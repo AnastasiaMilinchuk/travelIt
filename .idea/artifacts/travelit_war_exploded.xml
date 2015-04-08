@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="travelit:war exploded">
-    <output-path>$PROJECT_DIR$/target/secure-exam</output-path>
+    <output-path>$PROJECT_DIR$/target/travelit</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="travelit/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -24,7 +24,7 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.5" />
           <element id="library" level="project" name="Maven: org.tukaani:xz:1.2" />
@@ -98,6 +98,18 @@
           <element id="library" level="project" name="Maven: org.jboss:jandex:1.2.1.Final" />
           <element id="library" level="project" name="Maven: org.jboss.invocation:jboss-invocation:1.2.1.Final" />
           <element id="library" level="project" name="Maven: org.jboss.stdio:jboss-stdio:1.0.2.GA" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.13.0" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.7.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.10.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.10" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.10" />
+          <element id="library" level="project" name="Maven: cglib:cglib:2.2" />
+          <element id="library" level="project" name="Maven: asm:asm:3.1" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.apache.velocity:velocity:1.5" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.1" />
+          <element id="library" level="project" name="Maven: oro:oro:2.0.8" />
         </element>
       </element>
     </root>

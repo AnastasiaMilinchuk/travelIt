@@ -1,6 +1,6 @@
 package com.travelit.secure.config;
 
-import com.travelit.secure.service.UserDetailsServiceImpl;
+import com.travelit.secure.service.MongoUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private UserDetailsServiceImpl userDetailsService;
+    private MongoUserDetailsService userDetailsService;
+    //    private UserDetailsServiceImpl userDetailsService;
 
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
@@ -35,10 +36,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll()
                 .and();
 
+
         http.formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/j_spring_security_check")
                 .failureUrl("/login?error")
+                .defaultSuccessUrl("/main")
                 .usernameParameter("j_username")
                 .passwordParameter("j_password")
                 .permitAll();

@@ -1,6 +1,7 @@
 package com.travelit.secure.config;
 
-import com.travelit.secure.service.UserDetailsServiceImpl;
+//import com.travelit.secure.service.UserDetailsServiceImpl;
+import com.travelit.secure.service.MongoUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,10 +22,11 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/pages/**").addResourceLocations("/pages/");
     }
 
-@Bean
-public UserDetailsService getUserDetailsService(){
-    return new UserDetailsServiceImpl();
-}
+    @Bean
+    public UserDetailsService getUserDetailsService(){
+    //    return new UserDetailsServiceImpl();
+        return new MongoUserDetailsService();
+    }
 
     @Bean
     public UrlBasedViewResolver setupViewResolver() {

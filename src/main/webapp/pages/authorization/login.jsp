@@ -35,6 +35,10 @@
         <input type="password" class="form-control" name="j_password" placeholder="Password" required value="1234">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
     </form>
+
+    <div>
+        <p>No account yet? Please <a href="signup">Sign Up</a></p>
+    </div>
 </div>
 
 </body>
