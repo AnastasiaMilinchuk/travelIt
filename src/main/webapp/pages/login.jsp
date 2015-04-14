@@ -12,20 +12,8 @@
 
     <title>Spring Security</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src = "<c:url value="/pages/js/auth_no_yellow.js" />" ></script>
+    <script type="text/javascript" src = "<c:url value="/pages/js/auth_ajax.js" />" ></script>
     <link href="<c:url value="/pages/css/auth.css" />" rel="stylesheet">
-    <%----%>
-    <!-- Bootstrap core CSS -->
-    <%--<link href="<c:url value="/pages/css/bootstrap.css" />" rel="stylesheet">--%>
-
-    <!-- Custom styles for this template -->
-    <%--<link href="<c:url value="/pages/css/signin.css" />" rel="stylesheet">--%>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>-->
-    <![endif]-->
 </head>
 
 <body>
@@ -34,14 +22,14 @@
         <h2>Live. Love. Travel </h2>
     </div>
     <div class = "input_data"><c:url value="/j_spring_security_check" var="loginUrl" />
-        <form action="${loginUrl}" method="post" autocomplete="off">
+        <form action="${loginUrl}" method="post">
             <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
             <input style="display:none" type="text" name="fakeusernameremembered"/>
             <input style="display:none" type="password" name="fakepasswordremembered"/>
 
-            <input type="text" name = "j_username" placeholder = "E-mail" autocomplete="off"/>
-            <p><input type = "password" name = "j_password" placeholder = "Password" autocomplete="off"/></p>
-            <p><input type = "submit" value = "Log In" /></p>
+            <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
+            <p><input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/></p>
+            <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
         </form>
         <div class="add_link">
             <a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>

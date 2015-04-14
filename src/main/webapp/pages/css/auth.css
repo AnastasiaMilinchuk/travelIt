@@ -123,3 +123,7 @@ input:-webkit-autofill {
     -webkit-text-fill-color: white !important; /* цвет текста */
     color: white !important; /* цвет текста */
 }
+
+#error {
+    display: none;
+}
