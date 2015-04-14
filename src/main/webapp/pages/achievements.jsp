@@ -7,8 +7,8 @@
 </head>
 <body>
     <sec:authorize access="isAuthenticated()">
-        <jsp:include page="../templates/upperMenuTempl.jsp"  />
-        <h1>Profile</h1>
+        <jsp:include page="templates/upperMenuTempl.jsp"  />
+        <h1>Achievements</h1>
     </sec:authorize>
 
     <sec:authorize access="!isAuthenticated()">

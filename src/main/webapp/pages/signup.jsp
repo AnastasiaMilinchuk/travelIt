@@ -22,6 +22,7 @@
         <td><form:input path="firstName" value="" /></td>
         <form:errors path="firstName" element="div"/>
     </tr>
+    <br>
     <tr>
         <td>
             <label>
@@ -31,13 +32,15 @@
         <td><form:input path="lastName" value="" /></td>
         <form:errors path="lastName" element="div" />
     </tr>
+    <br>
     <tr>
         <td><label>E-mail
         </label>
         </td>
         <td><form:input path="email" value="" /></td>
-        <form:errors path="email" element="div" />
+        <%--<form:errors path="email" element="div" />--%>
     </tr>
+    <br>
     <tr>
         <td><label>Password
         </label>
@@ -45,13 +48,15 @@
         <td><form:input path="password" value="" type="password" /></td>
         <form:errors path="password" element="div" />
     </tr>
+    <br>
     <tr>
         <td><label>Confirm Password
         </label>
         </td>
         <td><form:input path="matchingPassword" value="" type="password" /></td>
-        <%--<form:errors element="div" />--%>
+        <form:errors element="div" />
     </tr>
+    <br>
     <button type="submit">Submit
     </button>
 </form:form>

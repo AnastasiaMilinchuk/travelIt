@@ -32,8 +32,54 @@ public class SignupController {
     @RequestMapping(method = RequestMethod.GET)
     public String mainPage(@Valid @ModelAttribute("user")User user,
                            BindingResult result,Model model){
-
+        System.out.println("Signup");
         return "signup";
     }
 
+    UserService service;
+    @Autowired
+    public void setService(UserService service) {
+        this.service = service;
+    }
+
+
+//    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+//    public String showRegistrationForm(WebRequest request, Model model) {
+//        User userDto = new User();
+//        model.addAttribute("user", userDto);
+//        System.out.println("Create User");
+//        return "signup";
+//    }
+
+    @RequestMapping( method = RequestMethod.POST)
+    public ModelAndView registerUserAccount(@ModelAttribute("user") @Valid User account,
+                                            BindingResult result, WebRequest request, Errors errors) {
+        org.springframework.security.core.userdetails.User registered =
+                createUserAccount(account, result);
+
+        System.out.println("Check User");
+        if (!result.hasErrors()) {
+            registered = createUserAccount(account, result);
+        }
+        if (registered == null) {
+            result.rejectValue("email", "message");
+        }
+        if (result.hasErrors()) {
+            return new ModelAndView("signup", "user", account);
+        }
+        else {
+            return new ModelAndView("main", "user", account);
+        }
+    }
+    private org.springframework.security.core.userdetails.User createUserAccount(User accountDto, BindingResult result) {
+        org.springframework.security.core.userdetails.User registered = null;
+        try {
+            registered = service.registerNewUserAccount(accountDto);
+//        } catch (EmailExistsException e) {
+//            return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return registered;
+    }
 }

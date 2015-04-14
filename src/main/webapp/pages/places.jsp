@@ -8,7 +8,7 @@
 </head>
 <body>
     <sec:authorize access="isAuthenticated()">
-        <jsp:include page="../templates/upperMenuTempl.jsp"  />
+        <jsp:include page="templates/upperMenuTempl.jsp"  />
         <h1>Places</h1>
     </sec:authorize>
 

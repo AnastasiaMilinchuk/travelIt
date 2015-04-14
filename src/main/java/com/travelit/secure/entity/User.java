@@ -8,14 +8,14 @@ import javax.validation.constraints.NotNull;
 
 
 @Document(collection = "users")
-//@PasswordMatches
+@PasswordMatches
 public class User  {
 
     private String firstName;
     private String lastName;
 
     @NotNull
-//    @ValidEmail
+    @ValidEmail
     private String email;
 
     @NotNull
@@ -26,7 +26,9 @@ public class User  {
     private int role;
 
     public User() {
-
+        email = new String();
+        password = new String();
+        matchingPassword = new String();
     }
 
     public User(String email, String password, int role) {
