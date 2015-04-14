@@ -1,0 +1,129 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    /*display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;*/
+}
+
+#background{
+    width: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: -1;
+    background: url(http://40.media.tumblr.com/7c93c05f927e0c823fff8305ae529785/tumblr_nk20158RtW1ta0hnbo1_1280.jpg) no-repeat;
+    background-size: 100%;
+
+}
+
+.logo {
+    position: relative;
+    top: 10%;
+}
+
+.logo * {
+    color: #696969;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    /*margin: 0;*/
+    padding: 0;
+}
+
+h1 {
+    font-size: 63px;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+.input_data {
+    margin: auto;
+    width: 25%;
+    position: relative;
+    top:27%;
+}
+
+input {
+    text-align: center;
+    font-size: 1em;
+    box-shadow: none;
+    height: 30px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    color: white;
+}
+
+input[type='submit']{
+    border: 1px solid #A92A27;
+    background-color: #DD423E;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    width: 92%;
+    margin-top: 5px;
+    height: 35px;
+    opacity:0.7;
+    font-weight: bold;
+    cursor: hand;
+}
+
+input:hover, input:focus {
+    opacity: 1;
+}
+
+.add_link {
+    height: 35px;
+}
+
+.add_link *{
+    border: none;
+    cursor: hand;
+}
+
+.add_link :nth-child(2) {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 1em;
+    left: 25px;
+    /*floapx center;*/
+    /*text-align: center;*/
+    /*	right: 25px;
+        top: 50%;*/
+}
+
+.add_link *:hover {
+    color: #4A0E0E;
+}
+
+input:-webkit-autofill {
+    background-color: #FAFFBD !important;
+    -webkit-text-fill-color: white !important; /* цвет текста */
+    color: white !important; /* цвет текста */
+}
+
+#error {
+    display: none;
+}
