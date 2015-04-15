@@ -23,7 +23,7 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.5" />
           <element id="library" level="project" name="Maven: org.tukaani:xz:1.2" />
@@ -93,10 +93,25 @@
           <element id="library" level="project" name="Maven: org.jboss.remoting:jboss-remoting:4.0.6.Final" />
           <element id="library" level="project" name="Maven: org.jboss.sasl:jboss-sasl:1.0.4.Final" />
           <element id="library" level="project" name="Maven: org.jboss.stdio:jboss-stdio:1.0.2.GA" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.jboss.threads:jboss-threads:2.1.1.Final" />
           <element id="library" level="project" name="Maven: org.jboss:jboss-vfs:3.2.5.Final" />
           <element id="library" level="project" name="Maven: io.undertow:undertow-core:1.1.0.Final" />
           <element id="library" level="project" name="Maven: org.wildfly:wildfly-build-config:8.2.0.Final" />
+=======
+          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.13.0" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.7.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.10.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.10" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.10" />
+          <element id="library" level="project" name="Maven: cglib:cglib:2.2" />
+          <element id="library" level="project" name="Maven: asm:asm:3.1" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.apache.velocity:velocity:1.5" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.1" />
+          <element id="library" level="project" name="Maven: oro:oro:2.0.8" />
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
         </element>
       </element>
       <element id="directory" name="META-INF">

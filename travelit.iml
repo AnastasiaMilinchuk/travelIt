@@ -17,9 +17,19 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
+<<<<<<< HEAD
         <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java</file>
+=======
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/devcolibri/secure/config/SecurityConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/devcolibri/secure/config/WebAppConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring-database.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/SpringConfig.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mongo/mongo-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java</file>
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
         </fileset>
       </configuration>
     </facet>
@@ -69,6 +79,7 @@
     <orderEntry type="library" name="Maven: jboss:jboss-system:4.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.0.0.RELEASE" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
@@ -76,6 +87,15 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.0.RELEASE" level="project" />
+=======
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.0.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.0.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.0.0.RELEASE" level="project" />
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.2.0.RELEASE" level="project" />
@@ -84,7 +104,11 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:3.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:3.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.2.6.RELEASE" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.2.6.RELEASE" level="project" />
+=======
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.0.9.RELEASE" level="project" />
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
     <orderEntry type="library" name="Maven: org.wildfly.plugins:wildfly-maven-plugin:1.0.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.5" level="project" />
     <orderEntry type="library" name="Maven: org.tukaani:xz:1.2" level="project" />
@@ -121,6 +145,7 @@
     <orderEntry type="library" name="Maven: org.jboss.aesh:aesh:0.33.11" level="project" />
     <orderEntry type="library" name="Maven: org.fusesource.jansi:jansi:1.9" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:staxmapper:1.1.0.Final" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.jboss.remotingjmx:remoting-jmx:2.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-river:1.4.2.Final" level="project" />
     <orderEntry type="module-library">
@@ -132,10 +157,31 @@
         <SOURCES />
       </library>
     </orderEntry>
+=======
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-controller-client:8.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-protocol:8.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.xnio:xnio-api:3.2.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.xnio:xnio-nio:3.2.2.Final" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="Maven: org.wildfly:wildfly-build-config:8.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss:jboss-dmr:1.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-security-manager:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.remotingjmx:remoting-jmx:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling:1.4.9.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-river:1.4.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss:jboss-vfs:3.2.5.Final" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: sun.jdk:jconsole:jdk">
+        <CLASSES>
+          <root url="jar:///usr/java/jdk1.7.0_04/lib/jconsole.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-server:8.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-controller:8.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-core-security:8.2.0.Final" level="project" />
@@ -163,10 +209,25 @@
     <orderEntry type="library" name="Maven: org.jboss.remoting:jboss-remoting:4.0.6.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.sasl:jboss-sasl:1.0.4.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.stdio:jboss-stdio:1.0.2.GA" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.jboss.threads:jboss-threads:2.1.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jboss-vfs:3.2.5.Final" level="project" />
     <orderEntry type="library" name="Maven: io.undertow:undertow-core:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.wildfly:wildfly-build-config:8.2.0.Final" level="project" />
     <orderEntry type="library" name="jquery" level="application" />
+=======
+    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.13.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-mongodb:1.7.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.10.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.10" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.2" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:3.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.velocity:velocity:1.5" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.1" level="project" />
+    <orderEntry type="library" name="Maven: oro:oro:2.0.8" level="project" />
+>>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
   </component>
 </module>
