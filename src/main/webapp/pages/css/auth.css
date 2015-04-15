@@ -10,10 +10,10 @@ body {
     justify-content: center;
     flex-direction: column;*/
 }
-::-webkit-input-placeholder {color:white;}
-::-moz-placeholder          {color:rgb(187, 187, 187);}/* Firefox 19+ */
-:-moz-placeholder           {color:rgb(187, 187, 187);}/* Firefox 18- */
-:-ms-input-placeholder      {color:rgb(187, 187, 187);}
+::-webkit-input-placeholder {color: #E4E1E1;}
+::-moz-placeholder          {color:#E4E1E1;}/* Firefox 19+ */
+:-moz-placeholder           {color:#E4E1E1;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#E4E1E1;}
 #background{
     width: 100%;
     position: fixed;
@@ -70,7 +70,7 @@ input {
     height: 30px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid rgb(165, 163, 163);
+    border-bottom: 1px solid rgb(140, 139, 139);
     background-color: transparent;
     color: white;
 }
