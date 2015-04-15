@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04fdf6ce-a794-4bed-ac73-32bae24e0ef0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="04fdf6ce-a794-4bed-ac73-32bae24e0ef0" name="Default" comment="" />
     <ignored path="spring-security-exam.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -144,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/pages/css/auth.html.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/js/auth_no_yellow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/css/auth.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
       </list>
     </option>
   </component>
@@ -207,7 +204,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1311" />
+    <option name="x" value="55" />
     <option name="y" value="-4" />
     <option name="width" value="1311" />
     <option name="height" value="772" />
@@ -1054,7 +1051,7 @@
       <workItem from="1428733784495" duration="7898000" />
       <workItem from="1428779470860" duration="8022000" />
       <workItem from="1429014320467" duration="41000" />
-      <workItem from="1429024534899" duration="148000" />
+      <workItem from="1429024534899" duration="2006000" />
     </task>
     <task id="LOCAL-00001" summary="Simple Security">
       <created>1427052598228</created>
@@ -1066,10 +1063,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101715000" />
+    <option name="totallyTimeSpent" value="103573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1311" y="-4" width="1311" height="772" extended-state="6" />
+    <frame x="55" y="-4" width="1311" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
