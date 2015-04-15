@@ -10,14 +10,17 @@ body {
     justify-content: center;
     flex-direction: column;*/
 }
-
+::-webkit-input-placeholder {color:white;}
+::-moz-placeholder          {color:rgb(187, 187, 187);}/* Firefox 19+ */
+:-moz-placeholder           {color:rgb(187, 187, 187);}/* Firefox 18- */
+:-ms-input-placeholder      {color:rgb(187, 187, 187);}
 #background{
     width: 100%;
     position: fixed;
     display: block;
     top: 0;
     bottom: 0;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: -1;
     background: url(http://40.media.tumblr.com/7c93c05f927e0c823fff8305ae529785/tumblr_nk20158RtW1ta0hnbo1_1280.jpg) no-repeat;
     background-size: 100%;
@@ -28,7 +31,11 @@ body {
     position: relative;
     top: 10%;
 }
-
+.no-have-account{
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 18px;
+}
 .logo * {
     color: #696969;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -53,7 +60,7 @@ h2 {
     margin: auto;
     width: 25%;
     position: relative;
-    top:27%;
+    top:22%;
 }
 
 input {
@@ -61,13 +68,17 @@ input {
     font-size: 1em;
     box-shadow: none;
     height: 30px;
-    width: 90%;
+    width: 100%;
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(165, 163, 163);
     background-color: transparent;
     color: white;
 }
-
+.login{
+    /*position: relative;*/
+    /*background-color: rgba(47, 47, 47, 0);*/
+    /*padding: 8%;*/
+}
 input:focus {
     outline: none;
     color: white;
@@ -79,10 +90,10 @@ input[type='submit']{
     color: white;
     text-align: center;
     font-size: 1em;
-    width: 92%;
+    width: 100%;
     margin-top: 5px;
     height: 35px;
-    opacity:0.7;
+    opacity:0.85;
     font-weight: bold;
     cursor: hand;
 }

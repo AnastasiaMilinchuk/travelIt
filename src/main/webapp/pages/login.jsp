@@ -22,20 +22,39 @@
         <h2>Live. Love. Travel </h2>
     </div>
     <div class = "input_data"><c:url value="/j_spring_security_check" var="loginUrl" />
-        <form action="${loginUrl}" method="post">
-            <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
-            <input style="display:none" type="text" name="fakeusernameremembered"/>
-            <input style="display:none" type="password" name="fakepasswordremembered"/>
+        <div class="login">
+            <div>
+                <form action="${loginUrl}" method="post">
 
-            <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
-            <p><input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/></p>
-            <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
-        </form>
-        <div class="add_link">
-            <a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>
-            <a href="register.html">Don't Have an Account?</a>
+                    <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                    <input style="display:none" type="text" name="fakeusernameremembered"/>
+                    <input style="display:none" type="password" name="fakepasswordremembered"/>
+
+                    <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
+                    <p><input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/></p>
+                    <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
+                </form>
+                <%--<div class="add_link">--%>
+
+                   <%--<div> Not have account yet?</div>--%>
+                   <%--<div>Please--%>
+                    <%--<a href="signup">Sign Up</a> or via social network:--%>
+                    <%--</div>--%>
+                    <%--<a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>--%>
+                <%--</div>--%>
+                <div>
+                    <div class="no-have-account">  Not have account yet? <a class="no-have-account" href="signup">Sign Up</a>
+                        </div>
+
+
+                    <%--<div>Please--%>
+                    <%--<a href="signup">Sign Up</a> or via social network:--%>
+                    <%--</div>--%>
+                    <%--<a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>--%>
+                </div>
+            </div>
         </div>
-    </div>
+   </div>
     <div id = "background"></div>
 
 
@@ -49,13 +68,13 @@
     </form>
 <<<<<<< HEAD
 </div>--%>
-=======
+<%--=======--%>
 
-    <div>
-        <p>No account yet? Please <a href="signup">Sign Up</a></p>
-    </div>
-</div>
->>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f
+    <%--<div>--%>
+        <%--<p>No account yet? Please <a href="signup">Sign Up</a></p>--%>
+    <%--</div>--%>
+<%--</div>--%>
+<%-->>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f--%>
 
 </body>
 </html>
