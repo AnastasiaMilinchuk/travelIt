@@ -5,10 +5,13 @@ package com.travelit.secure.controller;
 import com.travelit.secure.entity.User;
 import com.travelit.secure.service.TravelUserService;
 import com.travelit.secure.service.UserService;
+import org.apache.maven.artifact.repository.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -29,12 +32,14 @@ import javax.validation.Valid;
 @RequestMapping("/signup")
 public class SignupController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String mainPage(@Valid @ModelAttribute("user")User user,
-                           BindingResult result,Model model){
-        System.out.println("Signup");
-        return "signup";
-    }
+//    @RequestMapping(method = RequestMethod.GET)
+//    public String mainPage(WebRequest requestModel model){
+//        User userDto = new User();
+//        model.addAttribute("user", userDto);
+//        System.out.println("Create User");
+//        System.out.println("Signup");
+//        return "signup";
+//    }
 
     UserService service;
     @Autowired
@@ -42,20 +47,18 @@ public class SignupController {
         this.service = service;
     }
 
-
-//    @RequestMapping(value = "/signup", method = RequestMethod.GET)
-//    public String showRegistrationForm(WebRequest request, Model model) {
-//        User userDto = new User();
-//        model.addAttribute("user", userDto);
-//        System.out.println("Create User");
-//        return "signup";
-//    }
+    @RequestMapping( method = RequestMethod.GET)
+    public String showRegistrationForm(WebRequest request, Model model) {
+        User userDto = new User();
+        model.addAttribute("user", userDto);
+        System.out.println("Create User");
+        return "signup";
+    }
 
     @RequestMapping( method = RequestMethod.POST)
     public ModelAndView registerUserAccount(@ModelAttribute("user") @Valid User account,
                                             BindingResult result, WebRequest request, Errors errors) {
-        org.springframework.security.core.userdetails.User registered =
-                createUserAccount(account, result);
+        org.springframework.security.core.userdetails.User registered = null;
 
         System.out.println("Check User");
         if (!result.hasErrors()) {
@@ -66,11 +69,14 @@ public class SignupController {
         }
         if (result.hasErrors()) {
             return new ModelAndView("signup", "user", account);
+
         }
         else {
-            return new ModelAndView("main", "user", account);
+            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(registered, new Object(),  registered.getAuthorities()));
+            return new ModelAndView("main", "user", registered);
         }
     }
+
     private org.springframework.security.core.userdetails.User createUserAccount(User accountDto, BindingResult result) {
         org.springframework.security.core.userdetails.User registered = null;
         try {

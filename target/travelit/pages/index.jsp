@@ -36,11 +36,6 @@
         <sec:authorize access="!isAuthenticated()">
             <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Login</a></p>
         </sec:authorize>
-        <sec:authorize access="isAuthenticated()">
-            <p>E-mail: <sec:authentication property="principal.username" /></p>
-            <p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">logout</a></p>
-
-        </sec:authorize>
     </div>
 
     <div class="footer">

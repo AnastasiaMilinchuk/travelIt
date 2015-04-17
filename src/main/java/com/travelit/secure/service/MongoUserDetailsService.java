@@ -81,7 +81,7 @@ public class MongoUserDetailsService implements UserDetailsService, UserReposito
 
     @Override
     public void insert(User user) {
-
+        mongoTemplate.insert(user);
     }
 
     @Override

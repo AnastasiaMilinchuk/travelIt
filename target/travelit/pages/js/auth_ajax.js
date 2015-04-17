@@ -47,7 +47,7 @@ var main = function() {
     };
 
     password.onblur = function() {
-        if (!submit.disabled && password.value == ""){
+        if (password.value == "") {
             password.placeholder = "Please, input password";
             password.value = "";
             password.style.backgroundImage = "url(https://cdn1.iconfinder.com/data/icons/smallicons-controls/32/614338-.svg-512.png)";
@@ -55,8 +55,10 @@ var main = function() {
             password.style.backgroundRepeat = "no-repeat";
             submit.disabled = true;
         } else {
+            if (!submit.disabled) {
                 password.style.background = "none";
                 submit.disabled = false;
+            }
         }
     };
 };

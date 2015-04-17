@@ -33,7 +33,7 @@ public class TravelUserService implements UserService {
     @Override
     @Transactional
     public org.springframework.security.core.userdetails.User registerNewUserAccount(User account) throws Exception {
-        if (userRepository.getByEmail(account.getEmail()) == null) {
+        if (userRepository.getByEmail(account.getEmail()) != null) {
             throw new Exception("There is an account with that email adress: " +
                     account.getEmail());
         }

@@ -29,18 +29,18 @@
         <div>
             <form:form modelAttribute="user" method="POST" enctype="utf8">
 
-                    <form:input path="firstName"  placeholder="First Name" />
+                    <form:input path="firstName"  placeholder="First Name" autocomplete="off"/>
                     <form:errors path="firstName" element="div"/>
 
-                    <form:input path="lastName" placeholder="Last Name" />
+                    <form:input path="lastName" placeholder="Last Name" autocomplete="off"/>
                     <form:errors path="lastName" element="div" />
 
-                    <form:input path="email" placeholder="E-mail" id="email" value="" />
+                    <form:input path="email" placeholder="E-mail" id="email" value="" autocomplete="off"/>
                         <%--<form:errors path="email" element="div" />--%>
-                    <form:input path="password" value="" placeholder="Password" id="password" type="password" /></td>
+                    <form:input path="password" value="" placeholder="Password" id="password" type="password" autocomplete="off"/></td>
                     <form:errors path="password" element="div" />
 
-                    <form:input path="matchingPassword" value="" id="password" placeholder="Confirm Passsword" type="password" /></td>
+                    <form:input path="matchingPassword" value="" id="password" placeholder="Confirm Passsword" type="password" autocomplete="off"/></td>
                     <form:errors element="div" />
 
                <p> <input type = "submit" value="Sign Up" id = "submit" />
