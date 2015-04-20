@@ -221,7 +221,7 @@
 </section>
 
 <section>
-    <section class="content">
+    <section id="footer" class="content">
         <div class="footer">
             <div class="footer-content">
                 <h3>About</h3>
@@ -256,7 +256,7 @@
             <div class="copyright-text">
                  © by
             </div>
-           <img src="<c:url value="/pages/images/kokoCo1.png"/>" />
+           <img src="<c:url value="/pages/images/kokoCo2.png"/>" />
         </div>
     </section>
 </section>

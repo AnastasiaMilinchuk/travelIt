@@ -446,8 +446,8 @@ h2 {
     width: 100%;
     height: 100%;
     float: left;
-    margin-top: 20%;
-    background-color: #414141;
+    /*margin-top: 20%;*/
+    /*background-color: #414141;*/
 }
 
 .footer-content{
@@ -464,7 +464,7 @@ h2 {
     float: left;
     width: 96%;
     height: 54%;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-left: 5%;
     padding-bottom: 10%;
     color: white;
@@ -505,7 +505,7 @@ h2 {
 
 .copyright{
     position: relative;
-    background-color: rgb(65, 65, 65);
+    /*background-color: rgb(65, 65, 65);*/
     float: left;
     width: 100%;
     padding-top: 1%;
@@ -528,6 +528,11 @@ h2 {
     text-align: right;
     padding-top: 1%;
     color: rgb(236,170, 0);
+}
+#footer{
+    margin-top: 10%;
+    background: url("images/footer2.png") no-repeat;
+    background-size: cover;
 }
 
 input {

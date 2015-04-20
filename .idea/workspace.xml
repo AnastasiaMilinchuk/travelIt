@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ca3cd5-84f8-4994-adb0-2b6527288b48" name="Default" comment="Change INDEX page : added footer, how it works&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/images/map.png" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/map.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/images/prof.png" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/prof.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/images/result.png" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/result.png" />
+    <list default="true" id="c9ca3cd5-84f8-4994-adb0-2b6527288b48" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/Facebook-Logo-Circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/N5ow_J2Oj-Y.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/addPlace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/earth-map.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/what-it-about/earth-map.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/fb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/fillProfile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/find-here.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/footer1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/footer1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/footer2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/footer2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/footerImg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/googleMap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/googleMap2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/kokoCo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/kokoCo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/kokoCo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/main-page-background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/main-page-background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/map (1).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/map-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/obtainResult.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/profile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/register.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/travelItLogo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/tw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/twitter_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/twitterlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/vk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/vk2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/vkontakte-icon-15-8-6.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/css/auth.css" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/auth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -244,10 +282,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="auth.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="auth.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="498" column="19" selection-start="9499" selection-end="9499" vertical-scroll-proportion="0.0" vertical-offset="8856" max-vertical-offset="11088">
+            <state line="455" column="15" selection-start="8629" selection-end="8629" vertical-scroll-proportion="0.40208876" vertical-offset="8036" max-vertical-offset="11178">
               <folding />
             </state>
           </provider>
@@ -262,10 +300,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="22" selection-start="7474" selection-end="7474" vertical-scroll-proportion="0.6639118" vertical-offset="3125" max-vertical-offset="5508">
+            <state line="255" column="40" selection-start="9799" selection-end="9799" vertical-scroll-proportion="-8.259259" vertical-offset="4367" max-vertical-offset="5508">
               <folding />
             </state>
           </provider>
@@ -293,8 +331,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/pages/signup.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/css/stylename.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/js/index.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/css/auth.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/css/auth.css" />
       </list>
     </option>
   </component>
@@ -341,7 +379,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1359" />
+    <option name="x" value="1365" />
     <option name="y" value="-4" />
     <option name="width" value="1026" />
     <option name="height" value="773" />
@@ -550,6 +588,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="fonts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -615,6 +683,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1518,7 +1620,7 @@
       <workItem from="1429302092850" duration="35724000" />
       <workItem from="1429439993567" duration="40546000" />
       <workItem from="1429520493143" duration="27455000" />
-      <workItem from="1429565168123" duration="574000" />
+      <workItem from="1429565168123" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1429121657080</created>
@@ -1548,14 +1650,18 @@
       <created>1429489928341</created>
       <updated>1429489928341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change INDEX page : added footer, how it works&#10;">
+      <created>1429565780392</created>
+      <updated>1429565780392</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132415000" />
+    <option name="totallyTimeSpent" value="135177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1359" y="-4" width="1026" height="773" extended-state="6" />
+    <frame x="1365" y="-4" width="1026" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1571,10 +1677,10 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19444445" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25255623" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33179012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32617587" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16203703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3425926" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3425926" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3904321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1582,7 +1688,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2781186" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09713701" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.03990423" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1679,7 +1785,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576" />
+        <state line="13" column="13" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
@@ -1741,17 +1849,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="568" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="568">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/webContexts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="306" />
+        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="306">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1343" column="16" selection-start="70424" selection-end="70424" vertical-scroll-proportion="0.0" vertical-offset="24125" max-vertical-offset="27180" />
+        <state line="1343" column="16" selection-start="70424" selection-end="70424" vertical-scroll-proportion="0.0" vertical-offset="24125" max-vertical-offset="27180">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.0.0.RELEASE/spring-beans-4.0.0.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class">
@@ -1768,7 +1882,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576" />
+        <state line="13" column="13" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/validation/ValidEmail.java">
@@ -1785,7 +1901,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2632541" vertical-offset="0" max-vertical-offset="547" />
+        <state line="12" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2632541" vertical-offset="0" max-vertical-offset="547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java">
@@ -1804,22 +1922,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="360" />
+        <state line="9" column="13" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="360">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.14339623" vertical-offset="88" max-vertical-offset="378" />
+        <state line="10" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.14339623" vertical-offset="88" max-vertical-offset="378">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/ProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.31428573" vertical-offset="63" max-vertical-offset="378" />
+        <state line="12" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.31428573" vertical-offset="63" max-vertical-offset="378">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.27586207" vertical-offset="82" max-vertical-offset="378" />
+        <state line="12" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.27586207" vertical-offset="82" max-vertical-offset="378">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/validation/EmailValidator.java">
@@ -1863,7 +1989,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/AchievementsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="355" selection-end="355" vertical-scroll-proportion="0.37209302" vertical-offset="34" max-vertical-offset="378" />
+        <state line="12" column="13" selection-start="355" selection-end="355" vertical-scroll-proportion="0.37209302" vertical-offset="34" max-vertical-offset="378">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java">
@@ -1875,12 +2003,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="81" selection-start="715" selection-end="769" vertical-scroll-proportion="0.29213482" vertical-offset="112" max-vertical-offset="468" />
+        <state line="20" column="81" selection-start="715" selection-end="769" vertical-scroll-proportion="0.29213482" vertical-offset="112" max-vertical-offset="468">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="185" selection-end="185" vertical-scroll-proportion="0.20224719" vertical-offset="0" max-vertical-offset="356" />
+        <state line="7" column="17" selection-start="185" selection-end="185" vertical-scroll-proportion="0.20224719" vertical-offset="0" max-vertical-offset="356">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/js/jquery.BlackAndWhite.js">
@@ -1917,7 +2049,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/signin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4107143" vertical-offset="474" max-vertical-offset="810" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4107143" vertical-offset="474" max-vertical-offset="810">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/signup.jsp">
@@ -1927,7 +2061,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/stylename.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="467" selection-end="467" vertical-scroll-proportion="0.40384614" vertical-offset="0" max-vertical-offset="312" />
+        <state line="7" column="23" selection-start="467" selection-end="467" vertical-scroll-proportion="0.40384614" vertical-offset="0" max-vertical-offset="312">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/js/index.js">
@@ -1937,16 +2073,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="498" column="19" selection-start="9499" selection-end="9499" vertical-scroll-proportion="0.0" vertical-offset="8856" max-vertical-offset="11088">
+        <state line="255" column="40" selection-start="9799" selection-end="9799" vertical-scroll-proportion="-8.259259" vertical-offset="4367" max-vertical-offset="5508">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="22" selection-start="7474" selection-end="7474" vertical-scroll-proportion="0.6639118" vertical-offset="3125" max-vertical-offset="5508">
+        <state line="455" column="15" selection-start="8629" selection-end="8629" vertical-scroll-proportion="0.40208876" vertical-offset="8036" max-vertical-offset="11178">
           <folding />
         </state>
       </provider>
