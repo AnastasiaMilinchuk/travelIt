@@ -241,7 +241,7 @@
       <file leaf-file-name="auth.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="450" column="1" selection-start="8553" selection-end="8553" vertical-scroll-proportion="0.16710183" vertical-offset="8036" max-vertical-offset="11178">
+            <state line="453" column="23" selection-start="8595" selection-end="8595" vertical-scroll-proportion="0.308094" vertical-offset="8036" max-vertical-offset="11178">
               <folding />
             </state>
           </provider>
@@ -1576,7 +1576,7 @@
       <workItem from="1429302092850" duration="35724000" />
       <workItem from="1429439993567" duration="40546000" />
       <workItem from="1429520493143" duration="27455000" />
-      <workItem from="1429565168123" duration="3395000" />
+      <workItem from="1429565168123" duration="3527000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1429121657080</created>
@@ -1614,11 +1614,15 @@
       <created>1429569214628</created>
       <updated>1429569214628</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Change INDEX page : added footer, how it works. Added images&#10;">
+      <created>1429569264682</created>
+      <updated>1429569264683</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135236000" />
+    <option name="totallyTimeSpent" value="135368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="-4" width="1026" height="773" extended-state="6" />
@@ -2043,7 +2047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="450" column="1" selection-start="8553" selection-end="8553" vertical-scroll-proportion="0.16710183" vertical-offset="8036" max-vertical-offset="11178">
+        <state line="453" column="23" selection-start="8595" selection-end="8595" vertical-scroll-proportion="0.308094" vertical-offset="8036" max-vertical-offset="11178">
           <folding />
         </state>
       </provider>
