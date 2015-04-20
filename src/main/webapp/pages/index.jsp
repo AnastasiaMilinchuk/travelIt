@@ -47,20 +47,24 @@
         </div>
 
         <div class="logotype">
-           <img class="main-logo" src='<c:url value="/pages/images/travelItLogo1.png"/>' />
+           <img class="main-logo" src='<c:url value="/pages/images/travelItLogo2.png"/>' />
         </div>
 
         <div class="dare">
             <div id="begin">
-                <img class="imag" src='<c:url value="/pages/images/circle6.png"/>'/>
+                <a href="#how-it-works">
+                    <img class="imag" src='<c:url value="/pages/images/circle6.png"/>'/>
+                </a>
             </div>
         </div>
 
         <div class="authorize">
             <div class="authorize-frame">
+                <a href="<c:url value="/login" />">
                 <div class="signin">
                     Sign In
                 </div>
+               </a>
                 <%--<div class="signup">--%>
                     <%--Sign Up--%>
                 <%--</div>--%>
@@ -69,7 +73,8 @@
     </section>
 
 </section>
-    <section class="content">
+
+    <section id="how-it-works" class="content">
         <div class="what-it-about">
             <div class="article">
                 <h2>What it is about?</h2>
@@ -77,7 +82,7 @@
 
             <div class="what-it-about-content-grid">
                 <div class="what-it-about-content">
-                        <img  class="what-it-about-img" src="http://de-tur.com/wp-content/uploads/2014/05/20130609111100.jpg"/>
+                        <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/1.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -85,7 +90,7 @@
                 </div>
 
                 <div class="what-it-about-content">
-                    <img  class="what-it-about-img" src="http://hottour.dp.ua/_bl/650/53329292.jpg"/>
+                    <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/2.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -93,7 +98,7 @@
                 </div>
 
                 <div class="what-it-about-content">
-                    <img  class="what-it-about-img" src="http://lux.fm/resources/img/gallery/news/optimized/229390.jpg"/>
+                    <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/3.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -101,7 +106,7 @@
                 </div>
 
                 <div class="what-it-about-content">
-                    <img  class="what-it-about-img" src="http://toursdekiev.com.ua/files/Ch_lavra_night.jpg"/>
+                    <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/4.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -109,7 +114,7 @@
                 </div>
 
                 <div class="what-it-about-content">
-                    <img  class="what-it-about-img" src="http://www.asergeev.com/p/xl-2004-409-05/odessa_ukraine_august-seaport_marina_evening_odessa_ukraine.jpg"/>
+                    <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/5.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -117,7 +122,7 @@
                 </div>
 
                 <div class="what-it-about-content">
-                    <img  class="what-it-about-img" src="http://bookvachka.org.ua/photos/karpaty_may/karpaty_28.jpg"/>
+                    <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/6.jpg" />"/>
                     <div class="what-it-about-text">
                         <div class="h3-text">Tradition</div>
                         <div class="p-text">Find more for your entertainment.</div>
@@ -172,12 +177,90 @@
             <h2>How it works?</h2>
         </div>
         <div class="what-it-about-content-grid">
-            <div class="what-it-about-content">
-                <img src="">
+            <div class="how-it-works-content">
+                <div class="how-it-works">
+                    <img id="register" class="how-it-works-img" src="<c:url value="/pages/images/register.png"/>" />
+                </div>
+
+                 <a href="<c:url value="/login" />">
+                <div class="how-it-works">
+                   Register
+                </div>
+                 </a>
+            </div>
+
+            <div class="how-it-works-content">
+                <div class="how-it-works">
+                     <img class="how-it-works-img" src="<c:url value="/pages/images/fillProfile.png"/>" />
+                </div>
+
+                <div class="how-it-works">
+                    Fill profile
+                </div>
+           </div>
+            <div class="how-it-works-content">
+                <div class="how-it-works">
+                    <img  class="how-it-works-img" src="<c:url value="/pages/images/addPlace.png"/>" />
+                </div>
+
+                <div class="how-it-works">
+                    Choose city
+                </div>
+            </div>
+            <div class="how-it-works-content">
+                <div class="how-it-works">
+                    <img class="how-it-works-img" src="<c:url value="/pages/images/obtainResult.png"/>" />
+                </div>
+
+                <div class="how-it-works">
+                    Obtain result
+                </div>
             </div>
         </div>
     </section>
 </section>
+
+<section>
+    <section class="content">
+        <div class="footer">
+            <div class="footer-content">
+                <h3>About</h3>
+                <div class="footer-content-inner">
+                    Something about our site
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h3>Share with friends</h3>
+                <div class="footer-content-inner">
+                    <div class="footer-content-img">
+                        <img src="<c:url value="/pages/images/tw.png"/>"/>
+                    </div>
+                    <div  class="footer-content-img">
+                         <img src="<c:url value="/pages/images/fb.png"/>"/>
+                    </div>
+                    <div class="footer-content-img">
+                         <img src="<c:url value="/pages/images/vk.png"/>"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h3>Help</h3>
+                <div class="footer-content-inner">
+                   About help kokoko
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-text">
+                 © by
+            </div>
+           <img src="<c:url value="/pages/images/kokoCo1.png"/>" />
+        </div>
+    </section>
+</section>
+
 
 </body>
 </html>
@@ -196,4 +279,22 @@
 <%--<div class="footer">--%>
     <%--<p>&copy; TravelIt 2015</p>--%>
 <%--</div>--%>
+
+
+<%--<section>--%>
+    <%--<div class="footer-content">--%>
+        <%--<h3>About</h3>--%>
+        <%--<div></div>--%>
+    <%--</div>--%>
+
+    <%--<div class="footer-content">--%>
+        <%--<h3>Share with friends</h3>--%>
+        <%--<div></div>--%>
+    <%--</div>--%>
+
+    <%--<div class="footer-content">--%>
+        <%--<h3>Help</h3>--%>
+        <%--<div></div>--%>
+    <%--</div>--%>
+<%--</>--%>
 
