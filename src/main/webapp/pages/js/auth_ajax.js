@@ -10,6 +10,15 @@ var validateEmail = function (email) {
     return re.test(email);
 };
 
+var validatePassword = function (password){
+    if (password.length >= 6){
+         return true;
+    }
+    else{
+        return false;
+    }
+}
+
 //var valid = function (){
 //        var message = "E-mail";
 //        if (!validateEmail(email.value)){
@@ -39,7 +48,6 @@ var main = function() {
             email.style.backgroundRepeat = "no-repeat";
             submit.disabled = true;
         } else {
-            email.placeholder = "Good email";
             email.style.background = "none";
             submit.disabled = false;
         }
@@ -63,4 +71,36 @@ var main = function() {
     };
 };
 
-$(document).ready(main);
+$(document).ready(function(){
+
+    $("#password").onblur(function(){
+        var password = $("password").val();
+        var email = $("email").val();
+
+        if(validateEmail(email) && validatePassword(password)){
+            $("#background").css({"-webkit-filter" : "grayscale(0%)"});
+        }
+        else{
+            $("#background").css({"-webkit-filter" : "grayscale(100%)"})
+        }
+
+    });
+
+    $("#email").onblur(function(){
+        var password = $("password").val();
+        var email = $("email").val();
+
+        if(validateEmail(email) && validatePassword(password)){
+            $("background").css({"-webkit-filter" : "grayscale(0%)"});
+            alert("koko1");
+        }
+        else{
+            alert("koko2");
+            $("background").css({"-webkit-filter" : "grayscale(100%)"})
+        }
+
+    })
+
+
+
+});
