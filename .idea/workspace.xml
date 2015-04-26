@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9ca3cd5-84f8-4994-adb0-2b6527288b48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/background.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/background1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/backgroundColor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/images/loginBackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/login/loginBackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/login/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/login/logoEarth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/images/login/logoEarth1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/authorize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/travel.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/travelit_war_exploded/pages/login.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/pages/signup.jsp" afterPath="$PROJECT_DIR$/out/artifacts/travelit_war_exploded/pages/signup.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SpringMongoConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SpringMongoConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js" afterPath="$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/signup.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/signup.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/MongoRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/PlaceService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoRepository.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="travelIt.iws" />
@@ -82,6 +75,21 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="31" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="35" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -97,7 +105,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="39" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="58" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -127,7 +135,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="66" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="56" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -142,67 +150,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="60" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java" line="35" class="com.travelit.secure.service.TravelUserService" package="com.travelit.secure.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java" line="40" class="com.travelit.secure.service.TravelUserService" package="com.travelit.secure.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java" line="47" class="com.travelit.secure.service.TravelUserService" package="com.travelit.secure.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="82" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="78" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -232,7 +180,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="75" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" line="71" class="com.travelit.secure.controller.SignupController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -257,29 +205,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="auth_ajax.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js">
+      <file leaf-file-name="MongoRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/MongoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016">
-              <folding />
+            <state line="27" column="23" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="648">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
+      <file leaf-file-name="UserMongoRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="53" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1890">
-              <folding />
+            <state line="24" column="5" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="1134">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/signup.jsp">
+      <file leaf-file-name="UserMongoService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="9" selection-start="5890" selection-end="5890" vertical-scroll-proportion="-0.0" vertical-offset="2484" max-vertical-offset="4122">
-              <folding />
+            <state line="37" column="0" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+              <folding>
+                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1174#1175#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -287,7 +242,16 @@
       <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+            <state line="8" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaceService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/PlaceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="29" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
               <folding />
             </state>
           </provider>
@@ -296,52 +260,45 @@
       <file leaf-file-name="UserRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+            <state line="16" column="25" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TravelUserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java">
+      <file leaf-file-name="WebAppConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
+            <state line="27" column="29" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoUserDetailsService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java">
+      <file leaf-file-name="Initializer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="5" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1620">
-              <folding />
+            <state line="13" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.33333334" vertical-offset="172" max-vertical-offset="720">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringMongoConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SpringMongoConfig.java">
+      <file leaf-file-name="SpringConfig.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="37" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="522">
+            <state line="19" column="4" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="576">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongo-config.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mongo-config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mongo/mongo-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="768" selection-end="768" vertical-scroll-proportion="0.35714287" vertical-offset="122" max-vertical-offset="558">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authorize.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/authorize.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="5580">
+            <state line="21" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-12.72" vertical-offset="60" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -363,7 +320,6 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/validation/EmailValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/css/stylename.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/js/index.js" />
@@ -375,6 +331,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/pages/signup.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/js/auth_ajax.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/Repository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserMongoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/MongoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mongo/mongo-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java" />
       </list>
     </option>
   </component>
@@ -454,7 +425,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -767,6 +737,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mongo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travelIt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -848,6 +852,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -870,6 +875,9 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -1155,17 +1163,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -1199,6 +1196,17 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1351,7 +1359,7 @@
     <configuration default="false" name="Unnamed" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="wildfly-8.2.0" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/travelit/login" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <file path="$PROJECT_DIR$/target/travelit.war">
           <settings />
@@ -1547,7 +1555,8 @@
       <workItem from="1429710706685" duration="26121000" />
       <workItem from="1429878095635" duration="607000" />
       <workItem from="1429974606541" duration="82000" />
-      <workItem from="1430043161359" duration="2475000" />
+      <workItem from="1430043161359" duration="3906000" />
+      <workItem from="1430067956331" duration="11814000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1429121657080</created>
@@ -1597,11 +1606,15 @@
       <created>1429569772988</created>
       <updated>1429569772988</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added sign in / sign up pages design">
+      <created>1430050688229</created>
+      <updated>1430050688229</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167746000" />
+    <option name="totallyTimeSpent" value="180991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -1613,32 +1626,32 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4845679" sideWeight="0.5003984" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19444445" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22948207" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25617284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29243028" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5308642" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3425926" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5154321" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3904321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.4996016" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17768924" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.212749" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.03990423" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1646,36 +1659,36 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.03990423" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19444445" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36196318" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2988048" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37808642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10030864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3425926" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5154321" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3904321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1400818" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.212749" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1698,7 +1711,8 @@
     <MESSAGE value="Added INDEX page&#10;" />
     <MESSAGE value="Change INDEX page : added footer, how it works&#10;" />
     <MESSAGE value="Change INDEX page : added footer, how it works. Added images&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change INDEX page : added footer, how it works. Added images&#10;" />
+    <MESSAGE value="Added sign in / sign up pages design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sign in / sign up pages design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1708,40 +1722,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SpringMongoConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="648">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="13" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="1206">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mongo/spring-database.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
@@ -1762,11 +1754,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.0.0.RELEASE/spring-beans-4.0.0.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="0" selection-start="5212" selection-end="5212" vertical-scroll-proportion="2.8333333" vertical-offset="992" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="558" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.0.RELEASE/spring-web-4.0.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
@@ -1794,13 +1781,6 @@
         <state line="108" column="19" selection-start="7460" selection-end="7460" vertical-scroll-proportion="0.0" vertical-offset="1944" max-vertical-offset="2358" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2891" selection-end="2891" vertical-scroll-proportion="-0.29411766" vertical-offset="1044" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/js/jquery.BlackAndWhite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.5256796" vertical-offset="2160" max-vertical-offset="6876" />
@@ -1826,25 +1806,6 @@
         <state line="7" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="576" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="1062" selection-end="1220" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/AchievementsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="32" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378" />
@@ -1868,13 +1829,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
@@ -1938,9 +1892,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/css/auth.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="538" column="23" selection-start="10235" selection-end="10235" vertical-scroll-proportion="26.9" vertical-offset="0" max-vertical-offset="11178">
-          <folding />
-        </state>
+        <state line="538" column="23" selection-start="10235" selection-end="10235" vertical-scroll-proportion="26.9" vertical-offset="0" max-vertical-offset="11178" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
@@ -1971,30 +1923,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/ProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <folding />
+        <state line="12" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <folding />
+        <state line="62" column="12" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0" vertical-offset="338" max-vertical-offset="1350">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1484#1485#0" expanded="false" />
+            <element signature="e#1522#1523#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/TravelUserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mongo/spring-database.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/MongoUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="5" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1620">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
@@ -2006,10 +1957,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="29" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1206">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mongo/mongo-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="768" selection-end="768" vertical-scroll-proportion="0.35714287" vertical-offset="122" max-vertical-offset="558">
+        <state line="21" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-12.72" vertical-offset="60" max-vertical-offset="558">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/MongoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="23" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="648">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/PlaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="5" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="1134">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/UserMongoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
+          <folding>
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/config/Initializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.33333334" vertical-offset="172" max-vertical-offset="720">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

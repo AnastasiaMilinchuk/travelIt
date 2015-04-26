@@ -1,11 +1,17 @@
-package com.travelit.secure.service;
+package com.travelit.secure.service.mongo;
 
 import com.travelit.secure.entity.User;
+import com.travelit.secure.service.UserRepository;
+import com.travelit.secure.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +22,8 @@ import java.util.List;
  * CRUD Operations
  */
 @Service
-public class TravelUserService implements UserService {
+@Configuration
+public class UserMongoService implements UserService, UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
@@ -25,15 +32,14 @@ public class TravelUserService implements UserService {
     }
 
     @Override
-    public User getUserByLogin(String login) {
-        User user = new User();
-        return user;
+    public User getByEmail(String email) {
+      return userRepository.get(email);
     }
 
     @Override
     @Transactional
     public org.springframework.security.core.userdetails.User registerNewUserAccount(User account) throws Exception {
-        if (userRepository.getByEmail(account.getEmail()) != null) {
+        if (userRepository.get(account.getEmail()) != null) {
             throw new Exception("There is an account with that email adress: " +
                     account.getEmail());
         }
@@ -50,4 +56,18 @@ public class TravelUserService implements UserService {
     }
 
 
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        boolean enabled = true;
+        boolean accountNonExpired = true;
+        boolean credentialsNonExpired = true;
+        boolean accountNonLocked = true;
+        User user = userRepository.get(username);
+        System.out.println(username);
+
+        // return springs User
+        return new org.springframework.security.core.userdetails.User(user.getEmail(),
+                user.getPassword(),
+                enabled,accountNonExpired,credentialsNonExpired,
+                accountNonLocked,userRepository.getAuthorities(user.getRole()));
+    }
 }
