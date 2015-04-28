@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface UserService {
-    User getUserByLogin(String login);
+    User getByEmail(String email);
     org.springframework.security.core.userdetails.User registerNewUserAccount(User account) throws Exception;
 }

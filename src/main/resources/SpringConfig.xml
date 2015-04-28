@@ -17,10 +17,11 @@
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
     </bean>
 
-    <bean id="userService" class="com.travelit.secure.service.TravelUserService">
+    <bean id="userRepository" class="com.travelit.secure.service.mongo.UserMongoRepository">
     </bean>
 
-    <bean id="userRepository" class="com.travelit.secure.service.MongoUserDetailsService">
+    <bean id="userService" class="com.travelit.secure.service.mongo.UserMongoService">
     </bean>
+
 
 </beans>

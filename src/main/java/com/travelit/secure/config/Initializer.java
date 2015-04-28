@@ -1,7 +1,6 @@
 package com.travelit.secure.config;
 
-import com.travelit.secure.service.MongoUserDetailsService;
-import com.travelit.secure.service.UserService;
+import com.travelit.secure.service.mongo.UserMongoService;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -21,7 +20,7 @@ public class Initializer implements WebApplicationInitializer {
         ctx.register(WebAppConfig.class);
         ctx.register(SecurityConfig.class);
         ctx.register(SpringMongoConfig.class);
-        ctx.register(MongoUserDetailsService.class);
+        ctx.register(UserMongoService.class);
 
         servletContext.addListener(new ContextLoaderListener(ctx));
 

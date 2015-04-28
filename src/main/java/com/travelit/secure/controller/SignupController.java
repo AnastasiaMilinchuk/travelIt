@@ -3,14 +3,10 @@ package com.travelit.secure.controller;
 
 
 import com.travelit.secure.entity.User;
-import com.travelit.secure.service.TravelUserService;
 import com.travelit.secure.service.UserService;
-import org.apache.maven.artifact.repository.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

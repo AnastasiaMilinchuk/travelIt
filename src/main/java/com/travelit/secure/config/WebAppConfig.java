@@ -1,7 +1,7 @@
 package com.travelit.secure.config;
 
 //import com.travelit.secure.service.UserDetailsServiceImpl;
-import com.travelit.secure.service.MongoUserDetailsService;
+import com.travelit.secure.service.mongo.UserMongoService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public UserDetailsService getUserDetailsService(){
     //    return new UserDetailsServiceImpl();
-        return new MongoUserDetailsService();
+        return new UserMongoService();
     }
 
     @Bean

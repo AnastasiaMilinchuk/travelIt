@@ -11,10 +11,10 @@ import java.util.List;
  */
 @Repository
 public interface UserRepository {
-    List<GrantedAuthority> getAuthorities(Integer role);
 
     void insert(User user);
-    User getByEmail(String Email);
-    void update(User user);
-    void detete(User user);
+    void remove(User user);
+    User get(String email);
+
+    List<GrantedAuthority> getAuthorities(Integer role);
 }

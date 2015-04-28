@@ -13,68 +13,87 @@
     <title>Spring Security</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src = "<c:url value="/pages/js/auth_ajax.js" />" ></script>
-    <link href="<c:url value="/pages/css/auth.css" />" rel="stylesheet">
+    <link href="<c:url value="/pages/css/authorize.css" />" rel="stylesheet">
+    <link href="<c:url value="/pages/css/footer.css" />" rel="stylesheet">
 </head>
 
 <body>
-    <div class = "logo">
-        <h1>TravelIt.com</h1>
-        <h2>Live. Love. Travel </h2>
-    </div>
-    <div class = "input_data"><c:url value="/j_spring_security_check" var="loginUrl" />
-        <div class="login">
-            <div>
-                <form action="${loginUrl}" method="post">
+    <header>
+    </header>
 
-                    <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
-                    <input style="display:none" type="text" name="fakeusernameremembered"/>
-                    <input style="display:none" type="password" name="fakepasswordremembered"/>
+    <section >
+        <div class = "article">
+            <h1>Sign In</h1>
+        </div>
+        <div class="container">
 
-                    <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
-                    <input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/>
-                    <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
-                </form>
-                <%--<div class="add_link">--%>
+                <div class="logo">
+                    <a href="<c:url value="/" />">
+                        <img src="/travelit/pages/images/travelItLogo2.png"/>
+                    </a>
+                </div>
 
-                   <%--<div> Not have account yet?</div>--%>
-                   <%--<div>Please--%>
-                    <%--<a href="signup">Sign Up</a> or via social network:--%>
-                    <%--</div>--%>
-                    <%--<a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>--%>
-                <%--</div>--%>
-                <div>
-                    <div class="no-have-account">  Not have account yet? <a class="no-have-account" href="signup">Sign Up</a>
+            <div class = "input_data"><c:url value="/j_spring_security_check" var="loginUrl" />
+                <div class="login">
+                    <div>
+                        <form action="${loginUrl}" method="post">
+
+                            <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                            <input style="display:none" type="text" name="fakeusernameremembered"/>
+                            <input style="display:none" type="password" name="fakepasswordremembered"/>
+
+                            <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
+                            <input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/>
+                            <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
+                        </form>
+                    </div>
+                    <div class="signup">
+                        Not have account yet? Please  <a class="no-have-account" href="signup">Sign Up</a>.
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+    <div id="background"></div>
+    <footer>
+        <div id="footer" class="content">
+            <div class="footer">
+                <div class="footer-content">
+                    <h3>About</h3>
+                    <div class="footer-content-inner">
+                        Something about our site
+                    </div>
+                </div>
+
+                <div class="footer-content">
+                    <h3>Share with friends</h3>
+                    <div class="footer-content-inner">
+                        <div class="footer-content-img">
+                            <img src="<c:url value="/pages/images/tw.png"/>"/>
                         </div>
+                        <div  class="footer-content-img">
+                            <img src="<c:url value="/pages/images/fb.png"/>"/>
+                        </div>
+                        <div class="footer-content-img">
+                            <img src="<c:url value="/pages/images/vk.png"/>"/>
+                        </div>
+                    </div>
+                </div>
 
-
-                    <%--<div>Please--%>
-                    <%--<a href="signup">Sign Up</a> or via social network:--%>
-                    <%--</div>--%>
-                    <%--<a href =""><img src="<c:url value="/pages/images/vk.com.png" />" width = "35px" alt = "Log in via VK" /></a>--%>
+                <div class="footer-content">
+                    <h3>Help</h3>
+                    <div class="footer-content-inner">
+                        About help kokoko
+                    </div>
                 </div>
             </div>
+            <div class="copyright">
+                <div class="copyright-text">
+                    © by
+                </div>
+                <img src="<c:url value="/pages/images/kokoCo2.png"/>" />
+            </div>
         </div>
-   </div>
-    <div id = "background"></div>
-
-
-<%--<div class="container" style="width: 300px;">
-    <c:url value="/j_spring_security_check" var="loginUrl" />
-    <form action="${loginUrl}" method="post">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" name="j_username" placeholder="Email address" required autofocus value="admin">
-        <input type="password" class="form-control" name="j_password" placeholder="Password" required value="1234">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-    </form>
-<<<<<<< HEAD
-</div>--%>
-<%--=======--%>
-
-    <%--<div>--%>
-        <%--<p>No account yet? Please <a href="signup">Sign Up</a></p>--%>
-    <%--</div>--%>
-<%--</div>--%>
-<%-->>>>>>> 78b40245292fffc4914f31d0494c2b8aa31d513f--%>
-
+    </footer>
 </body>
 </html>

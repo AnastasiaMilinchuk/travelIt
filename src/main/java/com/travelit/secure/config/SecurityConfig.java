@@ -1,6 +1,6 @@
 package com.travelit.secure.config;
 
-import com.travelit.secure.service.MongoUserDetailsService;
+import com.travelit.secure.service.mongo.UserMongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private MongoUserDetailsService userDetailsService;
+    private UserMongoService userDetailsService;
     //    private UserDetailsServiceImpl userDetailsService;
 
     @Autowired
