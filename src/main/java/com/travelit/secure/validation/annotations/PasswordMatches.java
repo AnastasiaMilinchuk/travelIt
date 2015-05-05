@@ -1,4 +1,6 @@
-package com.travelit.secure.validation;
+package com.travelit.secure.validation.annotations;
+
+import com.travelit.secure.validation.PasswordMatchesValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

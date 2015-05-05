@@ -3,7 +3,7 @@ package com.travelit.secure.controller;
 
 
 import com.travelit.secure.entity.User;
-import com.travelit.secure.service.UserService;
+import com.travelit.secure.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

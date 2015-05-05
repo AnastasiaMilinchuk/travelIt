@@ -1,7 +1,8 @@
 package com.travelit.secure.entity;
 
-import com.travelit.secure.validation.PasswordMatches;
-import com.travelit.secure.validation.ValidEmail;
+import com.travelit.secure.validation.annotations.PasswordMatches;
+import com.travelit.secure.validation.annotations.ValidEmail;
+import com.travelit.secure.validation.annotations.ValidPlace;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;

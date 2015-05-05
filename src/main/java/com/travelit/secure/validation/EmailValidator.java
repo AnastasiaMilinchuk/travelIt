@@ -1,6 +1,6 @@
 package com.travelit.secure.validation;
 
-import com.travelit.secure.validation.ValidEmail;
+import com.travelit.secure.validation.annotations.ValidEmail;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

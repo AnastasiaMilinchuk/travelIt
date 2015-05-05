@@ -1,4 +1,4 @@
-package com.travelit.secure.service;
+package com.travelit.secure.service.services;
 
 import com.travelit.secure.entity.User;
 import org.springframework.transaction.annotation.Transactional;

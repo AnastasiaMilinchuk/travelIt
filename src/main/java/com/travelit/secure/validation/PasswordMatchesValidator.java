@@ -1,7 +1,7 @@
 package com.travelit.secure.validation;
 
 import com.travelit.secure.entity.User;
-import com.travelit.secure.validation.PasswordMatches;
+import com.travelit.secure.validation.annotations.PasswordMatches;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
