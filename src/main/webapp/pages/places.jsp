@@ -56,6 +56,8 @@
                          </div>
                     </div>
                     <button type="submit">Save</button>
+                    File to upload: <input type="file" name="file"><br /> Name: <input
+                        type="text" name="name"><br /> <br />
                 </form>
             </div>
         </sec:authorize>

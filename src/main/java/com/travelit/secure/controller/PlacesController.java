@@ -2,9 +2,9 @@ package com.travelit.secure.controller;
 
 import com.travelit.secure.entity.Place;
 import com.travelit.secure.service.services.PlaceService;
-import com.travelit.secure.service.services.UserService;
-import com.travelit.secure.validation.annotations.ValidPlace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,10 +12,16 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by milinchuk on 4/4/15.
@@ -33,19 +39,79 @@ public class PlacesController {
     @RequestMapping(method = RequestMethod.GET)
     public String mainPage(Model model){
         Place place = new Place();
-        model.addAttribute("place", place);
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(principal instanceof UserDetails){
+            place.setCreatorEmail(((UserDetails) principal).getUsername());
+            model.addAttribute("place", place);
+        }
         return "places";
     }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ModelAndView addPhoto( @RequestParam("file") MultipartFile image, BindingResult result, WebRequest request, Errors errors){
+
+    }
+
 
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView addPlace(@ModelAttribute("place") Place place,
                            BindingResult result, WebRequest request, Errors errors){
         if(!result.hasErrors()){
+            place.setDateOfCreation(new Date());
             service.save(place);
+
+//            if (!file.isEmpty()) {
+//                try {
+//                    byte[] bytes = file.getBytes();
+//                    BufferedOutputStream stream =
+//                            new BufferedOutputStream(new FileOutputStream(new File(place.getName())));
+//                    stream.write(bytes);
+//                    stream.close();
+//                    System.out.println("You successfully uploaded " +place.getName() + "!");
+//                } catch (Exception e) {
+//                    System.out.println("You failed to upload " +place.getName()+ " => " + e.getMessage());
+//                }
+//            }
+            if (!image.isEmpty()) {
+                try {
+                    validateImage(image);
+
+                } catch (RuntimeException re) {
+                    result.reject(re.getMessage());
+                }
+
+                try {
+                    saveImage(place.getName() + ".jpg", image);
+                } catch (IOException e) {
+                    result.reject(e.getMessage());
+                }
+            }
             return new ModelAndView("added", "place", place);
         }
         else {
             return new ModelAndView("places", "place", place);
+        }
+    }
+
+    private void validateImage(MultipartFile image) {
+        if (!image.getContentType().equals("image/jpeg")) {
+            throw new RuntimeException("Only JPG images are accepted");
+        }
+    }
+
+    private void saveImage(String filename, MultipartFile image)
+            throws RuntimeException, IOException {
+        try {
+            byte[] bytes = image.getBytes();
+            File file = new File(filename);
+            BufferedOutputStream stream =
+                    new BufferedOutputStream(new FileOutputStream(file));
+            stream.write(bytes);
+            stream.close();
+            System.out.println("Go to the location:  " + file.toString()
+                    + " on your computer and verify that the image has been stored.");
+        } catch (IOException e) {
+            throw e;
         }
     }
 

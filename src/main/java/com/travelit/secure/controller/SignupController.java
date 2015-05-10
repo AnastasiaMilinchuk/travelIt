@@ -1,12 +1,11 @@
 package com.travelit.secure.controller;
 
-
-
 import com.travelit.secure.entity.User;
 import com.travelit.secure.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -56,6 +55,9 @@ public class SignupController {
                                             BindingResult result, WebRequest request, Errors errors) {
         org.springframework.security.core.userdetails.User registered = null;
 
+        Object o = new Object();
+        account.setPassword(new ShaPasswordEncoder().encodePassword(account.getPassword(), o));
+        account.setMatchingPassword(new ShaPasswordEncoder().encodePassword(account.getMatchingPassword(), o));
         System.out.println("Check User");
         if (!result.hasErrors()) {
             registered = createUserAccount(account, result);
@@ -64,10 +66,13 @@ public class SignupController {
             result.rejectValue("email", "message");
         }
         if (result.hasErrors()) {
+            account.setPassword("");
+            account.setMatchingPassword("");
             return new ModelAndView("signup", "user", account);
 
         }
         else {
+
             SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(registered, new Object(),  registered.getAuthorities()));
             return new ModelAndView("main", "user", registered);
         }

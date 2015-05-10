@@ -3,6 +3,8 @@ package com.travelit.secure.entity;
 import com.travelit.secure.validation.annotations.ValidPlace;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.BufferedOutputStream;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,14 +18,32 @@ public class Place {
     private String address;
     private List<String> tags;
     private Coordinates coordinates;
-    private String pathMainPhoto;
+    private String photo;
+    private String creatorEmail;
+    private Date dateOfCreation;
 
-    public String getPathMainPhoto() {
-        return pathMainPhoto;
+    public Date getDateOfCreation() {
+        return dateOfCreation;
     }
 
-    public void setPathMainPhoto(String pathPhoto) {
-        this.pathMainPhoto = pathPhoto;
+    public void setDateOfCreation(Date dateOfCreation) {
+        this.dateOfCreation = dateOfCreation;
+    }
+
+    public String getCreatorEmail() {
+        return creatorEmail;
+    }
+
+    public void setCreatorEmail(String creatorEmail) {
+        this.creatorEmail = creatorEmail;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getName() {
