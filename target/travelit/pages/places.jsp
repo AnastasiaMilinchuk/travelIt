@@ -52,13 +52,13 @@
                         <div class="description">
 
                             <label>Name:</label>
-                            <input id="name" name="placeArticle"/>
+                            <input id="name" name="name"/>
                             <br>
                             <label>Description: </label>
-                            <input id="description" name="placeDescription"/>
+                            <input id="description" name="description"/>
                             <br>
                             <label>Address:</label>
-                            <input id="address" name="placeAddress" />
+                            <input id="address" name="address" />
                             <br>
                             <div id="map-canvas" class="map">
                             </div>
@@ -69,8 +69,7 @@
 
                             <label>File to upload:</label>
                             <input type="file" name="file"><br />
-                            <label>Name:</label>
-                            <input type="text" name="name"><br /> <br />
+
                          </div>
                     </div>
                     <button type="submit">Save</button>

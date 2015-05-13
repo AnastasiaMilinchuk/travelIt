@@ -95,20 +95,20 @@
                         <ul class="top-user-area-list list list-horizontal list-border">
                             <li class="top-user-area-avatar">
                                 <a href="user-profile.html">
-                                    <img class="origin round" src="img/amaze_40x40.jpg" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                    <img class="origin round" src="<c:url value="/pages/images/amaze_40x40.jpg"/>" alt="Image Alternative text" title="AMaze" />Hi, John</a>
                             </li>
                             <li><a href="#">Sign Out</a>
                             </li>
 
                             <li class="top-user-area-lang nav-drop">
                                 <a href="#">
-                                    <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                    <img src="<c:url value="/pages/images/flag/uk.png"/>" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
                                 </a>
                                 <ul class="list nav-drop-menu">
 
                                     <li>
                                         <a title="Ukrainian" href="#">
-                                            <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
+                                            <img src="<c:url value="/pages/images/flag/ua.png"/>" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
                                         </a>
                                     </li>
 
@@ -123,14 +123,14 @@
     <div class="container">
     <div class="nav">
     <ul class="slimmenu" id="slimmenu">
-    <li><a href="index.html">Home</a>
+    <li><a href="main.html">Home</a>
     </li>
-    <li class="active"><a href="success-payment.html">Profile</a>
+    <li class="active"><a href="profile.html">Profile</a>
     </li>
-    <li><a href="feature-typography.html">Places</a>
+    <li><a href="places.html">Places</a>
 
     </li>
-    <li><a href="hotels.html">Routes</a>
+    <li><a href="achievements.html">Routes</a>
     </li>
 
     </ul>
@@ -150,7 +150,7 @@
         <div class="col-md-3">
             <aside class="user-profile-sidebar">
                 <div class="user-profile-avatar text-center">
-                    <img src="img/amaze_300x300.jpg" alt="Image Alternative text" title="AMaze" />
+                    <img src="<c:url value="/pages/images/amaze_300x300.jpg"/>" alt="Image Alternative text" title="AMaze" />
                     <h5></h5>
                     <p>Member Since May 2012</p>
                 </div>
@@ -171,7 +171,7 @@
         <div class="col-md-9">
             <h4>Total Traveled</h4>
             <ul class="list list-inline user-profile-statictics mb30">
-                <li><i class="fa fa-dashboard user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/miles.jpg"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>12540</h5>
                     <p>Miles</p>
                 </li>
