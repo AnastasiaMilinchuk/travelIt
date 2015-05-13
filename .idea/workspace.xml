@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ca3cd5-84f8-4994-adb0-2b6527288b48" name="Default" comment="">
+    <list default="true" id="c9ca3cd5-84f8-4994-adb0-2b6527288b48" name="Default" comment="added profile (without elements)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/places.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/places.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webContexts.xml" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="77509c34-19bc-4633-b08e-c55fff461939" name="Failed commit: Default" comment="Add profile&#10;" />
@@ -188,7 +188,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="60" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="57" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -203,7 +203,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="106" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="122" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -218,7 +218,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="113" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="129" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -233,7 +233,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="114" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" line="130" class="com.travelit.secure.controller.PlacesController" package="com.travelit.secure.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -261,28 +261,8 @@
       <file leaf-file-name="places.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/places.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="32" selection-start="2480" selection-end="2480" vertical-scroll-proportion="-44.666668" vertical-offset="0" max-vertical-offset="1818">
+            <state line="63" column="34" selection-start="2351" selection-end="2351" vertical-scroll-proportion="-12.0" vertical-offset="810" max-vertical-offset="1836">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="21" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="828">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/profile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.44383562" vertical-offset="0" max-vertical-offset="5238">
-              <folding>
-                <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -290,10 +270,28 @@
       <file leaf-file-name="PlacesController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="77" selection-start="2289" selection-end="2289" vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="2376">
+            <state line="55" column="93" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2664">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="117" column="22" selection-start="6696" selection-end="6696" vertical-scroll-proportion="-78.0" vertical-offset="0" max-vertical-offset="5400">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringConfig.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="52" selection-start="964" selection-end="964" vertical-scroll-proportion="0.33333334" vertical-offset="143" max-vertical-offset="666">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -302,7 +300,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="202" column="84" selection-start="8029" selection-end="8029" vertical-scroll-proportion="-6.0" vertical-offset="3474" max-vertical-offset="5508">
-              <folding />
+              <folding>
+                <marker date="1429568083238" expanded="true" signature="1246:1348" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -364,13 +364,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/repositories/UserMongoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/services/UserMongoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/repositories/PlaceMongoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/service/mongo/services/PlaceMongoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/SignupController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/entity/Place.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/SpringConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/places.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" />
@@ -1532,7 +1532,7 @@
       <workItem from="1431003313984" duration="9087000" />
       <workItem from="1431279057722" duration="10307000" />
       <workItem from="1431428572605" duration="1284000" />
-      <workItem from="1431529620338" duration="4490000" />
+      <workItem from="1431529620338" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1429121657080</created>
@@ -1610,11 +1610,15 @@
       <created>1431530795582</created>
       <updated>1431530795582</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added profile&#10;">
+      <created>1431534433328</created>
+      <updated>1431534433328</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265315000" />
+    <option name="totallyTimeSpent" value="269389000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1638,7 +1642,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1297" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1653,15 +1657,15 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19444445" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15052041" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1561249" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45061728" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3425926" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6867284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18827161" sideWeight="0.4996016" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2824074" sideWeight="0.4996016" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06485188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1679,21 +1683,21 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4845679" sideWeight="0.5003984" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4845679" sideWeight="0.5003984" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.03990423" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19444445" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07055215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1561249" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62593144" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0030864198" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1703,12 +1707,12 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27006173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6867284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52160496" sideWeight="0.4996016" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.4996016" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14900398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06485188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1736,11 +1740,12 @@
     <MESSAGE value="Add add places&#10;" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Add profile&#10;" />
-    <MESSAGE value="added profile&#10;" />
     <MESSAGE value="added places&#10;" />
     <MESSAGE value="added add place" />
     <MESSAGE value="delete add place&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete add place&#10;" />
+    <MESSAGE value="added profile&#10;" />
+    <MESSAGE value="added profile (without elements)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added profile (without elements)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1897,13 +1902,6 @@
         <state line="7" column="0" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/search/UserPlaces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234" />
@@ -1990,42 +1988,49 @@
         <state line="60" column="0" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="4122" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="84" selection-start="8029" selection-end="8029" vertical-scroll-proportion="-6.0" vertical-offset="3474" max-vertical-offset="5508">
+          <folding>
+            <marker date="1429568083238" expanded="true" signature="1246:1348" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="828">
+        <state line="26" column="21" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.41747573" vertical-offset="210" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/places.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="34" selection-start="2351" selection-end="2351" vertical-scroll-proportion="-12.0" vertical-offset="810" max-vertical-offset="1836">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/travelit/secure/controller/PlacesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="77" selection-start="2289" selection-end="2289" vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="2376">
+        <state line="55" column="93" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2664">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/places.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="32" selection-start="2480" selection-end="2480" vertical-scroll-proportion="-44.666668" vertical-offset="0" max-vertical-offset="1818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="84" selection-start="8029" selection-end="8029" vertical-scroll-proportion="-6.0" vertical-offset="3474" max-vertical-offset="5508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.44383562" vertical-offset="0" max-vertical-offset="5238">
-          <folding>
-            <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="117" column="22" selection-start="6696" selection-end="6696" vertical-scroll-proportion="-78.0" vertical-offset="0" max-vertical-offset="5400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SpringConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="52" selection-start="964" selection-end="964" vertical-scroll-proportion="0.33333334" vertical-offset="143" max-vertical-offset="666">
+          <folding />
         </state>
       </provider>
     </entry>

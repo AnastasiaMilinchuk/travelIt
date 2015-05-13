@@ -9,12 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.BufferedOutputStream;
@@ -54,9 +52,8 @@ public class PlacesController {
 
 
     @RequestMapping(method = RequestMethod.POST, headers=("content-type=multipart/*"))
-    public ModelAndView addPlace(@ModelAttribute("place") Place place,
-                           BindingResult result, WebRequest request, Errors errors
-                                 , @RequestParam("file") MultipartFile image){
+    public ModelAndView addPlace(@ModelAttribute("place") Place place,@RequestParam("name") String name,
+                          @RequestParam("file") MultipartHttpServletRequest image,  BindingResult result, WebRequest request, Errors errors){
         System.out.println("add place method");
         if(!result.hasErrors()){
             place.setDateOfCreation(new Date());
@@ -102,6 +99,25 @@ public class PlacesController {
             return new ModelAndView("places", "error", place);
         }
     }
+
+//    @RequestMapping( method=RequestMethod.POST)
+//    public @ResponseBody String handleFileUpload(@RequestParam("name") String name,
+//                                                 @RequestParam("file") MultipartFile file){
+//        if (!file.isEmpty()) {
+//            try {
+//                byte[] bytes = file.getBytes();
+//                BufferedOutputStream stream =
+//                        new BufferedOutputStream(new FileOutputStream(new File(name)));
+//                stream.write(bytes);
+//                stream.close();
+//                return "You successfully uploaded " + name + "!";
+//            } catch (Exception e) {
+//                return "You failed to upload " + name + " => " + e.getMessage();
+//            }
+//        } else {
+//            return "You failed to upload " + name + " because the file was empty.";
+//        }
+//    }
 
     private void validateImage(MultipartFile image) {
         if (!image.getContentType().equals("image/jpeg")) {

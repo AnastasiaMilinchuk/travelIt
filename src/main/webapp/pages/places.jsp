@@ -67,10 +67,11 @@
                             <input id="tags"/>
                             <br>
 
+                            <label>Name:</label>
+                            <input type="text" name="name">
                             <label>File to upload:</label>
                             <input type="file" name="file"><br />
-                            <label>Name:</label>
-                            <input type="text" name="name"><br /> <br />
+
                          </div>
                     </div>
                     <button type="submit">Save</button>
