@@ -52,8 +52,9 @@ public class PlacesController {
 
 
     @RequestMapping(method = RequestMethod.POST, headers=("content-type=multipart/*"))
-    public ModelAndView addPlace(@ModelAttribute("place") Place place,@RequestParam("name") String name,
-                          @RequestParam("file") MultipartHttpServletRequest image,  BindingResult result, WebRequest request, Errors errors){
+    public ModelAndView addPlace(@ModelAttribute("place") Place place,
+                                 @RequestParam("file") MultipartHttpServletRequest image,
+                                 BindingResult result, WebRequest request, Errors errors){
         System.out.println("add place method");
         if(!result.hasErrors()){
             place.setDateOfCreation(new Date());
