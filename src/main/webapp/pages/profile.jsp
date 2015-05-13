@@ -1,9 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-<!DOCTYPE HTML>
 <html>
-
 <head>
     <title>TravelIt - Travel Profile</title>
 
@@ -19,8 +17,8 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/icomoon.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/styles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
-    <div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>                 .fluid-width-video-wrapper {                   width: 100%;                                position: relative;                         padding: 0;                              }                                                                                       .fluid-width-video-wrapper iframe,          .fluid-width-video-wrapper object,          .fluid-width-video-wrapper embed {             position: absolute;                         top: 0;                                     left: 0;                                    width: 100%;                                height: 100%;                            }                                         </style></div><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script><script src="js/modernizr.js"></script>
-
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
+    <script src="js/modernizr.js"></script>
     <link rel="stylesheet" href="css/switcher.css">
     <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/bright-turquoise.css"/>" title="bright-turquoise" media="all">
     <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/turkish-rose.css"/>" title="turkish-rose" media="all">
@@ -57,7 +55,9 @@
 <body>
 
 <!-- FACEBOOK WIDGET -->
-<div id="fb-root"></div>
+<div id="fb-root">
+
+</div>
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -73,68 +73,67 @@
 <!-- /FACEBOOK WIDGET -->
 <div class="global-wrap">
 <header id="main-header">
-<div class="header-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <a class="logo" href="index.html">
-                    <img src="<c:url value="/pages/images/login/logoEarth1.png" >" alt="Image Alternative text" title="Image Title" />
-                </a>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <form class="main-header-search">
-                    <div class="form-group form-group-icon-left">
-                        <i class="fa fa-search input-icon"></i>
-                        <input type="text" class="form-control">
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="logo" href="index.html">
+                        <img src="<c:url value="/pages/images/login/logoEarth1.png" />" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <form class="main-header-search">
+                        <div class="form-group form-group-icon-left">
+                            <i class="fa fa-search input-icon"></i>
+                            <input type="text" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-user-area clearfix">
+                        <ul class="top-user-area-list list list-horizontal list-border">
+                            <li class="top-user-area-avatar">
+                                <a href="user-profile.html">
+                                    <img class="origin round" src="img/amaze_40x40.jpg" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                            </li>
+                            <li><a href="#">Sign Out</a>
+                            </li>
+
+                            <li class="top-user-area-lang nav-drop">
+                                <a href="#">
+                                    <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                </a>
+                                <ul class="list nav-drop-menu">
+
+                                    <li>
+                                        <a title="Ukrainian" href="#">
+                                            <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                </form>
-            </div>
-            <div class="col-md-4">
-                <div class="top-user-area clearfix">
-                    <ul class="top-user-area-list list list-horizontal list-border">
-                        <li class="top-user-area-avatar">
-                            <a href="user-profile.html">
-                                <img class="origin round" src="img/amaze_40x40.jpg" alt="Image Alternative text" title="AMaze" />Hi, John</a>
-                        </li>
-                        <li><a href="#">Sign Out</a>
-                        </li>
-
-                        <li class="top-user-area-lang nav-drop">
-                            <a href="#">
-                                <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
-                            </a>
-                            <ul class="list nav-drop-menu">
-
-                                <li>
-                                    <a title="Ukrainian" href="#">
-                                        <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-<div class="nav">
-<ul class="slimmenu" id="slimmenu">
-<li><a href="index.html">Home</a>
-</li>
-<li class="active"><a href="success-payment.html">Profile</a>
-</li>
-<li><a href="feature-typography.html">Places</a>
+    <div class="container">
+    <div class="nav">
+    <ul class="slimmenu" id="slimmenu">
+    <li><a href="index.html">Home</a>
+    </li>
+    <li class="active"><a href="success-payment.html">Profile</a>
+    </li>
+    <li><a href="feature-typography.html">Places</a>
 
-</li>
-<li><a href="hotels.html">Routes</a>
-</li>
+    </li>
+    <li><a href="hotels.html">Routes</a>
+    </li>
 
-</li>
-</ul>
-</div>
+    </ul>
+    </div>
 </div>
 </header>
 
@@ -204,7 +203,7 @@
     <div class="container">
         <div class="row row-wrap">
         <div class="col-md-3">
-        <a class="logo" href="index.html">
+        <a class="logo" href="">
         <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
         </a>
         <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
@@ -231,10 +230,10 @@
         <h4>Newsletter</h4>
         <form>
         <label>Enter your E-mail Address</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control"/>
         <p class="mt5"><small>*We Never Send Spam</small>
         </p>
-        <input type="submit" class="btn btn-primary" value="Subscribe">
+        <input type="submit" class="btn btn-primary" value="Subscribe"/>
         </form>
         </div>
         <div class="col-md-2">
@@ -279,7 +278,7 @@
     <script src="<c:url value="/pages/js/icheck.js"/>"></script>
     <script src="<c:url value="/pages/js/fotorama.js"/>"></script>
     <script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>
-    <script src="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"></script>
+    <script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>
     <script src="<c:url value="/pages/js/typeahead.js"/>"></script>
     <script src="<c:url value="/pages/js/card-payment.js"/>"></script>
     <script src="<c:url value="/pages/js/magnific.js"/>"></script>
@@ -291,12 +290,6 @@
     <script src="<c:url value="/pages/js/custom.js"/>"></script>
     <script src="<c:url value="/pages/js/switcher.js"/>"></script>
 </div>
+
 </body>
-
 </html>
-
-
-
-
-
-

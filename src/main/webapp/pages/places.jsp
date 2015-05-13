@@ -44,7 +44,7 @@
             </div>
 
             <div class="add-own-place">
-                <form action="<c:url value="/places"/>" method="post">
+                <form action="<c:url value="/places"/>" method="post" enctype="multipart/form-data">
                     <h1>Add my own place</h1>
                     <div class="add-own-place-container">
                         <div class="photo">

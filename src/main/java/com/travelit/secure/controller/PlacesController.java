@@ -53,7 +53,7 @@ public class PlacesController {
 //    }
 
 
-    @RequestMapping(method = RequestMethod.POST/*, headers=("content-type=multipart/*")*/)
+    @RequestMapping(method = RequestMethod.POST, headers=("content-type=multipart/*"))
     public ModelAndView addPlace(@ModelAttribute("place") Place place,
                            BindingResult result, WebRequest request, Errors errors
                                  , @RequestParam("file") MultipartFile image){
