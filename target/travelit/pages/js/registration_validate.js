@@ -2,6 +2,9 @@
  * Created by bubble on 28.04.15.
  */
 
+/**
+ * Created by bubble on 28.04.15.
+ */
 var validateEmail = function (email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -61,7 +64,7 @@ var main = function() {
         validate(password, submit);
     };
     submitPassword.onblur = function() {
-       // validate(submitPassword, submit);
+        // validate(submitPassword, submit);
         if (password.value != submitPassword.value) addError(submitPassword, "Password doesn't match", submit);
         else takeAwayError(submitPassword, submit);
     };
