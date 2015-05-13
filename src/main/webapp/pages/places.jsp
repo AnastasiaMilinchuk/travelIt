@@ -24,6 +24,11 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false">
+    </script>
+
+
     <title></title>
 </head>
 <body>
@@ -45,19 +50,31 @@
                         <div class="photo">
                         </div>
                         <div class="description">
+
+                            <label>Name:</label>
                             <input id="name" name="placeArticle"/>
+                            <br>
+                            <label>Description: </label>
                             <input id="description" name="placeDescription"/>
+                            <br>
+                            <label>Address:</label>
                             <input id="address" name="placeAddress" />
+                            <br>
                             <div id="map-canvas" class="map">
                             </div>
 
                             <label>Tags</label>
                             <input id="tags"/>
+                            <br>
+
+                            <label>File to upload:</label>
+                            <input type="file" name="file"><br />
+                            <label>Name:</label>
+                            <input type="text" name="name"><br /> <br />
                          </div>
                     </div>
                     <button type="submit">Save</button>
-                    File to upload: <input type="file" name="file"><br /> Name: <input
-                        type="text" name="name"><br /> <br />
+
                 </form>
             </div>
         </sec:authorize>

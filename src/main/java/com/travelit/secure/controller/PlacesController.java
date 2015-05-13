@@ -46,20 +46,22 @@ public class PlacesController {
         }
         return "places";
     }
+//
+//    @RequestMapping(method = RequestMethod.POST)
+//    public ModelAndView addPhoto( @RequestParam("file") MultipartFile image, BindingResult result, WebRequest request, Errors errors){
+//
+//    }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView addPhoto( @RequestParam("file") MultipartFile image, BindingResult result, WebRequest request, Errors errors){
 
-    }
-
-
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST/*, headers=("content-type=multipart/*")*/)
     public ModelAndView addPlace(@ModelAttribute("place") Place place,
-                           BindingResult result, WebRequest request, Errors errors){
+                           BindingResult result, WebRequest request, Errors errors
+                                 , @RequestParam("file") MultipartFile image){
+        System.out.println("add place method");
         if(!result.hasErrors()){
             place.setDateOfCreation(new Date());
             service.save(place);
-
+            System.out.println(" save place");
 //            if (!file.isEmpty()) {
 //                try {
 //                    byte[] bytes = file.getBytes();
@@ -72,24 +74,32 @@ public class PlacesController {
 //                    System.out.println("You failed to upload " +place.getName()+ " => " + e.getMessage());
 //                }
 //            }
-            if (!image.isEmpty()) {
-                try {
-                    validateImage(image);
 
-                } catch (RuntimeException re) {
-                    result.reject(re.getMessage());
-                }
+//
+//            if (!image.isEmpty()) {
+//                System.out.println("check image");
+//                try {
+//                    validateImage(image);
+//                    System.out.println("validate image");
+//
+//                } catch (RuntimeException re) {
+//                    result.reject(re.getMessage());
+//                    System.out.println("error image");
+//                }
+//
+//                try {
+//                    saveImage(place.getName() + ".jpg", image);
+//                    System.out.println("save image");
+//                } catch (IOException e) {
+//                    System.out.println("reject image");
+//                    result.reject(e.getMessage());
+//                }
+            //}
 
-                try {
-                    saveImage(place.getName() + ".jpg", image);
-                } catch (IOException e) {
-                    result.reject(e.getMessage());
-                }
-            }
-            return new ModelAndView("added", "place", place);
+            return new ModelAndView("places","successfull", place);
         }
         else {
-            return new ModelAndView("places", "place", place);
+            return new ModelAndView("places", "error", place);
         }
     }
 
