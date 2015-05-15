@@ -21,57 +21,24 @@
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
     <script src="js/modernizr.js"></script>
     <link rel="stylesheet" href="css/switcher.css">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/bright-turquoise.css"/>" title="bright-turquoise" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/turkish-rose.css"/>" title="turkish-rose" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/salem.css"/>" title="salem" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/hippie-blue.css"/>" title="hippie-blue" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/mandy.css"/>" title="mandy" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/green-smoke.css"/>" title="green-smoke" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/horizon.css"/>" title="horizon" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/cerise.css"/>" title="cerise" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/brick-red.css"/>" title="brick-red" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/de-york.css"/>" title="de-york" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/shamrock.css"/>" title="shamrock" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/studio.css"/>" title="studio" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/leather.css"/>" title="leather" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/denim.css"/>" title="denim" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/scarlet.css"/>" title="scarlet" media="all">
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');
+            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
             var mapOptions = {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
+                center: myLatLng,
+                zoom: 10,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(mapCanvas, mapOptions)
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
 </head>
-
 <body>
-
-<!-- FACEBOOK WIDGET -->
-<div id="fb-root">
-
-</div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-<!-- /FACEBOOK WIDGET -->
 <div class="global-wrap">
 <header id="main-header">
     <div class="header-top">
@@ -155,15 +122,13 @@
                     <p>Member Since May 2012</p>
                 </div>
                 <ul class="list user-profile-nav">
-                    <li><a href="user-profile.html"><i class="fa fa-user"></i>Overview</a>
+                    <li><a href="user-profile.html">Overview</a>
                     </li>
-                    <li><a href="user-profile-settings.html"><i class="fa fa-cog"></i>Settings</a>
+                    <li><a href="user-profile-settings.html">About me</a>
                     </li>
-                    <li><a href="user-profile-photos.html"><i class="fa fa-camera"></i>My Travel Places</a>
+                    <li><a href="user-profile-photos.html">My Travel Places</a>
                     </li>
-                    <li><a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>History</a>
-                    </li>
-                    <li><a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>Wish list</a>
+                    <li><a href="user-profile-booking-history.html"></i>History</a>
                     </li>
                 </ul>
             </aside>
@@ -171,23 +136,23 @@
         <div class="col-md-9">
             <h4>Total Traveled</h4>
             <ul class="list list-inline user-profile-statictics mb30">
-                <li><img src="<c:url value="/pages/images/miles.jpg"/>" alt="Image Alternative text" title="AMaze" />
+                <li><img src="<c:url value="/pages/images/miles.svg"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>12540</h5>
                     <p>Miles</p>
                 </li>
-                <li><i class="fa fa-globe user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/earth.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>2%</h5>
                     <p>World</p>
                 </li>
-                <li><i class="fa fa-building-o user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/cities.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>15</h5>
-                    <p>Cityes</p>
+                    <p>Cities</p>
                 </li>
-                <li><i class="fa fa-flag-o user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/flag.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>3</h5>
                     <p>Countries</p>
                 </li>
-                <li><i class="fa fa-plane user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/trip.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>20</h5>
                     <p>Trips</p>
                 </li>
@@ -278,8 +243,8 @@
     <script src="<c:url value="/pages/js/ionrangeslider.js"/>"></script>
     <script src="<c:url value="/pages/js/icheck.js"/>"></script>
     <script src="<c:url value="/pages/js/fotorama.js"/>"></script>
-    <script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>
-    <script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>
+    <%--<script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>--%>
+    <%--<script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>--%>
     <script src="<c:url value="/pages/js/typeahead.js"/>"></script>
     <script src="<c:url value="/pages/js/card-payment.js"/>"></script>
     <script src="<c:url value="/pages/js/magnific.js"/>"></script>
