@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/icomoon.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/styles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <script src="js/modernizr.js"></script>
-    <link rel="stylesheet" href="css/switcher.css">
-
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
@@ -51,9 +50,9 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-
 </head>
 <body>
+<sec:authorize access="isAuthenticated()">
 <div class="global-wrap">
 <header id="main-header">
     <div class="header-top">
@@ -66,8 +65,8 @@
                 </div>
                 <div class="col-md-3 col-md-offset-2">
                     <form class="main-header-search">
-                        <div class="form-group form-group-icon-left">
-                            <i class="fa fa-search input-icon"></i>
+                        <div class="form-group form-group-icon-right">
+                            <i class="form-control-feedback glyphicon glyphicon-search"></i>
                             <input type="text" class="form-control">
                         </div>
                     </form>
@@ -76,15 +75,15 @@
                     <div class="top-user-area clearfix">
                         <ul class="top-user-area-list list list-horizontal list-border">
                             <li class="top-user-area-avatar">
-                                <a href="user-profile.html">
+                                <a href="profile">
                                     <img class="origin round" src="<c:url value="/pages/images/amaze_40x40.jpg"/>" alt="Image Alternative text" title="AMaze" />Hi, John</a>
                             </li>
-                            <li><a href="#">Sign Out</a>
+                            <li><a href='<c:url value="/logout" />'>Sign Out</a>
                             </li>
 
                             <li class="top-user-area-lang nav-drop">
                                 <a href="#">
-                                    <img src="<c:url value="/pages/images/flag/uk.png"/>" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                    <img src="<c:url value="/pages/images/flag/uk.png"/>" alt="Image Alternative text" title="Image Title" />ENG<i class="glyphicon glyphicon-menu-down"></i>
                                 </a>
                                 <ul class="list nav-drop-menu">
 
@@ -107,7 +106,7 @@
     <ul class="slimmenu" id="slimmenu">
     <li><a href="main.html">Home</a>
     </li>
-    <li class="active"><a href="profile.html">Profile</a>
+    <li class="active"><a href="profile">Profile</a>
     </li>
     <li><a href="places.html">Places</a>
 
@@ -137,13 +136,13 @@
                     <p>Member Since May 2012</p>
                 </div>
                 <ul class="list user-profile-nav">
-                    <li><a href="user-profile.html">Overview</a>
+                    <li><a href="profile">Overview</a>
                     </li>
-                    <li><a href="user-profile-settings.html">About me</a>
+                    <li><a href="profile-about">About me</a>
                     </li>
-                    <li><a href="user-profile-photos.html">My Travel Places</a>
+                    <li><a href="user-profile-photos">My Travel Places</a>
                     </li>
-                    <li><a href="user-profile-booking-history.html"></i>History</a>
+                    <li><a href="user-profile-booking-history">History</a>
                     </li>
                 </ul>
             </aside>
@@ -271,6 +270,14 @@
     <script src="<c:url value="/pages/js/custom.js"/>"></script>
     <script src="<c:url value="/pages/js/switcher.js"/>"></script>
 </div>
+</sec:authorize>
 
+<sec:authorize access="!isAuthenticated()">
+    <%
+        // Redirecting to login page
+        response.setStatus(response.SC_MOVED_TEMPORARILY);
+        response.setHeader("Location", "/travelit/login");
+    %>
+</sec:authorize>
 </body>
 </html>

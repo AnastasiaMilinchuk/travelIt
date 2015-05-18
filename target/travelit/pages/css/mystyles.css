@@ -10,3 +10,16 @@
 li a {
     text-align: center;
 }
+
+/*.main-header-search .form-control {*/
+    /*background: url("images/Search-icon.png") no-repeat 40px 40px;*/
+/*}*/
+
+.main-header-search {
+    color: #fff;
+}
+
+.top-user-area-lang i {
+    font-size: 8px;
+    margin-left: 4px;
+}

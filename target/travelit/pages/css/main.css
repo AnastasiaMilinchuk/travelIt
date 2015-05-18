@@ -1,31 +1,109 @@
-html {
-    height: 100%;
-
+*{
+    margin: 0;
 }
-.background {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 1;
-    z-index: -1;
-    background: url(http://cdns2.freepik.com/free-photo/blue-chevorn-seamless-pattern_23-2147496066.jpg) no-repeat;
-    background-size: 100%;
+
+.body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+.global-wrap {
+    background: transparent;
+}
+
+.main_block {
+    position: relative;
+    /*top: -197px;*/
+    height: 700px;
+}
+
+.nav1 {
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav1 * {
+    color: #fff;
+    z-index: 1;
+}
+
+.nav1 *:hover {
+    cursor: hand;
+}
+
+.prev {
+    float: left;
+    margin-left: 40px;
+}
+
+ .next {
+    float: right;
+    margin-right: 40px;
+}
+
+.block {
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15%;
+    position: absolute;
+}
+
+.circle {
+    display: table;
+    height: 260px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 260px;
+}
+
+.ctitle {
+    background: rgba(0,0,0,0.7);
+    left: 50%;
+    margin-left: -250px;
+}
+
+.cdescr {
+    background: rgba(255,255,255,0.7);
+    margin-right: -250px;
+    right: 50%;
+    /*top: 50%;*/
+}
+
+.circle span {
+    color: #fff;
+    display: table-cell;
+    font-family: Cabin, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    padding: 0px 40px;
+    vertical-align: middle;
+}
+
+.cdescr span {
+    color: #000;
+    font-size: 16px;
 }
 
 .title {
-    text-align: left;
+    text-align: center;
     cursor: hand;
-    margin-left: 120px;
+    /*margin-left: 120px;*/
+    margin-top: 100px;
 }
 
 .place_block {
-    border: 1px solid grey;
-    display: inline-block;
-    height: 350px;
-    margin: 10px;
+    height: 400px;
+    margin: 0px 0px 30px 0;
     width: 300px;
+    padding: 0;
 }
 
 .place_block h2 {
@@ -36,29 +114,29 @@ html {
     margin: 0;
 }
 
-.place_block img {
-    height: 100%;
-    margin: auto;
-    width: 270px;
-    -webkit-filter: grayscale(0.3);
-    filter: grayscale(0.5);
-}
-
-.place_block img:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-
 .place_block_img {
     /*background: url(ukraine.jpg) no-repeat;*/
-    height: 70%;
-    margin: auto;
-    margin-top: 10px;
-    width: 270px;
+    /*height: 70%;*/
+    /*margin: auto;*/
+    /*margin-top: 10px;*/
+    /*width: 270px;*/
+    -webkit-filter: sepia(0.2);
+    /*height:250px;*/
+    /*filter: sepia(100%)*/
+}
+
+.place_block img {
+    height: 250px;
+}
+
+.place_block_img:hover {
+    -webkit-filter: sepia(0);
 }
 
 .place_block .description_place {
-    height: 2em;
+    /*background: rgba(255, 250, 42, 0.37);*/
+    padding: 20px 10px 0px 10px;
+    height: 150px;
     text-align: center;
     position: relative;
     bottom: 0;
@@ -89,79 +167,15 @@ html {
     cursor: hand;
 }
 
-
-.big_block {
-    /*background-color: rgba(204, 204, 204, 0.39);*/
-    /*background-color:rgb(107, 189, 196);*/
-    border-radius: 5px;
-    font-family: Andika,Times,serif;
-    float: center;
-    padding: 3px;
-    width: 100%;
-    height: 350px;
-
-    display: table-cell;
-    vertical-align: bottom;
-
-    /*background: -webkit-linear-gradient(left, rgb(107, 189, 196), rgba(204, 204, 204, 0.39) 40%); /* For Safari 5.1 to 6.0 */*/
-    /*background: -o-linear-gradient(right, blue, grey); /* For Opera 11.1 to 12.0 */
-    /*background: -moz-linear-gradient(right, blue, grey); /* For Firefox 3.6 to 15 */
-    /*background: linear-gradient(right, rgb(107, 189, 196), rgba(204, 204, 204, 0.39) 40%); /* Standard syntax (must be last) */*/
+.btnn {
+    border: 3px solid teal;
+    height: 45px;
+    font-family: 'Lobster', cursive;
+    margin: auto;
+    padding-top: 0.5%;
+    text-align:  center;
+    text-decoration: none;
+    width: 200px;
+    font-size: 22px;
+    color: cadetblue;
 }
-
-.big_block>div {
-    display: inline-block;
-    /*height: 350px;*/
-    /*width: 48%;*/
-}
-
-.big_block_description {
-    vertical-align: top;
-    margin-top: 2%;
-    margin-left: 1%;
-    width:48%;
-    height: 350px;
-}
-
-.big_block_image {
-    background: url(http://ukrainetrek.com/blog/wp-content/uploads/2011/09/summer-in-ukraine-wallpaper-2.jpg) no-repeat 100% 100%;
-    border: 0.5px solid;
-    border-radius: 50%;
-    height: 350px;
-    -webkit-filter: grayscale(0.3);
-    filter: grayscale(0.5);
-    width:350px;
-}
-
-.big_block_image:hover {
-    /*border-radius: 15px;*/
-    cursor: hand;
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    /*width:48%;*/
-}
-
-
-
-.big_block_description h1{
-    float: left;
-    font: bold 100% Helvetica, sans-serif;
-    font-size: 30px;
-    padding: 5px;
-    text-align: left;
-    letter-spacing: -1px;
-    color: teal;
-
-}
-
-.big_block_description p {
-    display: table-cell;
-    padding: 5px;
-    padding-top: 15px;
-    text-align: justify;
-    font-family:Monda;
-    /*color: maroon;*/
-}
-
-
-
