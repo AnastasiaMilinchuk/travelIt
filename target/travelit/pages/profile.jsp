@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>TravelIt - Travel Profile</title>
@@ -78,7 +79,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <a class="logo" href="index.html">
-                        <img src="<c:url value="/pages/images/login/logoEarth1.png" />" alt="Image Alternative text" title="Image Title" />
+                        <%--<img src="<c:url value="/pages/images/login/logoEarth1.png" />" alt="Image Alternative text" title="Image Title" />--%>
                     </a>
                 </div>
                 <div class="col-md-3 col-md-offset-2">
