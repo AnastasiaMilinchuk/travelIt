@@ -18,21 +18,14 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.validation.Valid;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
 
-
-/**
- * Created by milinchuk on 4/4/15.
- */
 @Controller
 @ComponentScan("com.travelit")
 public class PlacesController{
@@ -50,11 +43,11 @@ public class PlacesController{
         this.validator = validator;
     }
 
-
     @RequestMapping(value = "/places", method = RequestMethod.GET )
     public String start(ModelMap model){
         System.out.println("koko start method ");
         model.addAttribute("places", new PlaceData());
+        model.addAttribute("file", new FileUpload());
         return "places";
     }
 
@@ -123,12 +116,12 @@ public class PlacesController{
         }
     }
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    private String upload(@RequestParam("file") MultipartFile file) throws IOException {
+    private String upload(@ModelAttribute("file") FileUpload file) throws IOException {
         System.out.println("upload " + file.toString());
-        ValidateMassage message = validator.validateImage(file);
+        ValidateMassage message = validator.validateImage(file.getFile());
         if (message.isValid){
-            this.file = file;
-            saveImage(file.getOriginalFilename());
+            this.file = file.getFile();
+            saveImage(file.getFile().getOriginalFilename());
         }
         return message.message;
     }

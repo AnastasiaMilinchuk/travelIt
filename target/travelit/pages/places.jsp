@@ -52,13 +52,13 @@
     <section>
         <%--<sec:authorize access="isAuthenticated()">--%>
             <jsp:include page="templates/upperMenuTempl.jsp"  />
-            <form:form method="POST" enctype="multipart/form-data" action="upload" >
+            <form:form method="POST" modelAttribute="file" enctype="multipart/form-data" action="upload" >
                 <p>File to upload:</p>
-                <form:input path="image" type="file" id = "image" name="image"/>
+                <form:input path="file" type="file" id = "file" name="file"/>
                 <input type="submit" name="action" value="upload" />
             </form:form>
 
-            <form:form modelAttribute="places"  method="POST">
+            <form:form modelAttribute="places" method="POST">
                 <fieldset>
                         <div class="selected-places">
                             <h1>My selected places</h1>

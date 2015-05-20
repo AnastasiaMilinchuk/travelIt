@@ -18,60 +18,41 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/icomoon.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/styles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <script src="js/modernizr.js"></script>
-    <link rel="stylesheet" href="css/switcher.css">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/bright-turquoise.css"/>" title="bright-turquoise" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/turkish-rose.css"/>" title="turkish-rose" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/salem.css"/>" title="salem" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/hippie-blue.css"/>" title="hippie-blue" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/mandy.css"/>" title="mandy" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/green-smoke.css"/>" title="green-smoke" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/horizon.css"/>" title="horizon" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/cerise.css"/>" title="cerise" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/brick-red.css"/>" title="brick-red" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/de-york.css"/>" title="de-york" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/shamrock.css"/>" title="shamrock" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/studio.css"/>" title="studio" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/leather.css"/>" title="leather" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/denim.css"/>" title="denim" media="all">
-    <link rel="alternate stylesheet" type="text/css" href="<c:url value="/pages/css/schemes/scarlet.css"/>" title="scarlet" media="all">
-
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');
+            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
             var mapOptions = {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
+                center: myLatLng,
+                zoom: 10,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = new google.maps.LatLng(position.coords.latitude,
+                            position.coords.longitude);
+
+                    map.setCenter(pos);
+                }, function() {
+                    handleNoGeolocation(true);
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleNoGeolocation(false);
             }
-            var map = new google.maps.Map(mapCanvas, mapOptions)
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-
 </head>
-
 <body>
-
-<!-- FACEBOOK WIDGET -->
-<div id="fb-root">
-
-</div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-<!-- /FACEBOOK WIDGET -->
+<sec:authorize access="isAuthenticated()">
 <div class="global-wrap">
 <header id="main-header">
     <div class="header-top">
@@ -84,8 +65,8 @@
                 </div>
                 <div class="col-md-3 col-md-offset-2">
                     <form class="main-header-search">
-                        <div class="form-group form-group-icon-left">
-                            <i class="fa fa-search input-icon"></i>
+                        <div class="form-group form-group-icon-right">
+                            <i class="form-control-feedback glyphicon glyphicon-search"></i>
                             <input type="text" class="form-control">
                         </div>
                     </form>
@@ -94,21 +75,21 @@
                     <div class="top-user-area clearfix">
                         <ul class="top-user-area-list list list-horizontal list-border">
                             <li class="top-user-area-avatar">
-                                <a href="user-profile.html">
-                                    <img class="origin round" src="img/amaze_40x40.jpg" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                <a href="profile">
+                                    <img class="origin round" src="<c:url value="/pages/images/amaze_40x40.jpg"/>" alt="Image Alternative text" title="AMaze" />Hi, John</a>
                             </li>
-                            <li><a href="#">Sign Out</a>
+                            <li><a href='<c:url value="/logout" />'>Sign Out</a>
                             </li>
 
                             <li class="top-user-area-lang nav-drop">
                                 <a href="#">
-                                    <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                    <img src="<c:url value="/pages/images/flag/uk.png"/>" alt="Image Alternative text" title="Image Title" />ENG<i class="glyphicon glyphicon-menu-down"></i>
                                 </a>
                                 <ul class="list nav-drop-menu">
 
                                     <li>
                                         <a title="Ukrainian" href="#">
-                                            <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
+                                            <img src="<c:url value="/pages/images/flag/ua.png"/>" alt="Image Alternative text" title="Image Title" /><span class="right">UA</span>
                                         </a>
                                     </li>
 
@@ -123,14 +104,14 @@
     <div class="container">
     <div class="nav">
     <ul class="slimmenu" id="slimmenu">
-    <li><a href="index.html">Home</a>
+    <li><a href="main.html">Home</a>
     </li>
-    <li class="active"><a href="success-payment.html">Profile</a>
+    <li class="active"><a href="profile">Profile</a>
     </li>
-    <li><a href="feature-typography.html">Places</a>
+    <li><a href="places.html">Places</a>
 
     </li>
-    <li><a href="hotels.html">Routes</a>
+    <li><a href="achievements.html">Routes</a>
     </li>
 
     </ul>
@@ -150,20 +131,18 @@
         <div class="col-md-3">
             <aside class="user-profile-sidebar">
                 <div class="user-profile-avatar text-center">
-                    <img src="img/amaze_300x300.jpg" alt="Image Alternative text" title="AMaze" />
+                    <img src="<c:url value="/pages/images/amaze_300x300.jpg"/>" alt="Image Alternative text" title="AMaze" />
                     <h5></h5>
                     <p>Member Since May 2012</p>
                 </div>
                 <ul class="list user-profile-nav">
-                    <li><a href="user-profile.html"><i class="fa fa-user"></i>Overview</a>
+                    <li><a href="profile">Overview</a>
                     </li>
-                    <li><a href="user-profile-settings.html"><i class="fa fa-cog"></i>Settings</a>
+                    <li><a href="profile-about">About me</a>
                     </li>
-                    <li><a href="user-profile-photos.html"><i class="fa fa-camera"></i>My Travel Places</a>
+                    <li><a href="user-profile-photos">My Travel Places</a>
                     </li>
-                    <li><a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>History</a>
-                    </li>
-                    <li><a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>Wish list</a>
+                    <li><a href="user-profile-booking-history">History</a>
                     </li>
                 </ul>
             </aside>
@@ -171,23 +150,23 @@
         <div class="col-md-9">
             <h4>Total Traveled</h4>
             <ul class="list list-inline user-profile-statictics mb30">
-                <li><i class="fa fa-dashboard user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/miles.svg"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>12540</h5>
                     <p>Miles</p>
                 </li>
-                <li><i class="fa fa-globe user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/earth.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>2%</h5>
                     <p>World</p>
                 </li>
-                <li><i class="fa fa-building-o user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/cities.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>15</h5>
-                    <p>Cityes</p>
+                    <p>Cities</p>
                 </li>
-                <li><i class="fa fa-flag-o user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/flag.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>3</h5>
                     <p>Countries</p>
                 </li>
-                <li><i class="fa fa-plane user-profile-statictics-icon"></i>
+                <li><img src="<c:url value="/pages/images/trip.png"/>" alt="Image Alternative text" title="AMaze" />
                     <h5>20</h5>
                     <p>Trips</p>
                 </li>
@@ -278,8 +257,8 @@
     <script src="<c:url value="/pages/js/ionrangeslider.js"/>"></script>
     <script src="<c:url value="/pages/js/icheck.js"/>"></script>
     <script src="<c:url value="/pages/js/fotorama.js"/>"></script>
-    <script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>
-    <script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>
+    <%--<script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>--%>
+    <%--<script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>--%>
     <script src="<c:url value="/pages/js/typeahead.js"/>"></script>
     <script src="<c:url value="/pages/js/card-payment.js"/>"></script>
     <script src="<c:url value="/pages/js/magnific.js"/>"></script>
@@ -291,6 +270,14 @@
     <script src="<c:url value="/pages/js/custom.js"/>"></script>
     <script src="<c:url value="/pages/js/switcher.js"/>"></script>
 </div>
+</sec:authorize>
 
+<sec:authorize access="!isAuthenticated()">
+    <%
+        // Redirecting to login page
+        response.setStatus(response.SC_MOVED_TEMPORARILY);
+        response.setHeader("Location", "/travelit/login");
+    %>
+</sec:authorize>
 </body>
 </html>
