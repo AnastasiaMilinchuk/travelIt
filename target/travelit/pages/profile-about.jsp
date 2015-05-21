@@ -122,7 +122,7 @@
                 <h4>Personal Infomation</h4>
                 <div class="form-group">
                   <label>First Name</label>
-                  <input class="form-control" value="John" type="text" />
+                  <input class="form-control" value="Julia" type="text" />
                 </div>
                 <div class="form-group">
                   <label>Last Name</label>

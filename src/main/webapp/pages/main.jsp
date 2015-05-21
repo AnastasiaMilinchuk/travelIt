@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/main.css"/>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.js">
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
 </head>
@@ -92,20 +93,58 @@
     </div>
 </div>
 </header>
-    <div class = "main_block">
-        <img src="http://foto.ua/uploads/photos/344/344692_2.jpeg" style="-webkit-backface-visibility: hidden; position: absolute; left: 0px; z-index: -2; max-width: none; height: 100%; width: 1296px;">
-        <div class = "cont">
-            <div class="nav1">
-                <a href="#" class = "prev"><span class = "glyphicon glyphicon-chevron-left"></span></a>
-                <!-- <div class = "left">P</div> -->
-                <a href="#" class = "next"><span class = "glyphicon glyphicon-chevron-right"></span></a>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="http://foto.ua/uploads/photos/344/344692_2.jpeg" style="left: 0px;z-index: -2;">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
             </div>
-            <div class = "block">
-                <div class = "circle ctitle"><span>Transcarpathia</span></div>
-                <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+            <div class="item">
+                <img src="http://img-fotki.yandex.ru/get/6306/19526786.1f/0_741b3_327e059f_XXXL.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://igormelika.com.ua/wp-content/gallery/stezhkami-karpat/igor-melika-30-09-02-10-11-48.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://uatravel.org/wp-content/uploads/2014/12/wpid-sonyachn-karpati_i_1.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
     <br>
     <h1 class = "title">Have you ever been here?</h1><br>
     <div class = "container" >

@@ -50,7 +50,7 @@
     height: 300px;
     width: 100%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 5%;
     position: absolute;
 }
 
@@ -178,4 +178,25 @@
     width: 200px;
     font-size: 22px;
     color: cadetblue;
+}
+
+.carousel {
+    height: 700px;
+}
+
+.carousel-inner {
+    height: inherit;
+}
+
+.carousel-caption {
+    top: 18%;
+}
+
+.carousel-control {
+    margin: 0;
+}
+
+.item img {
+    height: 700px;
+    width: 100%;
 }
