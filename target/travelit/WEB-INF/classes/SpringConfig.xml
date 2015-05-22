@@ -17,10 +17,32 @@
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
     </bean>
 
-    <bean id="userService" class="com.travelit.secure.service.TravelUserService">
+    <bean id="userService" class="com.travelit.secure.service.mongo.services.UserMongoService">
     </bean>
 
-    <bean id="userRepository" class="com.travelit.secure.service.MongoUserDetailsService">
+    <bean id="placeService" class="com.travelit.secure.service.mongo.services.PlaceMongoService">
     </bean>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="100000" />
+        <property name="uploadTempDir" ref="uploadDirResource" />
+    </bean>
+
+    <bean id="uploadDirResource"
+          class="org.springframework.core.io.FileSystemResource">
+        <constructor-arg>
+            <value>/</value>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.travelit.secure.controller.PlacesController">
+        <!--<property name="validator">-->
+            <!--<bean class="com.travelit.secure.validation.SavePlaceValidator"/>-->
+        <!--</property>-->
+    </bean>
+
+
+
 
 </beans>

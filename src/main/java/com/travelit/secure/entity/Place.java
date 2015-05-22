@@ -15,12 +15,21 @@ import java.util.List;
 @ValidPlace
 public class Place {
     private String name;
+    private String description;
     private String address;
     private List<String> tags;
     private Coordinates coordinates;
     private String photo;
     private String creatorEmail;
     private Date dateOfCreation;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Date getDateOfCreation() {
         return dateOfCreation;
@@ -51,6 +60,7 @@ public class Place {
     }
 
     public void setName(String name) {
+        System.out.println("click setting Name Place");
         this.name = name;
     }
 
@@ -59,6 +69,7 @@ public class Place {
     }
 
     public void setAddress(String address) {
+        System.out.println("click address setting");
         this.address = address;
     }
 

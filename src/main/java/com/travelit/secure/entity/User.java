@@ -68,6 +68,7 @@ public class User  {
 
     public void setEmail(String email) {
         this.email  = email;
+        System.out.println("koko setting User Email");
     }
 
     public String getPassword() {
