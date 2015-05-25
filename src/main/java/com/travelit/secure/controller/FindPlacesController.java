@@ -14,9 +14,9 @@ import java.util.List;
  * Created by milinchuk on 5/21/15.
  */
 @Controller
-@RequestMapping("/login")
+//@RequestMapping("/login")
 public class FindPlacesController {
-    @RequestMapping(method = RequestMethod.POST)
+//    @RequestMapping(method = RequestMethod.POST)
     public String profilePage(Model model){
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if(principal instanceof UserDetails){

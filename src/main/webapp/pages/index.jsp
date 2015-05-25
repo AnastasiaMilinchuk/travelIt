@@ -84,48 +84,48 @@
                 <div class="what-it-about-content">
                         <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/1.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">Landscape</div>
+                        <div class="p-text">Find new look of you Motherland.</div>
                     </div>
                 </div>
 
                 <div class="what-it-about-content">
                     <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/2.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">History</div>
+                        <div class="p-text">Become closer to history</div>
                     </div>
                 </div>
 
                 <div class="what-it-about-content">
                     <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/3.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">Event</div>
+                        <div class="p-text">Visit amazing events</div>
                     </div>
                 </div>
 
                 <div class="what-it-about-content">
                     <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/4.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">Pleasure</div>
+                        <div class="p-text">Share with your the most liked places </div>
                     </div>
                 </div>
 
                 <div class="what-it-about-content">
                     <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/5.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">Plan</div>
+                        <div class="p-text">Look more in your trip</div>
                     </div>
                 </div>
 
                 <div class="what-it-about-content">
                     <img  class="what-it-about-img" src="<c:url value="/pages/images/what-it-about/6.jpg" />"/>
                     <div class="what-it-about-text">
-                        <div class="h3-text">Tradition</div>
-                        <div class="p-text">Find more for your entertainment.</div>
+                        <div class="h3-text">Stay hungry</div>
+                        <div class="p-text">Stay foolish</div>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                         Find Interesting place here.
                     </h3>
                     <p>
-                        Register and bla bla bla. Enjoy kokoko kokoko kookoko.
+                        Register, look at new places, plan your trip and enjoy life
                     </p>
                </div>
                 <div class="what-it-behing-section">
@@ -163,7 +163,7 @@
                         ... Or share own
                     </h3>
                     <p>
-                        Register and bla bla bla. Enjoy kokoko kokoko kookoko.
+                        Register, add your own places and share pleasure with all the world
                     </p>
                 </div>
             </div>
@@ -219,6 +219,7 @@
         </div>
     </section>
 </section>
+
 
 <section>
     <section id="footer" class="content">

@@ -17,11 +17,11 @@
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
     </bean>
 
-    <bean id="userService" class="com.travelit.secure.service.mongo.services.UserMongoService">
-    </bean>
+    <!--<bean id="userService" class="com.travelit.secure.service.mongo.services.UserMongoService">-->
+    <!--</bean>-->
 
-    <bean id="placeService" class="com.travelit.secure.service.mongo.services.PlaceMongoService">
-    </bean>
+    <!--<bean id="placeService" class="com.travelit.secure.service.mongo.services.PlaceMongoService">-->
+    <!--</bean>-->
 
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -36,11 +36,11 @@
         </constructor-arg>
     </bean>
 
-    <bean class="com.travelit.secure.controller.PlacesController">
-        <!--<property name="validator">-->
-            <!--<bean class="com.travelit.secure.validation.SavePlaceValidator"/>-->
-        <!--</property>-->
-    </bean>
+    <!--<bean class="com.travelit.secure.controller.PlacesController">-->
+        <!--&lt;!&ndash;<property name="validator">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="com.travelit.secure.validation.SavePlaceValidator"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+    <!--</bean>-->
 
 
 

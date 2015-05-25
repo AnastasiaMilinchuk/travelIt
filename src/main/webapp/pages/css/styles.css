@@ -117,7 +117,7 @@ a.text-udl:hover {
   color: #737373;
 }
 .text-color {
-  color: #ed8323 !important;
+  color: #ECB300 !important;
 }
 .text-darken {
   color: #565656;
@@ -1016,7 +1016,7 @@ ul.slimmenu li.slimmenu-sub-menu a {
 }
 ul.slimmenu li.active > a,
 ul.slimmenu li:hover > a {
-  background: #ed8323;
+  background: #ECB300;
   color: #fff;
 }
 ul.slimmenu li.active .slimmenu-sub-collapser > i,
@@ -2199,7 +2199,7 @@ img.pp-img {
   color: #f2f2f2;
 }
 .top-user-area .top-user-area-list > li > a:hover {
-  color: #f19c4f;
+  color: #ECB300;
 }
 .top-user-area .top-user-area-list > li.top-user-area-avatar {
   font-weight: 400;
@@ -2216,7 +2216,7 @@ img.pp-img {
   border: 2px solid rgba(0,0,0,0.1);
 }
 .top-user-area .top-user-area-list > li.top-user-area-avatar > a:hover > img {
-  border: 2px solid #ed8323;
+  border: 2px solid #ECB300;
 }
 .top-user-area .top-user-area-list > li.top-user-area-lang > a > img {
   margin-top: -2px;
@@ -2444,7 +2444,7 @@ footer#main-footer .form-control:focus {
   text-decoration: underline;
 }
 header#main-header {
-  border-bottom: 2px solid #ed8323;
+  border-bottom: 2px solid #ECB300;
 }
 .main-header-search {
   top: 4px;
@@ -3863,7 +3863,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   border-bottom: 7px solid rgba(0,0,0,0.2);
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  content: "";
+  content: ";
   display: inline-block;
   position: absolute;
 }
@@ -3871,7 +3871,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   border-bottom: 6px solid #fff;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  content: "";
+  content: ";
   display: inline-block;
   position: absolute;
 }
@@ -8676,7 +8676,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .fotorama__nav:before,
 .fotorama__stage:after,
 .fotorama__stage:before {
-  content: "";
+  content: ";
   display: block;
   position: absolute;
   text-decoration: none;

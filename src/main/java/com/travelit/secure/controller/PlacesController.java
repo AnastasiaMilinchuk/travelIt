@@ -7,6 +7,7 @@ import com.travelit.secure.service.services.PlaceService;
 import com.travelit.secure.validation.SavePlaceValidator;
 import com.travelit.secure.validation.ValidateMassage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -35,7 +36,7 @@ public class PlacesController{
     private MultipartFile file;
 
     @Autowired
-    public void setService( PlaceService service) {
+    public void setService(@Qualifier("placeMongoService") PlaceService service) {
         this.service = service;
     }
 

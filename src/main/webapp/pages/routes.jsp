@@ -19,82 +19,76 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/styles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
-
+    <%--<style>--%>
+        <%--.controls {--%>
+            <%--margin-top: 16px;--%>
+            <%--border: 1px solid transparent;--%>
+            <%--border-radius: 2px 0 0 2px;--%>
+            <%--box-sizing: border-box;--%>
+            <%---moz-box-sizing: border-box;--%>
+            <%--height: 32px;--%>
+            <%--outline: none;--%>
+            <%--box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);--%>
+        <%--}--%>
+    <%--</style>--%>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&signed_in=true"></script>
+    <script src="<c:url value="/pages/js/map_initialize.js"/>"></script>
     <script>
-        function initialize() {
+        function initializeAutocomplete() {
+//            var mapOptions = {
+//                center: {lat: -33.8688, lng: 151.2195},
+//                zoom: 13
+//            };
+//            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-            var markers = [];
-            var map = new google.maps.Map(document.getElementById('map-canvas'), {
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-
-            var defaultBounds = new google.maps.LatLngBounds(
-                    new google.maps.LatLng(-33.8902, 151.1759),
-                    new google.maps.LatLng(-33.8474, 151.2631));
-            map.fitBounds(defaultBounds);
-
-            // Create the search box and link it to the UI element.
             var input = /** @type {HTMLInputElement} */(
                     document.getElementById('pac-input'));
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-            var searchBox = new google.maps.places.SearchBox(
-                    /** @type {HTMLInputElement} */(input));
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+//
+//            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-            // Listen for the event fired when the user selects an item from the
-            // pick list. Retrieve the matching places for that item.
-            google.maps.event.addListener(searchBox, 'places_changed', function() {
-                var places = searchBox.getPlaces();
+            var infowindow = new google.maps.InfoWindow();
+            var marker = new google.maps.Marker({
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
 
-                if (places.length == 0) {
+            google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                infowindow.close();
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
                     return;
                 }
-                for (var i = 0, marker; marker = markers[i]; i++) {
-                    marker.setMap(null);
+
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(17);
                 }
 
-                // For each place, get the icon, place name, and location.
-                markers = [];
-                var bounds = new google.maps.LatLngBounds();
-                for (var i = 0, place; place = places[i]; i++) {
-                    var image = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25)
-                    };
+                // Set the position of the marker using the place ID and location
+                marker.setPlace({
+                    placeId: place.place_id,
+                    location: place.geometry.location
+                });
+                marker.setVisible(true);
 
-                    // Create a marker for each place.
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        icon: image,
-                        title: place.name,
-                        position: place.geometry.location
-                    });
-
-                    markers.push(marker);
-
-                    bounds.extend(place.geometry.location);
-                }
-
-                map.fitBounds(bounds);
-            });
-
-            // Bias the SearchBox results towards places that are within the bounds of the
-            // current map's viewport.
-            google.maps.event.addListener(map, 'bounds_changed', function() {
-                var bounds = map.getBounds();
-                searchBox.setBounds(bounds);
+                infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                        'Place ID: ' + place.place_id + '<br>' +
+                        place.formatted_address);
+                infowindow.open(map, marker);
             });
         }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
     </script>
-
 </head>
 <body>
 <sec:authorize access="isAuthenticated()">
@@ -121,7 +115,7 @@
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     <li class="top-user-area-avatar">
                                         <a href="profile">
-                                            <img class="origin round" src="<c:url value="/pages/images/amaze_40x40.jpg"/>" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                            <img class="origin round" src="<c:url value="/pages/images/amaze_40x40.jpg"/>" alt="Image Alternative text" title="AMaze" />Hi, Julia</a>
                                     </li>
                                     <li><a href='<c:url value="/logout" />'>Sign Out</a>
                                     </li>
@@ -156,7 +150,7 @@
                         <li><a href="places.html">Places</a>
 
                         </li>
-                        <li class = "active"><a href="achievements.html">Routes</a>
+                        <li class = "active"><a href="routes">Routes</a>
                         </li>
 
                     </ul>
@@ -168,9 +162,6 @@
             <h1 class="page-title">History</h1>
         </div>
 
-
-
-
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -178,7 +169,7 @@
                         <div class="user-profile-avatar text-center">
                             <img src="<c:url value="/pages/images/amaze_300x300.jpg"/>" alt="Image Alternative text" title="AMaze" />
                             <h5></h5>
-                            <p>Member Since May 2012</p>
+                            <p>Member Since May 2015</p>
                         </div>
                         <ul class="list user-profile-nav">
                             <li><a href="profile">Overview</a>
@@ -193,7 +184,6 @@
                     </aside>
                 </div>
                 <div class="col-md-9">
-
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -204,12 +194,16 @@
                                     <input class = "modal-title" placeholder = "Input name of tour" />
                                 </div>
                                 <div class="modal-body">
-                                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                                    <label>Input city</label><br><input id="pac-input" class="controls" type="text"
+                                           placeholder="City" /><br><br>
+                                    <label>Choose date</label><br><input type="date" class="form-control" />
+                                    <br><br>
                                     <div id="map-canvas"></div>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
                                 </div>
                             </div>
                         </div>
@@ -218,23 +212,32 @@
                     <div class="row row-wrap">
                         <div class="col-md-4 add_route">
                             <div class="thumb">
-                                <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                    <img src="http://www.clker.com/cliparts/U/4/o/o/u/Q/add-button-hi.png" alt="Image Alternative text" title="Create new route">
+                                <a href="#" class="btn btn-primary btn-lg add-new-route" data-toggle="modal" data-target="#myModal">
+                                    Create new route
                                 </a>
+                                <script>
+                                    $('.add-new-route').click('shown.bs.modal', function() {
+                                        initialize();
+                                        initializeAutocomplete();
+                                        alert("olol");
+
+//                               google.maps.event.trigger(map, 'resize');
+                                    });
+                                </script>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="thumb">
-                                <a class="hover-img" href="#">
-                                    <img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">
-                                    <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                        <div class="text-small">
-                                            <h5>Bakota. Ukraine</h5>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        <%--<div class="col-md-4">--%>
+                            <%--<div class="thumb">--%>
+                                <%--<a class="hover-img" href="#">--%>
+                                    <%--<img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">--%>
+                                    <%--<div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">--%>
+                                        <%--<div class="text-small">--%>
+                                            <%--<h5>Bakota. Ukraine</h5>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="col-md-4">
                             <div class="thumb">
                                 <a class="hover-img" href="#">
@@ -310,43 +313,21 @@
                         </li>
                     </ul>
                 </div>
-
-
-
             </div>
         </div>
-
-
 
         <div class="gap"></div>
         <footer id="main-footer">
             <div class="container">
                 <div class="row row-wrap">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <a class="logo" href="">
-                            <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
+                            <img src="<c:url value = "/pages/img/logo-invert.png"/>" alt="Image Alternative text" title="Image Title" />
                         </a>
-                        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
-                        <ul class="list list-horizontal list-space">
-                            <li>
-                                <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-linkedin box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-pinterest box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-                            </li>
-                        </ul>
+                        <p class="mb20">TravelIt help you with planning of trips, sharing and saving of wonderful places</p>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h4>Newsletter</h4>
                         <form>
                             <label>Enter your E-mail Address</label>
@@ -356,31 +337,14 @@
                             <input type="submit" class="btn btn-primary" value="Subscribe"/>
                         </form>
                     </div>
-                    <div class="col-md-2">
-                        <ul class="list list-footer">
-                            <li><a href="#">About US</a>
-                            </li>
-                            <li><a href="#">Press Centre</a>
-                            </li>
-                            <li><a href="#">Best Price Guarantee</a>
-                            </li>
-                            <li><a href="#">Travel News</a>
-                            </li>
-                            <li><a href="#">Jobs</a>
-                            </li>
-                            <li><a href="#">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Terms of Use</a>
-                            </li>
-                            <li><a href="#">Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <%--<div class="col-md-2"></div>--%>
                     <div class="col-md-4">
-                        <h4>Have Questions?</h4>
-                        <h4 class="text-color">+1-202-555-0173</h4>
-                        <h4><a href="#" class="text-color">support@traveler.com</a></h4>
-                        <p>24/7 Dedicated Customer Support</p>
+                        <h4>Authors</h4>
+                        <h4 class="text-color">Artem Malinovskiy</h4>
+                        <h4 class="text-color">Anastasia Milinchuk</h4>
+                        <h4 class="text-color">Tanya Syagailo</h4>
+                        <h4 class="text-color">Julia Hrihorieva</h4>
+                        <h4 class="text-color">Nikita Orlov</h4>
                     </div>
 
                 </div>

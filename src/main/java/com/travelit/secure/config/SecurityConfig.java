@@ -2,6 +2,7 @@ package com.travelit.secure.config;
 
 import com.travelit.secure.service.mongo.services.UserMongoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
@@ -16,6 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Qualifier("userMongoService")
     @Autowired
     private UserMongoService userDetailsService;
     //    private UserDetailsServiceImpl userDetailsService;
@@ -33,8 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/**").permitAll()
-                .anyRequest().permitAll()
-                .and();
+                .anyRequest().permitAll();
 
 
         http.formLogin()
