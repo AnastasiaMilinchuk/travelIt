@@ -42,7 +42,9 @@
         <!--</property>-->
     </bean>
 
-
+    <bean id="userPlaceService" class="com.travelit.secure.search.UserPlaces"/>
+    <bean id="placeAboutValidator" class="com.travelit.secure.validation.PlaceAboutValidator"/>
+    <bean id="commonValidation" class="com.travelit.secure.validation.CommonValidation" />
 
 
 </beans>

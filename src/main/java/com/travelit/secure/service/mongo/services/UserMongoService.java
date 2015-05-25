@@ -1,7 +1,10 @@
 package com.travelit.secure.service.mongo.services;
 
+import com.mongodb.util.JSON;
+import com.travelit.secure.entity.Place;
 import com.travelit.secure.entity.User;
 import com.travelit.secure.service.services.UserService;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -61,6 +65,26 @@ public class UserMongoService implements UserService, UserDetailsService {
 
         save(account);
         return user;
+    }
+
+    @Override
+    public boolean isSubscribeToPlace(String userEmail, ObjectId placeID) {
+        return (mongoTemplate.findOne(new Query(Criteria.where("email").is(userEmail).and("places").is(placeID)), User.class) != null);
+    }
+
+    @Override
+    public void addPlace(String userEmail, ObjectId placeID) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("email").is(userEmail));
+        Update update = new Update().addToSet("places", placeID);
+        mongoTemplate.updateFirst(new Query().addCriteria(Criteria.where("email").is(userEmail)),
+                new Update().addToSet("places", placeID),
+                User.class);
+    }
+
+    @Override
+    public void deletePlace(String userEmail, ObjectId placeID) {
+        mongoTemplate.updateFirst(new Query(Criteria.where("email").is(userEmail)), new Update().pull("places", placeID), User.class);
     }
 
 

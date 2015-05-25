@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,63 +104,65 @@
               <h5></h5>
               <p>Member Since May 2012</p>
             </div>
-            <ul class="list user-profile-nav">
-              <li><a href="profile">Overview</a>
-              </li>
-              <li><a href="profile-about">About me</a>
-              </li>
-              <li><a href="user-profile-photos">My Travel Places</a>
-              </li>
-              <li><a href="user-profile-booking-history">History</a>
-              </li>
-            </ul>
+              <ul class="list user-profile-nav">
+                  <li><a href=''<c:url value="profile"/>'>Overview</a>
+                  </li>
+                  <li><a href='<c:url value="profile-about"/>'>About me</a>
+                  </li>
+                  <li><a href='<c:url value="places"/>'>My Travel Places</a>
+                  </li>
+                  <li><a href='<c:url value="profile-about"/>'>History</a>
+                  </li>
+              </ul>
           </aside>
         </div>
         <div class="col-md-9">
           <div class="row">
             <div class="col-md-5">
-              <form action="">
+
+              <form:form modelAttribute="user" method="POST" enctype="utf8"  action="savePersonalInfo">
                 <h4>Personal Infomation</h4>
                 <div class="form-group">
                   <label>First Name</label>
-                  <input class="form-control" value="John" type="text" />
+                  <form:input path="firstname" class="form-control" value="" type="text" />
                 </div>
                 <div class="form-group">
                   <label>Last Name</label>
-                  <input class="form-control" value="Doe" type="text" />
+                  <form:input path="lastname" class="form-control" value="Doe" type="text" />
                 </div>
                 <div class="form-group">
                   <label>E-mail</label>
-                  <input class="form-control" value="johndoe@gmail.com" type="text" />
+                  <form:input path="email" class="form-control" value="johndoe@gmail.com" type="text" />
                 </div>
                 <div class="gap gap-small"></div>
                 <h4>What I like</h4>
                <div class="form-group">
                   <label>City</label>
-                  <input class="form-control" value="London" type="text" />
+                  <form:input path="likes" class="form-control" value="London" type="text" />
                 </div>
                 <hr>
                 <input type="submit" class="btn btn-primary" value="Save Changes">
-              </form>
+              </form:form>
             </div>
+
             <div class="col-md-4 col-md-offset-1">
+            <form:form modelAttribute="userPassword" method="POST" enctype="utf8"  action="changePassword">
               <h4>Change Password</h4>
-              <form>
                 <div class="form-group">
                   <label>Current Password</label>
-                  <input class="form-control" type="password" />
+                  <form:input path="password" class="form-control" type="password" />
                 </div>
                 <div class="form-group">
                   <label>New Password</label>
-                  <input class="form-control" type="password" />
+                  <form:input path="newPassword" class="form-control" type="password" />
                 </div>
                 <div class="form-group">
                   <label>New Password Again</label>
-                  <input class="form-control" type="password" />
+                  <form:input path="confirmPassword" class="form-control" type="password" />
                 </div>
                 <hr />
                 <input class="btn btn-primary" type="submit" value="Change Password" />
-              </form>
+              </form:form>
             </div>
           </div>
 

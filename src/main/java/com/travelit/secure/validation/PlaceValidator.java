@@ -25,6 +25,7 @@ public class PlaceValidator implements ConstraintValidator<ValidPlace, Place> {
 
 
     private boolean isTagsValid(List<String> tags){
+        System.out.println(tags);
         if(tags!= null && tags.size() != 0){
             return true;
         }
@@ -32,6 +33,7 @@ public class PlaceValidator implements ConstraintValidator<ValidPlace, Place> {
     }
 
     private boolean isAddressValid(String address) {
+        System.out.println(address);
         if(address != null && address != ""){
             return true;
         }
@@ -39,6 +41,7 @@ public class PlaceValidator implements ConstraintValidator<ValidPlace, Place> {
     }
 
     private boolean isNameValid(String name) {
+        System.out.println(name);
         if(name != null && name != ""){
             return true;
         }

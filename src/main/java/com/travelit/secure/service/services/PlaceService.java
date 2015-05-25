@@ -2,6 +2,7 @@ package com.travelit.secure.service.services;
 
 import com.travelit.secure.entity.Coordinates;
 import com.travelit.secure.entity.Place;
+import org.bson.types.ObjectId;
 
 import java.util.List;
 
@@ -14,5 +15,8 @@ public interface PlaceService {
     Place getByCoordinates(Coordinates coordinators);
     Place getByAddress(String address);
     Place getByTags(List<String> tags);
+    Place getById(String id);
+    void addSubscriber(ObjectId placeID);
+    void deleteSubscriber(ObjectId placeID);
 
 }

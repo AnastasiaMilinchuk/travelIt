@@ -109,6 +109,24 @@
     <br>
     <h1 class = "title">Have you ever been here?</h1><br>
     <div class = "container" >
+        <c:forEach items="${places}" var="place">
+        <a href="place?id=${place.id}">
+            <article class = "col-md-4 place_block">
+                <div class = "place_block_img">
+                    <img src="${place.photo}" alt = "Dubno, Rivnenska obl" class="img-thumbnail"/>
+                </div>
+                <div class = "description_place">
+                    <h2>${place.name}</h2>
+                    <p>${place.description}</p>
+                    <div class= "place_detail_info">Creator ${place.creatorEmail}
+                        <span class = "number_visits">${place.subscribes}</span>
+                    </div>
+                </div>
+            </article>
+        </a>
+        </c:forEach>
+
+        <a href="place?id=555d8dd10c6d12299f3f99a6">
         <article class = "col-md-4 place_block">
             <div class = "place_block_img">
                 <img src="http://ic.pics.livejournal.com/veremia/39760178/23663/original.jpg" alt = "Dubno, Rivnenska obl" class="img-thumbnail"/>
@@ -121,6 +139,7 @@
                 </div>
             </div>
         </article>
+            </a>
 
         <article class = "col-md-4 place_block">
             <div class = "place_block_img">

@@ -14,7 +14,7 @@ import java.util.List;
  * Created by milinchuk on 5/21/15.
  */
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/find-places")
 public class FindPlacesController {
     @RequestMapping(method = RequestMethod.POST)
     public String profilePage(Model model){
@@ -23,7 +23,7 @@ public class FindPlacesController {
             String username = ((UserDetails)principal).getUsername();
             List<GrantedAuthority> roles = (List<GrantedAuthority>)((UserDetails)principal).getAuthorities();
         }
-        return "main";
+        return "find-places";
     }
 
 }

@@ -31,6 +31,7 @@ import java.util.Date;
 public class PlacesController{
 
     private PlaceService service;
+
     private SavePlaceValidator validator;
     private MultipartFile file;
 
@@ -115,8 +116,10 @@ public class PlacesController{
             throw e;
         }
     }
+
+
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    private String upload(@ModelAttribute("file") FileUpload file) throws IOException {
+    public String upload(@ModelAttribute("file") FileUpload file) throws IOException {
         System.out.println("upload " + file.toString());
         ValidateMassage message = validator.validateImage(file.getFile());
         if (message.isValid){

@@ -1,6 +1,7 @@
 package com.travelit.secure.entity;
 
 import com.travelit.secure.validation.annotations.ValidPlace;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.BufferedOutputStream;
@@ -14,6 +15,7 @@ import java.util.List;
 @Document(collection = "places")
 @ValidPlace
 public class Place {
+    private ObjectId id;
     private String name;
     private String description;
     private String address;
@@ -22,6 +24,28 @@ public class Place {
     private String photo;
     private String creatorEmail;
     private Date dateOfCreation;
+    private int subscribers;
+
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    public Place() {
+        subscribers = 0;
+    }
+
+    public int getSubscribes() {
+        return subscribers;
+    }
+
+    public void setSubscribes(int subscribes) {
+        this.subscribers = subscribes;
+    }
 
     public String getDescription() {
         return description;
