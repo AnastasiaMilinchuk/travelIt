@@ -108,10 +108,10 @@
     </li>
     <li class="active"><a href="profile">Profile</a>
     </li>
-    <li><a href="places.html">Places</a>
+    <li><a href="<c:url value='/find-places' />">Places</a>
 
     </li>
-    <li><a href="achievements.html">Routes</a>
+    <li><a href="<c:url value='/routes' />">Routes</a>
     </li>
 
     </ul>
@@ -136,13 +136,13 @@
                     <p>Member Since May 2012</p>
                 </div>
                 <ul class="list user-profile-nav">
-                    <li><a href="profile">Overview</a>
+                    <li><a href=''<c:url value="profile"/>'>Overview</a>
                     </li>
-                    <li><a href="profile-about">About me</a>
+                    <li><a href='<c:url value="profile-about"/>'>About me</a>
                     </li>
-                    <li><a href="user-profile-photos">My Travel Places</a>
+                    <li><a href='<c:url value="places"/>'>My Travel Places</a>
                     </li>
-                    <li><a href="user-profile-booking-history">History</a>
+                    <li><a href='<c:url value="profile-about"/>'>History</a>
                     </li>
                 </ul>
             </aside>
