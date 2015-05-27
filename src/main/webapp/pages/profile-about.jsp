@@ -131,10 +131,10 @@
                   <label>Last Name</label>
                   <form:input path="lastName" class="form-control" value="${user.lastName}" type="text" />
                 </div>
-                <div class="form-group">
-                  <label>E-mail</label>
-                  <form:input path="email" class="form-control" value="${user.email}" type="text" />
-                </div>
+                <%--<div class="form-group">--%>
+                  <%--<label>E-mail</label>--%>
+                  <%--<form:input path="email" class="form-control" value="${user.email}" type="text" />--%>
+                <%--</div>--%>
                 <div class="gap gap-small"></div>
                 <h4>What I like</h4>
                <div class="form-group">

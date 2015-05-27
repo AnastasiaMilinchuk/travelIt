@@ -27,22 +27,13 @@ public class User  {
 
     @NotNull
     private int role;
-
-    private List<String> likes;
-
-    public List<String> getLikes() {
-        return likes;
-    }
-
-    public void setLikes(List<String> likes) {
-        this.likes = likes;
-    }
+    private Prefer prefer;
 
     public User() {
         email = new String();
         password = new String();
         matchingPassword = new String();
-        likes = new LinkedList<>();
+        prefer = new Prefer();
     }
 
     public User(String email, String password, int role) {
@@ -103,5 +94,18 @@ public class User  {
     @Override
     public String toString(){
         return "Login: " + email + " Role: " + role;
+    }
+
+    public void mergeChanges(User newUser){
+        firstName = getChanges(firstName, newUser.firstName);
+        lastName = getChanges(lastName, newUser.lastName);
+
+    }
+
+    private String getChanges(String currentData, String newData){
+        if(!currentData.equals(newData)){
+            return newData;
+        }
+        return currentData;
     }
 }

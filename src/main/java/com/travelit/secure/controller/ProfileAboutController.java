@@ -52,8 +52,17 @@ public class ProfileAboutController {
         return userService.getByEmail(userEmail);
     }
 
-    @RequestMapping(value = "/profile-about", method = RequestMethod.POST)
+    @RequestMapping(value = "/save-details", method = RequestMethod.POST)
     public String changeUserDetails(@ModelAttribute("user") User user){
+        if(commonValidation.isAuthorize().isValid){
+            
+        }
+
+        return "redirect:/login";
+    }
+
+    @RequestMapping(value = "/save-password", method = RequestMethod.POST)
+    public String changePassword(@ModelAttribute("password") Password password){
         if(commonValidation.isAuthorize().isValid){
 
         }
