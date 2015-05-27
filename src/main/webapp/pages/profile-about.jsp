@@ -139,7 +139,7 @@
                 <h4>What I like</h4>
                <div class="form-group">
                   <label>City</label>
-                  <form:input path="likes" class="form-control" value="" type="text" />
+                  <input class="form-control" value="" type="text" />
                 </div>
                 <hr>
                 <input type="submit" class="btn btn-primary" value="Save Changes">
