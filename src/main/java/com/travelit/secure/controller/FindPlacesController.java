@@ -1,5 +1,8 @@
 package com.travelit.secure.controller;
 
+import com.travelit.secure.validation.CommonValidation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,15 +18,21 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/find-places")
+//@RequestMapping("/login")
 public class FindPlacesController {
+    CommonValidation commonValidation;
+
+    @Autowired
+    public void setCommonValidation(@Qualifier("commonValidation") CommonValidation commonValidation) {
+        this.commonValidation = commonValidation;
+    }
+
     @RequestMapping(method = RequestMethod.POST)
-    public String profilePage(Model model){
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if(principal instanceof UserDetails){
-            String username = ((UserDetails)principal).getUsername();
-            List<GrantedAuthority> roles = (List<GrantedAuthority>)((UserDetails)principal).getAuthorities();
+    public String findPlaceStart(Model model){
+        if(commonValidation.isAuthorize().isValid){
+             return "find-places";
         }
-        return "find-places";
+        return "login";
     }
 
 }

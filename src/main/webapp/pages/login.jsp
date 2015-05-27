@@ -42,8 +42,8 @@
                             <input style="display:none" type="text" name="fakeusernameremembered"/>
                             <input style="display:none" type="password" name="fakepasswordremembered"/>
 
-                            <input type="text" name = "j_username" placeholder = "E-mail" id = "email" autocomplete="off" />
-                            <input type = "password" name = "j_password" placeholder = "Password" id = "password" autocomplete="off"/>
+                            <input type="text" name = "j_username" placeholder = "E-mail" id = "email"  value="admin@gmail.com" />
+                            <input type = "password" name = "j_password" placeholder = "Password" id = "password" value="1234"/>
                             <p><input type = "submit" value = "Log In" id = "submit" /><div id = "error">Such user doesn't exist. Try again</div> </p>
                         </form>
                     </div>
@@ -55,6 +55,7 @@
         </div>
     </section>
     <div id="background"></div>
+
     <footer>
         <div id="footer" class="content">
             <div class="footer">

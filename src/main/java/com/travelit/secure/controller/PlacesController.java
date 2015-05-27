@@ -7,6 +7,7 @@ import com.travelit.secure.service.services.PlaceService;
 import com.travelit.secure.validation.SavePlaceValidator;
 import com.travelit.secure.validation.ValidateMassage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,14 +30,12 @@ import java.util.Date;
 @Controller
 @ComponentScan("com.travelit")
 public class PlacesController{
-
     private PlaceService service;
-
     private SavePlaceValidator validator;
     private MultipartFile file;
 
     @Autowired
-    public void setService( PlaceService service) {
+    public void setService(@Qualifier("placeMongoService") PlaceService service) {
         this.service = service;
     }
 
@@ -55,16 +54,6 @@ public class PlacesController{
     @RequestMapping(value="/places", method = RequestMethod.POST)
     public ModelAndView submit(@ModelAttribute("places") PlaceData places,
                                  BindingResult result,ModelMap model , Errors errors ) throws IOException {
-        System.out.println(model.get("file"));
-        System.out.println("click PlaceData "+ places.getOlolo());
-        System.out.println("koko getPlace " + places.getPlace());
-        System.out.println("koko submit " + places.getPlace().getName());
-        System.out.println("click sdgsdg " + places.getPlace().getAddress());
-        System.out.println("koko file " + places.getImage());
-
-
-        System.out.println("add place method");
-
         if(!result.hasErrors() && file != null){
             System.out.println("koko no errs");
             String msg = save(places.getImage(), places.getPlace());

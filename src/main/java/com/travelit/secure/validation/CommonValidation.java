@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Configuration
 public class CommonValidation {
-    public ValidateMassage isAuthorize(Authentication authentication){
-        return new ValidateMassage(authentication.getName().equals("anonymousUser"), "Authenticate user");
+    public ValidateMassage isAuthorize(){
+        return new ValidateMassage(!SecurityContextHolder.getContext().getAuthentication().getName().equals("anonymousUser"), "Authenticate user");
     }
 }

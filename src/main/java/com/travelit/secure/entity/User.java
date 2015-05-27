@@ -6,6 +6,8 @@ import com.travelit.secure.validation.annotations.ValidPlace;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
+import java.util.LinkedList;
+import java.util.List;
 
 
 @Document(collection = "users")
@@ -26,10 +28,21 @@ public class User  {
     @NotNull
     private int role;
 
+    private List<String> likes;
+
+    public List<String> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(List<String> likes) {
+        this.likes = likes;
+    }
+
     public User() {
         email = new String();
         password = new String();
         matchingPassword = new String();
+        likes = new LinkedList<>();
     }
 
     public User(String email, String password, int role) {

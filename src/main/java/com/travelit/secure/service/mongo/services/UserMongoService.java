@@ -87,6 +87,21 @@ public class UserMongoService implements UserService, UserDetailsService {
         mongoTemplate.updateFirst(new Query(Criteria.where("email").is(userEmail)), new Update().pull("places", placeID), User.class);
     }
 
+    @Override
+    public void changeFirstName(String userEmail, String firstName) {
+
+    }
+
+    @Override
+    public void changeLastName(String userEmail, String lastName) {
+
+    }
+
+    @Override
+    public void changeEmail(String userEmail, String newEmail) {
+
+    }
+
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         boolean enabled = true;

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
     <link rel="stylesheet" href="<c:url value="/pages/css/main.css"/>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.js">
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
 </head>
@@ -85,27 +86,65 @@
     <li><a href="places.html">Places</a>
 
     </li>
-    <li><a href="achievements.html">Routes</a>
+    <li><a href="routes">Routes</a>
     </li>
 
     </ul>
     </div>
 </div>
 </header>
-    <div class = "main_block">
-        <img src="http://foto.ua/uploads/photos/344/344692_2.jpeg" style="-webkit-backface-visibility: hidden; position: absolute; left: 0px; z-index: -2; max-width: none; height: 100%; width: 1296px;">
-        <div class = "cont">
-            <div class="nav1">
-                <a href="#" class = "prev"><span class = "glyphicon glyphicon-chevron-left"></span></a>
-                <!-- <div class = "left">P</div> -->
-                <a href="#" class = "next"><span class = "glyphicon glyphicon-chevron-right"></span></a>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="http://foto.ua/uploads/photos/344/344692_2.jpeg" style="left: 0px;z-index: -2;">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
             </div>
-            <div class = "block">
-                <div class = "circle ctitle"><span>Transcarpathia</span></div>
-                <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+            <div class="item">
+                <img src="http://img-fotki.yandex.ru/get/6306/19526786.1f/0_741b3_327e059f_XXXL.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Crocuses Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Go to the Carpathian mountains in spring and look at the field of crocuses</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://igormelika.com.ua/wp-content/gallery/stezhkami-karpat/igor-melika-30-09-02-10-11-48.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://uatravel.org/wp-content/uploads/2014/12/wpid-sonyachn-karpati_i_1.jpg" alt="...">
+                <div class="carousel-caption">
+                    <div class = "block">
+                        <div class = "circle ctitle"><span>Pastoral Summer Landscapes of Transcarpathia</span></div>
+                        <div class = "circle cdescr"><span>Zakarpattia (Transcarpathia) region is located on the south-western slopes and foothills of the Eastern Carpathians.</span></div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
     <br>
     <h1 class = "title">Have you ever been here?</h1><br>
     <div class = "container" >
@@ -191,7 +230,7 @@
 
         <article class = "col-md-4 place_block">
             <div class = "place_block_img">
-                <img src="photo/img_3788-1.jpg" class="img-thumbnail" />
+                <img src="http://www.prokarpaty.info/images/easyblog_shared/43506be9-e6a0-4efa-97d3-101b178ce91016.jpg" class="img-thumbnail" />
             </div>
             <div class = "description_place">
                 <h2>Uzhgorord</h2>
@@ -240,70 +279,35 @@
     </div>
     <a href = ""><div class="btnn">Look more</div></a>
 
-<div class="gap"></div>
-<footer id="main-footer">
+<div class="gap"></div><footer id="main-footer">
     <div class="container">
         <div class="row row-wrap">
-        <div class="col-md-3">
-        <a class="logo" href="">
-        <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
-        </a>
-        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
-        <ul class="list list-horizontal list-space">
-        <li>
-        <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-        </li>
-        <li>
-        <a class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-        </li>
-        <li>
-        <a class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-        </li>
-        <li>
-        <a class="fa fa-linkedin box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-        </li>
-        <li>
-        <a class="fa fa-pinterest box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
-        </li>
-        </ul>
-        </div>
+            <div class="col-md-4">
+                <a class="logo" href="">
+                    <img src="<c:url value = "/pages/img/logo-invert.png"/>" alt="Image Alternative text" title="Image Title" />
+                </a>
+                <p class="mb20">TravelIt help you with planning of trips, sharing and saving of wonderful places</p>
+            </div>
 
-        <div class="col-md-3">
-        <h4>Newsletter</h4>
-        <form>
-        <label>Enter your E-mail Address</label>
-        <input type="text" class="form-control"/>
-        <p class="mt5"><small>*We Never Send Spam</small>
-        </p>
-        <input type="submit" class="btn btn-primary" value="Subscribe"/>
-        </form>
-        </div>
-        <div class="col-md-2">
-        <ul class="list list-footer">
-        <li><a href="#">About US</a>
-        </li>
-        <li><a href="#">Press Centre</a>
-        </li>
-        <li><a href="#">Best Price Guarantee</a>
-        </li>
-        <li><a href="#">Travel News</a>
-        </li>
-        <li><a href="#">Jobs</a>
-        </li>
-        <li><a href="#">Privacy Policy</a>
-        </li>
-        <li><a href="#">Terms of Use</a>
-        </li>
-        <li><a href="#">Feedback</a>
-        </li>
-        </ul>
-        </div>
-        <div class="col-md-4">
-        <h4>Have Questions?</h4>
-        <h4 class="text-color">+1-202-555-0173</h4>
-        <h4><a href="#" class="text-color">support@traveler.com</a></h4>
-        <p>24/7 Dedicated Customer Support</p>
-        </div>
+            <div class="col-md-4">
+                <h4>Newsletter</h4>
+                <form>
+                    <label>Enter your E-mail Address</label>
+                    <input type="text" class="form-control"/>
+                    <p class="mt5"><small>*We Never Send Spam</small>
+                    </p>
+                    <input type="submit" class="btn btn-primary" value="Subscribe"/>
+                </form>
+            </div>
+                <%--<div class="col-md-2"></div>--%>
+            <div class="col-md-4">
+                <h4>Authors</h4>
+                <h4 class="text-color">Artem Malinovskiy</h4>
+                <h4 class="text-color">Anastasia Milinchuk</h4>
+                <h4 class="text-color">Tanya Syagailo</h4>
+                <h4 class="text-color">Julia Hrihorieva</h4>
+                <h4 class="text-color">Nikita Orlov</h4>
+            </div>
 
         </div>
     </div>

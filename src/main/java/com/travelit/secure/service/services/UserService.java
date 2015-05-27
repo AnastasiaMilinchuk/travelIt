@@ -12,4 +12,7 @@ public interface UserService {
     boolean isSubscribeToPlace(String user, ObjectId placeID);
     void addPlace(String userEmail, ObjectId placeID);
     void deletePlace(String userEmail, ObjectId placeID);
+    void changeFirstName(String userEmail, String firstName);
+    void changeLastName(String userEmail, String lastName);
+    void changeEmail(String userEmail, String newEmail);
 }

@@ -2079,8 +2079,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #ECAA00;
+  border-color: #EFAE07;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2677,6 +2677,7 @@ input[type="button"].btn-block {
   position: relative;
   display: table;
   border-collapse: separate;
+  width: 30%;
 }
 .input-group[class*="col-"] {
   float: none;

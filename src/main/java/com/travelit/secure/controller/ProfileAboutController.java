@@ -1,5 +1,6 @@
 package com.travelit.secure.controller;
 
+import com.travelit.secure.entity.Password;
 import com.travelit.secure.entity.User;
 import com.travelit.secure.service.services.UserService;
 import com.travelit.secure.validation.CommonValidation;
@@ -10,11 +11,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/profile-about")
 public class ProfileAboutController {
     @Autowired
     private UserService userService;
@@ -32,21 +33,31 @@ public class ProfileAboutController {
     }
 
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/profile-about", method = RequestMethod.GET)
     public String mainPage(ModelMap model) {
-        if(commonValidation.isAuthorize(SecurityContextHolder.getContext().getAuthentication()).isValid){
+        if(commonValidation.isAuthorize().isValid){
+            System.out.println(commonValidation.isAuthorize().isValid);
             model.addAttribute("user", getUserDetails(((UserDetails) SecurityContextHolder.getContext()
-                    .getAuthentication().getPrincipal())
+                    .getAuthentication()
+                    .getPrincipal())
                     .getUsername()));
+            model.addAttribute("password", new Password());
             return "profile-about";
         }
-        else{
-            return "redirect:/login";
-        }
 
+        return "redirect:/login";
     }
 
     public User getUserDetails(String userEmail){
         return userService.getByEmail(userEmail);
+    }
+
+    @RequestMapping(value = "/profile-about", method = RequestMethod.POST)
+    public String changeUserDetails(@ModelAttribute("user") User user){
+        if(commonValidation.isAuthorize().isValid){
+
+        }
+
+        return "redirect:/login";
     }
 }
