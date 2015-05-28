@@ -121,15 +121,15 @@
           <div class="row">
             <div class="col-md-5">
 
-              <form:form modelAttribute="user" method="POST" enctype="utf8"  action="savePersonalInfo">
+              <form method="POST" enctype="utf8"  action="save-details">
                 <h4>Personal Infomation</h4>
                 <div class="form-group">
                   <label>First Name</label>
-                  <form:input path="firstName" class="form-control" value="${user.firstName}" type="text" />
+                  <input name="firstName" class="form-control" value="${user.firstName}" type="text" />
                 </div>
                 <div class="form-group">
                   <label>Last Name</label>
-                  <form:input path="lastName" class="form-control" value="${user.lastName}" type="text" />
+                  <input name="lastName" class="form-control" value="${user.lastName}" type="text" />
                 </div>
                 <%--<div class="form-group">--%>
                   <%--<label>E-mail</label>--%>
@@ -143,7 +143,7 @@
                 </div>
                 <hr>
                 <input type="submit" class="btn btn-primary" value="Save Changes">
-              </form:form>
+              </form>
             </div>
 
             <div class="col-md-4 col-md-offset-1">

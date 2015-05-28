@@ -82,6 +82,12 @@ public class UserMongoService implements UserService, UserDetailsService {
                 User.class);
     }
 
+
+    private void setChanges(String userEmail, String fieldName, String newData){
+        mongoTemplate.updateFirst(new Query(Criteria.where("email").is(userEmail)), new Update().set(fieldName, newData), User.class);
+    }
+
+
     @Override
     public void deletePlace(String userEmail, ObjectId placeID) {
         mongoTemplate.updateFirst(new Query(Criteria.where("email").is(userEmail)), new Update().pull("places", placeID), User.class);
@@ -89,17 +95,17 @@ public class UserMongoService implements UserService, UserDetailsService {
 
     @Override
     public void changeFirstName(String userEmail, String firstName) {
-
+       setChanges(userEmail, "firstName", firstName);
     }
 
     @Override
     public void changeLastName(String userEmail, String lastName) {
-
+        setChanges(userEmail, "lastName", lastName);
     }
 
     @Override
-    public void changeEmail(String userEmail, String newEmail) {
-
+    public User mergeChanges(User currentUser, User newUser) {
+        return null;
     }
 
 
