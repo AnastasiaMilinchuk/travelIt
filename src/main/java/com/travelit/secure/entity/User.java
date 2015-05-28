@@ -96,16 +96,5 @@ public class User  {
         return "Login: " + email + " Role: " + role;
     }
 
-    public void mergeChanges(User newUser){
-        firstName = getChanges(firstName, newUser.firstName);
-        lastName = getChanges(lastName, newUser.lastName);
 
-    }
-
-    private String getChanges(String currentData, String newData){
-        if(!currentData.equals(newData)){
-            return newData;
-        }
-        return currentData;
-    }
 }

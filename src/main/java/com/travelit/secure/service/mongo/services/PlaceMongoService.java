@@ -69,6 +69,11 @@ public class PlaceMongoService implements PlaceService {
         updateSubscribers(placeID, -1);
     }
 
+    @Override
+    public List<Place> getPlaces(int number) {
+       return mongoTemplate.find(new Query(Criteria.where("")).limit(number), Place.class);
+    }
+
     private void updateSubscribers(ObjectId placeID, int inc){
         mongoTemplate.updateFirst(new Query(Criteria.where("_id").is(placeID)), new Update().inc("subscribers", inc), Place.class);
     }

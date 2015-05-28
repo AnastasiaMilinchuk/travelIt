@@ -105,16 +105,16 @@
               <h5></h5>
               <p>Member Since May 2015</p>
             </div>
-            <ul class="list user-profile-nav">
-              <li><a href=''<c:url value="profile"/>'>Overview</a>
-              </li>
-              <li><a href='<c:url value="profile-about"/>'>About me</a>
-              </li>
-              <li><a href='<c:url value="places"/>'>My Travel Places</a>
-              </li>
-              <li><a href='<c:url value="profile-about"/>'>History</a>
-              </li>
-            </ul>
+              <ul class="list user-profile-nav">
+                  <li><a href=''<c:url value="profile"/>'>Overview</a>
+                  </li>
+                  <li><a href='<c:url value="profile-about"/>'>About me</a>
+                  </li>
+                  <li><a href='<c:url value="places"/>'>My Travel Places</a>
+                  </li>
+                  <li><a href='<c:url value="profile-about"/>'>History</a>
+                  </li>
+              </ul>
           </aside>
         </div>
         <div class="col-md-9">
@@ -131,22 +131,9 @@
                   <label>Last Name</label>
                   <form:input path="lastName" class="form-control" value="${user.lastName}" type="text" />
                 </div>
-                <div class="form-group">
-                  <label>City</label>
-                  <input class="form-control" value="" type="text" />
-                </div>
-                <div class="form-group">
-                  <label>Find me there</label>
-                  <input class="form-control" value="" type="text" />
-                </div>
-                <div class="checkbox confidence">
-                  <label>
-                    <input type="checkbox" value="">Stay confidence
-                  </label>
-                </div>
                 <%--<div class="form-group">--%>
-                <%--<label>E-mail</label>--%>
-                <%--<form:input path="email" class="form-control" value="${user.email}" type="text" />--%>
+                  <%--<label>E-mail</label>--%>
+                  <%--<form:input path="email" class="form-control" value="${user.email}" type="text" />--%>
                 <%--</div>--%>
                 <div class="gap gap-small"></div>
                 <h4>What I like</h4>
@@ -168,8 +155,8 @@
             </div>
 
             <div class="col-md-4 col-md-offset-1">
-              <form:form modelAttribute="password" method="POST" enctype="utf8"  action="changePassword">
-                <h4>Change Password</h4>
+            <form:form modelAttribute="password" method="POST" enctype="utf8"  action="changePassword">
+              <h4>Change Password</h4>
                 <div class="form-group">
                   <label>Current Password</label>
                   <form:input path="currentPassword" class="form-control" type="password" />
@@ -191,6 +178,8 @@
         </div>
       </div>
     </div>
+
+
 
     <div class="gap"></div>
     <footer id="main-footer">

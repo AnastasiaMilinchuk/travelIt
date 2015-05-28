@@ -1,5 +1,7 @@
 package com.travelit.secure.entity;
 
+import org.bson.types.ObjectId;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,11 +9,31 @@ import java.util.List;
  * Created by milinchuk on 5/27/15.
  */
 public class Prefer {
+
     private List<String> books;
     private List<String> hobbies;
     private List<String> films;
     private List<String> sport;
     private List<String> music;
+
+    private ObjectId id;
+    private String userEmail;
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
 
     public Prefer() {
         books = new LinkedList<>();

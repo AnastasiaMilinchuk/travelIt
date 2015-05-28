@@ -19,12 +19,48 @@ public class Place {
     private String name;
     private String description;
     private String address;
+    private String city;
     private List<String> tags;
     private Coordinates coordinates;
     private String photo;
     private String creatorEmail;
     private Date dateOfCreation;
     private int subscribers;
+    private double  x;
+    private double  y;
+
+    @Override
+    public String toString(){
+        return city + ", " + name;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    // Gets city's x coordinate
+    public double getX(){
+        return this.x;
+    }
+
+    // Gets city's y coordinate
+    public double getY(){
+        return this.y;
+    }
+
+    // Gets the distance to given city
+    public double distanceTo(Place city){
+        double xDistance = Math.abs(getX() - city.getX());
+        double yDistance = Math.abs(getY() - city.getY());
+        double distance = Math.sqrt( (xDistance*xDistance) + (yDistance*yDistance) );
+
+        return distance;
+    }
+
 
 
     public ObjectId getId() {

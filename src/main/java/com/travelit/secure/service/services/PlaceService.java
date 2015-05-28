@@ -18,5 +18,6 @@ public interface PlaceService {
     Place getById(String id);
     void addSubscriber(ObjectId placeID);
     void deleteSubscriber(ObjectId placeID);
+    List<Place> getPlaces(int number);
 
 }

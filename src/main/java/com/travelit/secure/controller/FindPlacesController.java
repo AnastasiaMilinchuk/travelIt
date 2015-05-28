@@ -32,7 +32,14 @@ public class FindPlacesController {
         if(commonValidation.isAuthorize().isValid){
              return "find-places";
         }
-        return "login";
+        return "redirect:login";
+    }
+    @RequestMapping(method = RequestMethod.GET)
+    public String findPlaceStartGET(Model model){
+        if(commonValidation.isAuthorize().isValid){
+            return "find-places";
+        }
+        return "redirect:login";
     }
 
 }

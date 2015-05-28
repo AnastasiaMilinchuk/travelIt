@@ -14,5 +14,5 @@ public interface UserService {
     void deletePlace(String userEmail, ObjectId placeID);
     void changeFirstName(String userEmail, String firstName);
     void changeLastName(String userEmail, String lastName);
-    void changeEmail(String userEmail, String newEmail);
+    public User mergeChanges(User currentUser, User newUser);
 }
