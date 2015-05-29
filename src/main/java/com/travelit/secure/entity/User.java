@@ -27,14 +27,17 @@ public class User  {
 
     @NotNull
     private int role;
-    private Prefer prefer;
+    private List<Preference> preferences;
 
-    public User() {
-        email = new String();
-        password = new String();
-        matchingPassword = new String();
-        prefer = new Prefer();
+    public List<Preference> getPreferences() {
+        return preferences;
     }
+
+    public void setPreferences(List<Preference> preferences) {
+        this.preferences = preferences;
+    }
+
+    public User() {}
 
     public User(String email, String password, int role) {
         this.email = email;
@@ -95,6 +98,4 @@ public class User  {
     public String toString(){
         return "Login: " + email + " Role: " + role;
     }
-
-
 }
