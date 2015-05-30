@@ -55,16 +55,16 @@
         }
         //google.maps.event.addDomListener(window, 'load', initialize);
 
-//        $('.add-place').click('shown.bs.collapse', function() {
-//            alert("olol");
-////            google.maps.event.trigger(map, 'resize');
-//        });
+        //        $('.add-place').click('shown.bs.collapse', function() {
+        //            alert("olol");
+        ////            google.maps.event.trigger(map, 'resize');
+        //        });
     </script>
     <!--Load google map after open tab-->
     <%--<script>--%>
-        <%--$('.add-place').click('shown.bs.collapse', function() {--%>
-            <%--google.maps.event.trigger(map, 'resize');--%>
-        <%--});--%>
+    <%--$('.add-place').click('shown.bs.collapse', function() {--%>
+    <%--google.maps.event.trigger(map, 'resize');--%>
+    <%--});--%>
     <%--</script>--%>
 </head>
 <body>
@@ -142,101 +142,100 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                   <form:form modelAttribute="places" method="POST">
-                    <fieldset>
-                        <div class="selected-places">
-                            <h1>My selected places</h1>
-                            <div class="row row-wrap">
-                                <div class="col-md-4">
-                                    <div class="thumb">
-                                        <a class="hover-img" href="#">
-                                            <img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">
-                                            <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                <div class="text-small">
-                                                    <h5>Bakota. Ukraine</h5>
+                    <form:form modelAttribute="places" method="POST">
+                        <fieldset>
+                            <div class="selected-places">
+                                <h1>My selected places</h1>
+                                <div class="row row-wrap">
+                                    <div class="col-md-4">
+                                        <div class="thumb">
+                                            <a class="hover-img" href="#">
+                                                <img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">
+                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
+                                                    <div class="text-small">
+                                                        <h5>Bakota. Ukraine</h5>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="thumb">
-                                        <a class="hover-img" href="#">
-                                            <img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/10/10_1.jpg" alt="Image Alternative text" title="lack of blue depresses me">
-                                            <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                <div class="text-small">
-                                                    <h5>Gurzuf</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="added-places">
-                            <h1>My added places</h1>
-                            <div class="row row-wrap">
-                               <div class="col-md-4">
-                                    <div class="thumb">
-                                        <a class="hover-img" href="#">
-                                            <img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/5/5.jpg" alt="Image Alternative text" title="the journey home">
-                                            <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                <div class="text-small">
-                                                    <h5>Sevastopol'</h5>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary add-place" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            Share with place
-                        </button>
-                       <script>
-                           $('.add-place').click('shown.bs.collapse', function() {
-                               initialize();
-                              alert("olol");
-
-//                               google.maps.event.trigger(map, 'resize');
-                        });
-                        </script>
-                        <div class="collapse" id="collapseExample">
-                            <div class="well">
-                                <div class="add-own-place">
-                                    <form:form method="POST" modelAttribute="file" enctype="multipart/form-data" action="upload" >
-                                     <label>Choose photo</label><form:input path = "file" id="file" type="file" multiple="false" placeholder = "Choose photo" />
-                                        <script>
-                                            $("#file").fileinput({
-                                                allowedFileTypes: ["image"]
-                                            });
-                                        </script>
-                                        <%--<input type="submit" name="action" value="upload" />--%>
-                                    </form:form>
-                                    <div class="add-own-place-container"><br>
-                                        <div class="description">
-                                            <label>Name</label><br>
-                                            <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
-                                            <br><br>
-                                            <label>Description</label><br>
-                                            <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
-                                            <br><br>
-                                            <label>Address</label><br>
-                                            <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
-                                            <label>Tags</label><br>
-                                            <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
-                                            <br><br>
-                                            <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
+                                            </a>
                                         </div>
                                     </div>
-                                    <input class="btn btn-primary" type="submit" name="action" value="save" />
+                                    <div class="col-md-4">
+                                        <div class="thumb">
+                                            <a class="hover-img" href="#">
+                                                <img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/10/10_1.jpg" alt="Image Alternative text" title="lack of blue depresses me">
+                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
+                                                    <div class="text-small">
+                                                        <h5>Gurzuf</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="added-places">
+                                <h1>My added places</h1>
+                                <div class="row row-wrap">
+                                    <div class="col-md-4">
+                                        <div class="thumb">
+                                            <a class="hover-img" href="#">
+                                                <img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/5/5.jpg" alt="Image Alternative text" title="the journey home">
+                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
+                                                    <div class="text-small">
+                                                        <h5>Sevastopol'</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary add-place" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Share with place
+                            </button>
+                            <script>
+                                $('.add-place').click('shown.bs.collapse', function() {
+                                    initialize();
+
+//                               google.maps.event.trigger(map, 'resize');
+                                });
+                            </script>
+                            <div class="collapse" id="collapseExample">
+                                <div class="well">
+                                    <div class="add-own-place">
+                                        <form:form method="POST" modelAttribute="file" enctype="multipart/form-data" action="upload" >
+                                            <label>Choose photo</label><form:input path = "file" id="file" type="file" multiple="false" placeholder = "Choose photo" />
+                                            <script>
+                                                $("#file").fileinput({
+                                                    allowedFileTypes: ["image"]
+                                                });
+                                            </script>
+                                            <%--<input type="submit" name="action" value="upload" />--%>
+                                        </form:form>
+                                        <div class="add-own-place-container"><br>
+                                            <div class="description">
+                                                <label>Name</label><br>
+                                                <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
+                                                <br><br>
+                                                <label>Description</label><br>
+                                                <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
+                                                <br><br>
+                                                <label>Address</label><br>
+                                                <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
+                                                <label>Tags</label><br>
+                                                <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
+                                                <br><br>
+                                                <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primary" type="submit" name="action" value="save" />
+                                    </div>
+                                </div>
+                            </div>
 
 
 
-                    </fieldset>
+                        </fieldset>
                     </form:form>
                 </div>
             </div>
@@ -244,39 +243,7 @@
 
         <div class="gap"></div>
 
-        <footer id="main-footer">
-            <div class="container">
-                <div class="row row-wrap">
-                    <div class="col-md-4">
-                        <a class="logo" href="">
-                            <img src="<c:url value = "/pages/img/logo-invert.png"/>" alt="Image Alternative text" title="Image Title" />
-                        </a>
-                        <p class="mb20">TravelIt help you with planning of trips, sharing and saving of wonderful places</p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <h4>Newsletter</h4>
-                        <form>
-                            <label>Enter your E-mail Address</label>
-                            <input type="text" class="form-control"/>
-                            <p class="mt5"><small>*We Never Send Spam</small>
-                            </p>
-                            <input type="submit" class="btn btn-primary" value="Subscribe"/>
-                        </form>
-                    </div>
-                        <%--<div class="col-md-2"></div>--%>
-                    <div class="col-md-4">
-                        <h4>Authors</h4>
-                        <h4 class="text-color">Artem Malinovskiy</h4>
-                        <h4 class="text-color">Anastasia Milinchuk</h4>
-                        <h4 class="text-color">Tanya Syagailo</h4>
-                        <h4 class="text-color">Julia Hrihorieva</h4>
-                        <h4 class="text-color">Nikita Orlov</h4>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
+        <jsp:include page="templates/footer.jsp"  />
 
         <script src="<c:url value='/pages/js/jquery.js'/>"></script>
         <script src="<c:url value="/pages/js/bootstrap.js"/>"></script>
