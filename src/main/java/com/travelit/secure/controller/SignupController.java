@@ -1,5 +1,6 @@
 package com.travelit.secure.controller;
 
+import com.travelit.secure.entity.Preference;
 import com.travelit.secure.entity.User;
 import com.travelit.secure.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by milinchuk on 4/5/15.
@@ -43,8 +47,9 @@ public class SignupController {
     }
 
     @RequestMapping( method = RequestMethod.GET)
-    public String showRegistrationForm(WebRequest request, Model model) {
+    public String showRegistrationForm(WebRequest request, Model model) throws Exception {
         User userDto = new User();
+        service.registerNewUserAccount(userDto);
         model.addAttribute("user", userDto);
         System.out.println("Create User");
         return "signup";
