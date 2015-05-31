@@ -49,14 +49,6 @@ public class SignupController {
     @RequestMapping( method = RequestMethod.GET)
     public String showRegistrationForm(WebRequest request, Model model) throws Exception {
         User userDto = new User();
-        List<Preference> p = new ArrayList<>();
-        p.add(new Preference("films", new ArrayList(){{
-            add("kokoko");
-        }}));
-
-        userDto.setEmail("kfdkfls@gmail.com"); 
-        userDto.setPassword("koko");
-        userDto.setPreferences(p);
         service.registerNewUserAccount(userDto);
         model.addAttribute("user", userDto);
         System.out.println("Create User");
