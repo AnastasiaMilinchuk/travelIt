@@ -54,7 +54,7 @@ public class SignupController {
             add("kokoko");
         }}));
 
-        userDto.setEmail("kfdkfls@gmail.com");
+        userDto.setEmail("kfdkfls@gmail.com"); 
         userDto.setPassword("koko");
         userDto.setPreferences(p);
         service.registerNewUserAccount(userDto);
