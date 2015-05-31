@@ -121,15 +121,15 @@
           <div class="row">
             <div class="col-md-5">
 
-              <form method="POST" enctype="utf8"  action="save-details">
+              <form:form modelAttribute="user" method="POST" enctype="utf8"  action="savePersonalInfo">
                 <h4>Personal Infomation</h4>
                 <div class="form-group">
                   <label>First Name</label>
-                  <input name="firstName" class="form-control" value="${user.firstName}" type="text" />
+                  <form:input path="firstName" class="form-control" value="${user.firstName}" type="text" />
                 </div>
                 <div class="form-group">
                   <label>Last Name</label>
-                  <input name="lastName" class="form-control" value="${user.lastName}" type="text" />
+                  <form:input path="lastName" class="form-control" value="${user.lastName}" type="text" />
                 </div>
                 <%--<div class="form-group">--%>
                   <%--<label>E-mail</label>--%>
@@ -137,13 +137,21 @@
                 <%--</div>--%>
                 <div class="gap gap-small"></div>
                 <h4>What I like</h4>
-               <div class="form-group">
-                  <label>City</label>
+                <div class="form-group">
+                  <label>Books</label>
+                  <input class="form-control" value="" type="text" />
+                  <label>Hobbies</label>
+                  <input class="form-control" value="" type="text" />
+                  <label>Films</label>
+                  <input class="form-control" value="" type="text" />
+                  <label>Sport</label>
+                  <input class="form-control" value="" type="text" />
+                  <label>Music</label>
                   <input class="form-control" value="" type="text" />
                 </div>
                 <hr>
                 <input type="submit" class="btn btn-primary" value="Save Changes">
-              </form>
+              </form:form>
             </div>
 
             <div class="col-md-4 col-md-offset-1">

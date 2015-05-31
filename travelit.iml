@@ -12,21 +12,7 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/SpringConfig.xml</file>
-        </fileset>
-        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mongo/mongo-config.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mongo/spring-database.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/SpringConfig.xml</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/service/mongo/services/PlaceMongoService.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/config/SecurityConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/config/SpringMongoConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/service/mongo/services/UserMongoService.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/travelit/secure/config/WebAppConfig.java</file>
-        </fileset>
-      </configuration>
+      <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
@@ -37,9 +23,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.0.RELEASE" level="project" />
@@ -158,4 +143,3 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.12" level="project" />
   </component>
 </module>
-
