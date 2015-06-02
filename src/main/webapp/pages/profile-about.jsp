@@ -82,7 +82,7 @@
             </li>
             <li class="active"><a href="profile">Profile</a>
             </li>
-            <li><a href="places.html">Places</a>
+            <li><a href="places">Places</a>
             </li>
             <li><a href="routes">Routes</a>
             </li>

@@ -45,6 +45,9 @@
     <bean id="userPlaceService" class="com.travelit.secure.search.UserPlaces"/>
     <bean id="placeAboutValidator" class="com.travelit.secure.validation.PlaceAboutValidator"/>
     <bean id="commonValidation" class="com.travelit.secure.validation.CommonValidation" />
-
+    <bean id="optimizeImport" class="com.travelit.secure.algorithms.prefer.OptimizeImport"/>
+    <bean id="userPrefer" class="com.travelit.secure.search.UserPrefer"/>
+    <bean id="userPlaces" class="com.travelit.secure.search.UserPlaces"/>
+    <bean id="travelSalesmanProblem" class="com.travelit.secure.algorithms.travelsalesman.TravelSalesmanProblem"/>
 
 </beans>

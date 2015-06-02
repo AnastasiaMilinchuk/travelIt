@@ -142,40 +142,72 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                    <form:form modelAttribute="places" method="POST">
+
                         <fieldset>
                             <div class="selected-places">
                                 <h1>My selected places</h1>
                                 <div class="row row-wrap">
-                                    <div class="col-md-4">
-                                        <div class="thumb">
-                                            <a class="hover-img" href="#">
-                                                <img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">
-                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                    <div class="text-small">
-                                                        <h5>Bakota. Ukraine</h5>
+                                    <c:forEach items="${subscribePlaces}" var="place" >
+                                        <div class="col-md-4">
+                                            <div class="thumb">
+                                                <a class="hover-img" href="place?id=${place.id}">
+                                                    <img src="<c:out value="${place.photo}"/>" alt="Image Alternative text" title="Gaviota en el Top">
+                                                    <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
+                                                        <div class="text-small">
+                                                            <h5><c:out value="${place.name}"/></h5>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumb">
-                                            <a class="hover-img" href="#">
-                                                <img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/10/10_1.jpg" alt="Image Alternative text" title="lack of blue depresses me">
-                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                    <div class="text-small">
-                                                        <h5>Gurzuf</h5>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
+                                 </div>
+
+                                <%--<div class="row row-wrap">--%>
+                                    <%--<div class="col-md-4">--%>
+                                        <%--<div class="thumb">--%>
+                                            <%--<a class="hover-img" href="#">--%>
+                                                <%--<img src="http://extreme-weekend.com.ua/assets/cacheimg/104-92578-255-382.pageCache.jpg" alt="Image Alternative text" title="Gaviota en el Top">--%>
+                                                <%--<div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">--%>
+                                                    <%--<div class="text-small">--%>
+                                                        <%--<h5>Bakota. Ukraine</h5>--%>
+                                                    <%--</div>--%>
+                                                <%--</div>--%>
+                                            <%--</a>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="col-md-4">--%>
+                                        <%--<div class="thumb">--%>
+                                            <%--<a class="hover-img" href="#">--%>
+                                                <%--<img src="http://allbooking.com.ua/images/Articles/top-10-najkrasyvishyh-misc-ukraini/10/10_1.jpg" alt="Image Alternative text" title="lack of blue depresses me">--%>
+                                                <%--<div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">--%>
+                                                    <%--<div class="text-small">--%>
+                                                        <%--<h5>Gurzuf</h5>--%>
+                                                    <%--</div>--%>
+                                                <%--</div>--%>
+                                            <%--</a>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
                                 </div>
                             </div>
                             <div class="added-places">
                                 <h1>My added places</h1>
                                 <div class="row row-wrap">
+                                    <c:forEach items="${addedPlaces}" var="place" >
+                                        <div class="col-md-4">
+                                            <div class="thumb">
+                                                <a class="hover-img" href="place?id=${place.id}">
+                                                    <img src="<c:out value="${place.photo}"/>" alt="Image Alternative text" title="Gaviota en el Top">
+                                                    <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
+                                                        <div class="text-small">
+                                                            <h5><c:out value="${place.name}"/></h5>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </c:forEach>
+
                                     <div class="col-md-4">
                                         <div class="thumb">
                                             <a class="hover-img" href="#">
@@ -212,23 +244,26 @@
                                             </script>
                                             <%--<input type="submit" name="action" value="upload" />--%>
                                         </form:form>
-                                        <div class="add-own-place-container"><br>
-                                            <div class="description">
-                                                <label>Name</label><br>
-                                                <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
-                                                <br><br>
-                                                <label>Description</label><br>
-                                                <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
-                                                <br><br>
-                                                <label>Address</label><br>
-                                                <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
-                                                <label>Tags</label><br>
-                                                <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
-                                                <br><br>
-                                                <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
-                                            </div>
-                                        </div>
-                                        <input class="btn btn-primary" type="submit" name="action" value="save" />
+
+                                        <%--<form:form method="POST" modelAttribute="place" enctype="multipart/form-data" >--%>
+                                        <%--<div class="add-own-place-container"><br>--%>
+                                            <%--<div class="description">--%>
+                                                <%--<label>Name</label><br>--%>
+                                                <%--<form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<label>Description</label><br>--%>
+                                                <%--<form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<label>Address</label><br>--%>
+                                                <%--<form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>--%>
+                                                <%--<label>Tags</label><br>--%>
+                                                <%--<form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<div id="map-canvas" style="width:100%; height:400px;"></div><br><br>--%>
+                                            <%--</div>--%>
+                                        <%--</div>--%>
+                                        <%--<input class="btn btn-primary" type="submit" name="action" value="save" />--%>
+                                        <%--</form:form>--%>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +271,6 @@
 
 
                         </fieldset>
-                    </form:form>
                 </div>
             </div>
         </div>

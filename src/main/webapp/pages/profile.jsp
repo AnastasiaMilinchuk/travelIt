@@ -109,7 +109,7 @@
                         </li>
                         <li class="active"><a href="profile">Profile</a>
                         </li>
-                        <li><a href="<c:url value='/find-places' />">Places</a>
+                        <li><a href="<c:url value='/places' />">Places</a>
 
                         </li>
                         <li><a href="<c:url value='/routes' />">Routes</a>

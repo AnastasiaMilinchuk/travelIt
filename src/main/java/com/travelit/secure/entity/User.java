@@ -28,6 +28,15 @@ public class User  {
     @NotNull
     private int role;
     private List<Preference> preferences;
+    private List<String> places;
+
+    public List<String> getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(List<String> places) {
+        this.places = places;
+    }
 
     public List<Preference> getPreferences() {
         return preferences;

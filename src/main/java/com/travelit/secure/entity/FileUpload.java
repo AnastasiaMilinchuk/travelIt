@@ -11,8 +11,8 @@ public class FileUpload{
     }
 
     public void setFile(MultipartFile file) {
-        System.out.println("sdydyhd");
         this.file = file;
-
     }
+
+    public FileUpload(){}
 }

@@ -70,8 +70,18 @@ public class PlaceMongoService implements PlaceService {
     }
 
     @Override
-    public List<Place> getPlaces(int number) {
-       return mongoTemplate.find(new Query(Criteria.where("")).limit(number), Place.class);
+    public List<Place> getPlaces(String city) {
+       return mongoTemplate.find(new Query(Criteria.where("city").is(city)), Place.class);
+    }
+
+    @Override
+    public List<Place> getAll() {
+        return mongoTemplate.findAll(Place.class);
+    }
+
+    @Override
+    public List<Place> getByUser(String userEmail) {
+        return mongoTemplate.find(new Query(Criteria.where("creatorEmail").is(userEmail)), Place.class);
     }
 
     private void updateSubscribers(ObjectId placeID, int inc){

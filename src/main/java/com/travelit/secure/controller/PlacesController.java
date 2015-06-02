@@ -3,7 +3,9 @@ package com.travelit.secure.controller;
 import com.travelit.secure.entity.FileUpload;
 import com.travelit.secure.entity.Place;
 import com.travelit.secure.entity.PlaceData;
+import com.travelit.secure.search.UserPlaces;
 import com.travelit.secure.service.services.PlaceService;
+import com.travelit.secure.validation.CommonValidation;
 import com.travelit.secure.validation.SavePlaceValidator;
 import com.travelit.secure.validation.ValidateMassage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +32,19 @@ import java.util.Date;
 @Controller
 @ComponentScan("com.travelit")
 public class PlacesController{
-    private PlaceService service;
+    @Autowired
+    private UserPlaces userPlaces;
+    @Autowired
+    private  PlaceService placeService;
+    @Autowired
+    private CommonValidation commonValidation;
+
     private SavePlaceValidator validator;
     private MultipartFile file;
 
-    @Autowired
-    public void setService(@Qualifier("placeMongoService") PlaceService service) {
-        this.service = service;
+
+    public void setService( UserPlaces service) {
+        this.userPlaces = service;
     }
 
     public void setValidator(SavePlaceValidator validator) {
@@ -45,10 +53,15 @@ public class PlacesController{
 
     @RequestMapping(value = "/places", method = RequestMethod.GET )
     public String start(ModelMap model){
-        System.out.println("koko start method ");
-        model.addAttribute("places", new PlaceData());
-        model.addAttribute("file", new FileUpload());
-        return "places";
+        if(commonValidation.isAuthorize().isValid){
+            System.out.println("koko start method ");
+            model.addAttribute("subscribePlaces", userPlaces.getSubscribePlaces(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername()));
+            model.addAttribute("addedPlaces", userPlaces.getAddedByUserPlaces(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername()));
+            model.addAttribute("file", new FileUpload());
+            model.addAttribute("place", new Place());
+            return "places";
+        }
+        return "redirect:login";
     }
 
     @RequestMapping(value="/places", method = RequestMethod.POST)
@@ -76,7 +89,7 @@ public class PlacesController{
 
             // save Place
             System.out.println("save place");
-            service.save(place);
+            placeService.save(place);
         }
         return "";
     }
@@ -107,15 +120,15 @@ public class PlacesController{
     }
 
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String upload(@ModelAttribute("file") FileUpload file) throws IOException {
-        System.out.println("upload " + file.toString());
-        ValidateMassage message = validator.validateImage(file.getFile());
-        if (message.isValid){
-            this.file = file.getFile();
-            saveImage(file.getFile().getOriginalFilename());
-        }
-        return message.message;
-    }
+//    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+//    public String upload(@ModelAttribute("file") FileUpload file) throws IOException {
+//        System.out.println("upload " + file.toString());
+//        ValidateMassage message = validator.validateImage(file.getFile());
+//        if (message.isValid){
+//            this.file = file.getFile();
+//            saveImage(file.getFile().getOriginalFilename());
+//        }
+//        return message.message;
+//    }
 
 }

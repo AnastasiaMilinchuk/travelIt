@@ -18,6 +18,7 @@ public interface PlaceService {
     Place getById(String id);
     void addSubscriber(ObjectId placeID);
     void deleteSubscriber(ObjectId placeID);
-    List<Place> getPlaces(int number);
-
+    List<Place> getPlaces(String city);
+    List<Place> getAll();
+    List<Place> getByUser(String userEmail);
 }

@@ -108,6 +108,16 @@ public class UserMongoService implements UserService, UserDetailsService {
         return null;
     }
 
+    @Override
+    public void subscribeToPlace(String user, ObjectId placeID) {
+        mongoTemplate.updateFirst(new Query(Criteria.where("user").is(user)), new Update().addToSet("places", placeID), Place.class);
+    }
+
+    @Override
+    public List<String> getSubscribePlaceByUser(String userEmail) {
+        return mongoTemplate.findOne(new Query(Criteria.where("email").is(userEmail)), User.class).getPlaces();
+    }
+
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         boolean enabled = true;

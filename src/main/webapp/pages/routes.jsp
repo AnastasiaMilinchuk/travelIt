@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- GOOGLE FONTS -->
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
     <!-- /GOOGLE FONTS -->
@@ -21,45 +22,93 @@
     <link rel="stylesheet" href="<c:url value="/pages/css/mystyles.css"/>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href="<c:url value="/pages/css/input/fileinput.css"/>" media="all" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script  src="<c:url value="/pages/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/pages/js/input/fileinput.min.js"/>"></script>
     <script src="<c:url value="/pages/js/input/fileinput_locale_uk.js"/>"></script>
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <%--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>--%>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
+        var markerCount = 0;
+        var map;
+        var data;
+        // Define yo ur locations: HTML content for the info window, latitude, longitude
         function initialize() {
-            var mapCanvas = document.getElementById('map-canvas');
-            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
+            var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
             var mapOptions = {
-                center: myLatLng,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+                zoom: 4,
+                center: myLatlng
+            }
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Hello World!'
+            });
 
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = new google.maps.LatLng(position.coords.latitude,
-                            position.coords.longitude);
+            addMarkers();
+        }
 
-                    map.setCenter(pos);
-                }, function() {
-                    handleNoGeolocation(true);
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleNoGeolocation(false);
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function addMarkers(){
+            var locations = [];
+            console.log(data);
+            for(var i = 0; i < data.length; i++){
+                 locations += ['<h4>'+ data[i].name +'</h4>' , data[i].x, data[i].y];
+                  alert(locations);
+
+
+            var infowindow = new google.maps.InfoWindow();
+            var myLatLng = new google.maps.LatLng(data[i].x, data[i].y);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map
+            });
+
+            //Gives each marker an Id for the on click
+            markerCount++;
+
+            //Creates the event listener for clicking the marker
+            //and places the marker on the map
+            google.maps.event.addListener(marker, 'click', (function(marker, markerCount) {
+                return function() {
+                    infowindow.setContent(data[i].name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, markerCount));
+
+            //Pans map to the new location of the marker
+            map.panTo(myLatLng);
             }
         }
-        //google.maps.event.addDomListener(window, 'load', initialize);
 
-        //        $('.add-place').click('shown.bs.collapse', function() {
-        //            alert("olol");
-        ////            google.maps.event.trigger(map, 'resize');
-        //        });
+        function doAjax() {
+
+            var inputText = $("#city").val();
+
+            $.ajax({
+                url : 'routes/get',
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json',
+                mimeType: 'application/json',
+                data : ({
+                    text: inputText
+                }),
+                success: function (request) {
+                    data = request.coordinates;
+//                    google.maps.event.addDomListener(window, 'load', initialize);
+                   addMarkers(request.coordinates);
+                }
+
+            });
+        }
     </script>
+
+
     <!--Load google map after open tab-->
     <%--<script>--%>
     <%--$('.add-place').click('shown.bs.collapse', function() {--%>
@@ -124,7 +173,7 @@
                         </li>
                         <li><a href="profile">Profile</a>
                         </li>
-                        <li class = "active"><a href="places.html">Places</a>
+                        <li class = "active"><a href="places">Places</a>
 
                         </li>
                         <li><a href="routes">Routes</a>
@@ -142,13 +191,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                    <form:form modelAttribute="places" method="POST">
+                    <form:form modelAttribute="places" method="POST" >
                         <h1>Choose city:</h1>
-                        <select>
-                            <option>Kiev</option>
-                            <option>Lviv</option>
-                            <option>Odessa</option>
-                        </select>
+                        <form:select path="places">
+                            <form:option selected="selected" value=""></form:option>
+                            <form:option value="iphone">IPHONE</form:option>
+                        </form:select>
+                        <button type="submit">Find</button>
+                        <div id="map-canvas"></div>
 
                         <fieldset>
 
@@ -156,7 +206,7 @@
                                 <h1>Recomended Places</h1>
 
                                 <div class="row row-wrap">
-                                    <c:forEach items="${places}" var="place" >
+                                    <c:forEach items="${response.places}" var="place" >
                                     <div class="col-md-4">
                                         <div class="thumb">
                                             <a class="hover-img" href="place?id=${place.id}">

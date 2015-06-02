@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -56,7 +58,28 @@ public class UserPlaces {
         return placeService.getById(id);
     }
 
-    public List<Place> getNinePlacesForUser(String userEmail){
+    public List<Place> getPlacesForUser(String userEmail){
         return StaticData.getNinePlacesForUser(userEmail);
+    }
+
+    public List<Place> getAllPlaces(){
+        return placeService.getAll();
+    }
+
+    public List<Place> getPlacesByCity(String city){
+        return placeService.getPlaces(city);
+    }
+
+    public List<Place> getSubscribePlaces(String userEmail){
+        List<String> placesID =  userService.getSubscribePlaceByUser(userEmail);
+        List<Place> places = new LinkedList<>();
+        for(String place: placesID){
+           places.add(placeService.getById(place));
+        }
+
+        return places;
+    }
+    public List<Place> getAddedByUserPlaces(String userEmail){
+        return placeService.getByUser(userEmail);
     }
 }

@@ -6,6 +6,7 @@ package com.travelit.secure.controller;
 
 import com.travelit.secure.entity.Place;
 import com.travelit.secure.search.UserPlaces;
+import com.travelit.secure.search.UserPrefer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,6 +24,9 @@ public class MainPageController {
     @Autowired
     private UserPlaces userPlaces;
 
+    @Autowired
+    private UserPrefer userPrefer;
+
     public void setUserPlaces(UserPlaces userPlaces) {
         this.userPlaces = userPlaces;
     }
@@ -31,15 +35,15 @@ public class MainPageController {
     public String mainPage(ModelMap model){
         if(SecurityContextHolder.getContext().getAuthentication().getName() != "anonymousUser"){
             model.addAttribute("places",
-                    getNinePlaces(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername())
+                    getPlaces(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername())
             );
         }
         return "main";
 
     }
 
-    private List<Place> getNinePlaces(String userEmail){
-        return userPlaces.getNinePlacesForUser(userEmail);
+    private List<Place> getPlaces(String userEmail){
+        return userPrefer.getUserPrefers();
     }
 
 

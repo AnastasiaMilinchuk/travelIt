@@ -49,7 +49,6 @@ public class SignupController {
     @RequestMapping( method = RequestMethod.GET)
     public String showRegistrationForm(WebRequest request, Model model) throws Exception {
         User userDto = new User();
-        service.registerNewUserAccount(userDto);
         model.addAttribute("user", userDto);
         System.out.println("Create User");
         return "signup";

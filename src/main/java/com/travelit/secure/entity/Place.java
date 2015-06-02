@@ -21,13 +21,85 @@ public class Place {
     private String address;
     private String city;
     private List<String> tags;
-    private Coordinates coordinates;
     private String photo;
     private String creatorEmail;
     private Date dateOfCreation;
     private int subscribers;
     private double  x;
     private double  y;
+
+    private double luxury; // show how expensive this place
+    private double length; // distance between user and place
+    private double rating; // user rating
+    private double eventsNowNumber; // number of current active events
+    private double avgRatingForAdditionalCriterias; // average rating of additional criterias
+    private double fitnessIndividual; // represent how individual is attractive
+
+    public Place(double avgRatingForAdditionalCriterias, double eventsNowNumber, double length, double luxury, double rating,String name) {
+        this.avgRatingForAdditionalCriterias = avgRatingForAdditionalCriterias;
+        this.eventsNowNumber = eventsNowNumber;
+        this.fitnessIndividual = 0;
+        this.length = length;
+        this.luxury = luxury;
+        this.rating = rating;
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public double getLuxury() {
+        return luxury;
+    }
+
+    public void setLuxury(double luxury) {
+        this.luxury = luxury;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public double getEventsNowNumber() {
+        return eventsNowNumber;
+    }
+
+    public void setEventsNowNumber(double eventsNowNumber) {
+        this.eventsNowNumber = eventsNowNumber;
+    }
+
+    public double getAvgRatingForAdditionalCriterias() {
+        return avgRatingForAdditionalCriterias;
+    }
+
+    public void setAvgRatingForAdditionalCriterias(double avgRatingForAdditionalCriterias) {
+        this.avgRatingForAdditionalCriterias = avgRatingForAdditionalCriterias;
+    }
+
+    public double getFitnessIndividual() {
+        return fitnessIndividual;
+    }
+
+    public void setFitnessIndividual(double fitnessIndividual) {
+        this.fitnessIndividual = fitnessIndividual;
+    }
 
     @Override
     public String toString(){
@@ -139,14 +211,6 @@ public class Place {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
-    }
-
-    public Coordinates getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
     }
 
 }
