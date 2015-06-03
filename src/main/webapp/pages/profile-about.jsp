@@ -121,7 +121,7 @@
           <div class="row">
             <div class="col-md-5">
 
-              <form:form modelAttribute="user" method="POST" enctype="utf8"  action="savePersonalInfo">
+              <form:form modelAttribute="user" method="POST" enctype="utf8"  action="save-details">
                 <h4>Personal Infomation</h4>
                 <div class="form-group">
                   <label>First Name</label>
@@ -139,19 +139,19 @@
                 <h4>What I like</h4>
                 <div class="form-group">
                   <label>Books</label>
-                  <input class="form-control" value="" type="text" />
+                  <form:input path="preferences[books]" class="form-control" value="${user.preferences['books']}" type="text" />
                   <label>Hobbies</label>
-                  <input class="form-control" value="" type="text" />
+                  <form:input path="preferences[Hobbies]" class="form-control" value="${user.preferences['Hobbies']}" type="text" />
                   <label>Films</label>
-                  <input class="form-control" value="" type="text" />
+                  <form:input path="preferences[Films]" class="form-control" value="${user.preferences['Films']}" type="text" />
                   <label>Sport</label>
-                  <input class="form-control" value="" type="text" />
+                  <form:input path="preferences[Sport]" class="form-control" value="${user.preferences['Sport']}" type="text" />
                   <label>Music</label>
-                  <input class="form-control" value="" type="text" />
+                  <form:input path="preferences[Music]" class="form-control" value="${user.preferences['Music']}" type="text" />
                 </div>
                 <hr>
                 <input type="submit" class="btn btn-primary" value="Save Changes">
-              </form:form>
+                </form:form>
             </div>
 
             <div class="col-md-4 col-md-offset-1">

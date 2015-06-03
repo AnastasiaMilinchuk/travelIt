@@ -83,7 +83,7 @@ public class UserMongoService implements UserService, UserDetailsService {
     }
 
 
-    private void setChanges(String userEmail, String fieldName, String newData){
+    public void setChanges(String userEmail, String fieldName, Object newData){
         mongoTemplate.updateFirst(new Query(Criteria.where("email").is(userEmail)), new Update().set(fieldName, newData), User.class);
     }
 
