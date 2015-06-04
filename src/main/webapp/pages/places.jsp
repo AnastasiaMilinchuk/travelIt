@@ -184,7 +184,7 @@
                                         <%--</div>--%>
                                     <%--</div>--%>
                                 </div>
-                            </div>
+                            <%--</div>--%>
                             <div class="added-places">
                                 <h1>My added places</h1>
                                 <div class="row row-wrap">
