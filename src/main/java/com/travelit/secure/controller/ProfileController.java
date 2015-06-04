@@ -12,14 +12,21 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.inject.Inject;
+
 /**
  * Created by milinchuk on 4/4/15.
  */
 @Controller
 @RequestMapping("/profile")
 public class ProfileController {
+    @Inject
+    UserService userService;
+
     @RequestMapping(method = RequestMethod.GET)
     public String mainPage(ModelMap model){
+        String email = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+        model.addAttribute("similarUsers", userService.getSimilarUsersByPreferences(email, 20));
         return "profile";
     }
 

@@ -175,6 +175,23 @@
                     <div id="map-canvas" style="width:100%; height:400px;"></div>
                     <div class = "people">
                         <h3>These people can become your friends</h3>
+                        <c:forEach items="${similarUsers}" var="user" >
+                            <div>
+                                <strong><p>${user.firstName} ${user.lastName}</p></strong>
+                                ${user.email}
+                                <c:forEach var="preference" items="${user.preferences}">
+                                    ${preference.key}  - ${preference.value}
+                                </c:forEach>
+                                    <%--<a href="user?id=${user.fires}">--%>
+                                        <%--<img src="<c:out value="${place.photo}"/>" alt="Image Alternative text" title="Gaviota en el Top">--%>
+                                        <%--<div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">--%>
+                                            <%--<div class="text-small">--%>
+                                                <%--<h5><c:out value="${place.name}"/></h5>--%>
+                                            <%--</div>--%>
+                                        <%--</div>--%>
+                                    <%--</a>--%>
+                            </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
