@@ -24,32 +24,32 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
     <script>
-        function initialize() {
-            var mapCanvas = document.getElementById('map-canvas');
-            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
-            var mapOptions = {
-                center: myLatLng,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = new google.maps.LatLng(position.coords.latitude,
-                            position.coords.longitude);
-
-                    map.setCenter(pos);
-                }, function() {
-                    handleNoGeolocation(true);
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleNoGeolocation(false);
-            }
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
+//        function initialize() {
+//            var mapCanvas = document.getElementById('map-canvas');
+//            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
+//            var mapOptions = {
+//                center: myLatLng,
+//                zoom: 10,
+//                mapTypeId: google.maps.MapTypeId.ROADMAP
+//            };
+//
+//            var map = new google.maps.Map(mapCanvas, mapOptions);
+//
+//            if(navigator.geolocation) {
+//                navigator.geolocation.getCurrentPosition(function(position) {
+//                    var pos = new google.maps.LatLng(position.coords.latitude,
+//                            position.coords.longitude);
+//
+//                    map.setCenter(pos);
+//                }, function() {
+//                    handleNoGeolocation(true);
+//                });
+//            } else {
+//                // Browser doesn't support Geolocation
+//                handleNoGeolocation(false);
+//            }
+//        }
+//        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </head>
 <body>
@@ -134,7 +134,6 @@
                         <div class="user-profile-avatar text-center">
                             <img src="<c:url value="/pages/images/amaze_300x300.jpg"/>" alt="Image Alternative text" title="AMaze" />
                             <h5></h5>
-                            <p>Member Since May 2012</p>
                         </div>
                         <ul class="list user-profile-nav">
                             <li><a href=''<c:url value="profile"/>'>Overview</a>
@@ -149,29 +148,30 @@
                     </aside>
                 </div>
                 <div class="col-md-9">
-                    <h4>Total Traveled</h4>
-                    <ul class="list list-inline user-profile-statictics mb30">
-                        <li><img src="<c:url value="/pages/images/miles.svg"/>" alt="Image Alternative text" title="AMaze" />
-                            <h5>12540</h5>
-                            <p>Miles</p>
-                        </li>
-                        <li><img src="<c:url value="/pages/images/earth.png"/>" alt="Image Alternative text" title="AMaze" />
-                            <h5>2%</h5>
-                            <p>World</p>
-                        </li>
-                        <li><img src="<c:url value="/pages/images/cities.png"/>" alt="Image Alternative text" title="AMaze" />
-                            <h5>15</h5>
-                            <p>Cities</p>
-                        </li>
-                        <li><img src="<c:url value="/pages/images/flag.png"/>" alt="Image Alternative text" title="AMaze" />
-                            <h5>3</h5>
-                            <p>Countries</p>
-                        </li>
-                        <li><img src="<c:url value="/pages/images/trip.png"/>" alt="Image Alternative text" title="AMaze" />
-                            <h5>20</h5>
-                            <p>Trips</p>
-                        </li>
-                    </ul>
+                    <%--<h4>Total Traveled</h4>--%>
+                    <%--<ul class="list list-inline user-profile-statictics mb30">--%>
+                        <%--<li><img src="<c:url value="/pages/images/miles.svg"/>" alt="Image Alternative text" title="AMaze" />--%>
+                            <%--<h5>12540</h5>--%>
+                            <%--<p>Miles</p>--%>
+                        <%--</li>--%>
+                        <%--<li><img src="<c:url value="/pages/images/earth.png"/>" alt="Image Alternative text" title="AMaze" />--%>
+                            <%--<h5>2%</h5>--%>
+                            <%--<p>World</p>--%>
+                        <%--</li>--%>
+                        <%--<li><img src="<c:url value="/pages/images/cities.png"/>" alt="Image Alternative text" title="AMaze" />--%>
+                            <%--<h5>15</h5>--%>
+                            <%--<p>Cities</p>--%>
+                        <%--</li>--%>
+                        <%--<li><img src="<c:url value="/pages/images/flag.png"/>" alt="Image Alternative text" title="AMaze" />--%>
+                            <%--<h5>3</h5>--%>
+                            <%--<p>Countries</p>--%>
+                        <%--</li>--%>
+                        <%--<li><img src="<c:url value="/pages/images/trip.png"/>" alt="Image Alternative text" title="AMaze" />--%>
+                            <%--<h5>20</h5>--%>
+                            <%--<p>Trips</p>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+
                     <div id="map-canvas" style="width:100%; height:400px;"></div>
                     <div class = "people">
                         <h3>These people can become your friends</h3>

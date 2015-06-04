@@ -156,7 +156,6 @@
                         </div>
                         <div class = "description_place">
                             <h2>${place.name}</h2>
-                            <p>${place.description}</p>
                             <div class= "place_detail_info">Creator ${place.creatorEmail}
                                 <span class = "number_visits">${place.subscribes}</span>
                             </div>

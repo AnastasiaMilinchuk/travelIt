@@ -27,13 +27,8 @@ public class UserPlaces {
     @Autowired
     private UserService userService;
 
-
     public void setService(PlaceService service) {
         this.placeService = service;
-    }
-
-    public void setUserService(UserService userService) {
-        this.userService = userService;
     }
 
 

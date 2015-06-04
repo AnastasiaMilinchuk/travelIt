@@ -33,6 +33,8 @@ public class UserPrefer {
     }
 
     public List<Place> getPlacePrefersByLocation(String city){
-        return travelSalesmanProblem.findPath(optimizeImport.getSequence(userPlaces.getPlacesByCity(city)).subList(0,6));
+        List<Place> places = optimizeImport.getSequence(userPlaces.getPlacesByCity(city)).subList(0,6);
+        System.out.println("get prefer places by location " + places.size());
+        return travelSalesmanProblem.findPath(places);
     }
 }

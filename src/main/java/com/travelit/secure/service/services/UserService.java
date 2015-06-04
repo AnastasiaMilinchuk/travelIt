@@ -14,6 +14,7 @@ public interface UserService {
     void deletePlace(String userEmail, ObjectId placeID);
     void changeFirstName(String userEmail, String firstName);
     void changeLastName(String userEmail, String lastName);
+    void changePassword(String userEmail, String newPassword);
     public User mergeChanges(User currentUser, User newUser);
     void subscribeToPlace(String userEmail, ObjectId placeID);
     List<String> getSubscribePlaceByUser(String userEmail);
