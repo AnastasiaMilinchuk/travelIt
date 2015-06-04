@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.validation.constraints.NotNull;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 
 @Document(collection = "users")
@@ -27,7 +29,8 @@ public class User  {
 
     @NotNull
     private int role;
-    private List<Preference> preferences;
+    private Map<String, String> preferences;
+
     private List<String> places;
 
     public List<String> getPlaces() {
@@ -38,11 +41,11 @@ public class User  {
         this.places = places;
     }
 
-    public List<Preference> getPreferences() {
+    public Map<String, String> getPreferences() {
         return preferences;
     }
 
-    public void setPreferences(List<Preference> preferences) {
+    public void setPreferences(Map<String, String> preferences) {
         this.preferences = preferences;
     }
 

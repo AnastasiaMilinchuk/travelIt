@@ -18,8 +18,7 @@ public class JaccardIndexBasedSimilarity {
     private Map<String, Set<String>> mapPreference(List<Preference> prefs) {
         Map<String, Set<String>> m = new HashMap<>();
         for (Preference preference : prefs) {
-            Set<String> tagsSet = new HashSet<>(preference.getValue());
-            m.put(preference.getName(), tagsSet);
+            m.put(preference.getName(), preference.getValue());
         }
         return m;
     }
@@ -37,10 +36,10 @@ public class JaccardIndexBasedSimilarity {
     }
 
     public static float calculateSimilarity(Set<String> oneContent, Set<String> otherContet) {
-        Set<String> denominator = Sets.union(oneContent,otherContet);
+        Set<String> denominator = Sets.union(oneContent, otherContet);
         Set<String> numerator = Sets.intersection(oneContent, otherContet);
 
-        return denominator.size()>0? (float)numerator.size()/(float)denominator.size() : 0;
+        return denominator.size() > 0 ? (float) numerator.size() / (float) denominator.size() : 0;
     }
 
 //    public static void main(String[] args) {
