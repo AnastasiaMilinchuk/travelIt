@@ -24,32 +24,32 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
     <script>
-        function initialize() {
-            var mapCanvas = document.getElementById('map-canvas');
-            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
-            var mapOptions = {
-                center: myLatLng,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = new google.maps.LatLng(position.coords.latitude,
-                            position.coords.longitude);
-
-                    map.setCenter(pos);
-                }, function() {
-                    handleNoGeolocation(true);
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleNoGeolocation(false);
-            }
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
+//        function initialize() {
+//            var mapCanvas = document.getElementById('map-canvas');
+//            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
+//            var mapOptions = {
+//                center: myLatLng,
+//                zoom: 10,
+//                mapTypeId: google.maps.MapTypeId.ROADMAP
+//            };
+//
+//            var map = new google.maps.Map(mapCanvas, mapOptions);
+//
+//            if(navigator.geolocation) {
+//                navigator.geolocation.getCurrentPosition(function(position) {
+//                    var pos = new google.maps.LatLng(position.coords.latitude,
+//                            position.coords.longitude);
+//
+//                    map.setCenter(pos);
+//                }, function() {
+//                    handleNoGeolocation(true);
+//                });
+//            } else {
+//                // Browser doesn't support Geolocation
+//                handleNoGeolocation(false);
+//            }
+//        }
+//        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </head>
 <body>
@@ -172,7 +172,7 @@
                             <p>Trips</p>
                         </li>
                     </ul>
-                    <div id="map-canvas" style="width:100%; height:400px;"></div>
+                    <%--<div id="map-canvas" style="width:100%; height:400px;"></div>--%>
                     <div class = "people">
                         <h3>These people can become your friends</h3>
                     </div>

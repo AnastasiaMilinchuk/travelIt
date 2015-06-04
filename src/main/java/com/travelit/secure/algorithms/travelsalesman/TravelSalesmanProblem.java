@@ -15,13 +15,11 @@ import java.util.List;
 public class TravelSalesmanProblem {
 
     public List<Place> findPath(List<Place> places){
-        System.out.println("TRAVELSALESMAN "+places);
-        for(Place place: places){
-            TourManager.addCity(place);
-        }
-
-        Population pop = evolvePopulation(createPopulation(50, true));
-        System.out.println(pop.getFittest().getPlaces());
+        System.out.println("TRAVELSALESMAN "+ places.size());
+        TourManager.setDestinationCities(places);
+        System.out.println("tour manager " + TourManager.numberOfCities());
+        Population pop = evolvePopulation(createPopulation(150, true));
+        System.out.println(pop.getFittest().getPlaces().size());
         return pop.getFittest().getPlaces();
     }
 

@@ -26,95 +26,8 @@
     <script src="<c:url value="/pages/js/input/fileinput.min.js"/>"></script>
     <script src="<c:url value="/pages/js/input/fileinput_locale_uk.js"/>"></script>
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <%--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>--%>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script>
-        var markerCount = 0;
-        var map;
-        var data;
-        // Define yo ur locations: HTML content for the info window, latitude, longitude
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-            var mapOptions = {
-                zoom: 4,
-                center: myLatlng
-            }
-            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Hello World!'
-            });
-
-            addMarkers();
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-        function addMarkers(){
-            var locations = [];
-            console.log(data);
-            for(var i = 0; i < data.length; i++){
-                 locations += ['<h4>'+ data[i].name +'</h4>' , data[i].x, data[i].y];
-                  alert(locations);
-
-
-            var infowindow = new google.maps.InfoWindow();
-            var myLatLng = new google.maps.LatLng(data[i].x, data[i].y);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map
-            });
-
-            //Gives each marker an Id for the on click
-            markerCount++;
-
-            //Creates the event listener for clicking the marker
-            //and places the marker on the map
-            google.maps.event.addListener(marker, 'click', (function(marker, markerCount) {
-                return function() {
-                    infowindow.setContent(data[i].name);
-                    infowindow.open(map, marker);
-                }
-            })(marker, markerCount));
-
-            //Pans map to the new location of the marker
-            map.panTo(myLatLng);
-            }
-        }
-
-        function doAjax() {
-
-            var inputText = $("#city").val();
-
-            $.ajax({
-                url : 'routes/get',
-                type: 'GET',
-                dataType: 'json',
-                contentType: 'application/json',
-                mimeType: 'application/json',
-                data : ({
-                    text: inputText
-                }),
-                success: function (request) {
-                    data = request.coordinates;
-//                    google.maps.event.addDomListener(window, 'load', initialize);
-                   addMarkers(request.coordinates);
-                }
-
-            });
-        }
-    </script>
-
-
-    <!--Load google map after open tab-->
-    <%--<script>--%>
-    <%--$('.add-place').click('shown.bs.collapse', function() {--%>
-    <%--google.maps.event.trigger(map, 'resize');--%>
-    <%--});--%>
-    <%--</script>--%>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="<c:url value="/pages/js/customMaps.js"/>"></script>
 </head>
 <body>
 <sec:authorize access="isAuthenticated()">
@@ -125,7 +38,6 @@
                     <div class="row">
                         <div class="col-md-3">
                             <a class="logo" href="index.html">
-                                    <%--<img src="<c:url value="/pages/images/login/logoEarth1.png" />" alt="Image Alternative text" title="Image Title" />--%>
                             </a>
                         </div>
                         <div class="col-md-3 col-md-offset-2">
@@ -173,10 +85,10 @@
                         </li>
                         <li><a href="profile">Profile</a>
                         </li>
-                        <li class = "active"><a href="places">Places</a>
+                        <li><a href="places">Places</a>
 
                         </li>
-                        <li><a href="routes">Routes</a>
+                        <li class = "active"><a href="routes">Routes</a>
                         </li>
 
                     </ul>
@@ -191,14 +103,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                    <form:form modelAttribute="places" method="POST" >
+                    <form:form modelAttribute="city" method="POST">
                         <h1>Choose city:</h1>
-                        <form:select path="places">
-                            <form:option selected="selected" value=""></form:option>
-                            <form:option value="iphone">IPHONE</form:option>
+                        <form:select id="city" path="cityName">
+                            <form:option selected="selected" value="Kiev">Kiev</form:option>
+                            <form:option value="Odessa">Odessa</form:option>
+                            <form:option value="Lviv">Lviv</form:option>
                         </form:select>
-                        <button type="submit">Find</button>
-                        <div id="map-canvas"></div>
+                        <button onclick="doAjax()">Find</button>
+                        <div id="customMap"></div>
 
                         <fieldset>
 
@@ -251,7 +164,6 @@
                             <input type="submit" class="btn btn-primary" value="Subscribe"/>
                         </form>
                     </div>
-                        <%--<div class="col-md-2"></div>--%>
                     <div class="col-md-4">
                         <h4>Authors</h4>
                         <h4 class="text-color">Artem Malinovskiy</h4>
@@ -275,8 +187,6 @@
         <script src="<c:url value="/pages/js/ionrangeslider.js"/>"></script>
         <script src="<c:url value="/pages/js/icheck.js"/>"></script>
         <script src="<c:url value="/pages/js/fotorama.js"/>"></script>
-            <%--<script src="<c:url value="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"/>"></script>--%>
-            <%--<script src="<c:url value="https://maps.gstatic.com/maps-api-v3/api/js/20/11/main.js"/>"></script>--%>
         <script src="<c:url value="/pages/js/typeahead.js"/>"></script>
         <script src="<c:url value="/pages/js/card-payment.js"/>"></script>
         <script src="<c:url value="/pages/js/magnific.js"/>"></script>

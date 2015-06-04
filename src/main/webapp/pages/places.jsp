@@ -27,32 +27,33 @@
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src=""
     <script>
-        function initialize() {
-            var mapCanvas = document.getElementById('map-canvas');
-            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
-            var mapOptions = {
-                center: myLatLng,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-            if(navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = new google.maps.LatLng(position.coords.latitude,
-                            position.coords.longitude);
-
-                    map.setCenter(pos);
-                }, function() {
-                    handleNoGeolocation(true);
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleNoGeolocation(false);
-            }
-        }
+//        function initialize() {
+//            var mapCanvas = document.getElementById('map-canvas');
+//            var myLatLng = new google.maps.LatLng(50.447585, 30.452310);
+//            var mapOptions = {
+//                center: myLatLng,
+//                zoom: 10,
+//                mapTypeId: google.maps.MapTypeId.ROADMAP
+//            };
+//
+//            var map = new google.maps.Map(mapCanvas, mapOptions);
+//
+//            if(navigator.geolocation) {
+//                navigator.geolocation.getCurrentPosition(function(position) {
+//                    var pos = new google.maps.LatLng(position.coords.latitude,
+//                            position.coords.longitude);
+//
+//                    map.setCenter(pos);
+//                }, function() {
+//                    handleNoGeolocation(true);
+//                });
+//            } else {
+//                // Browser doesn't support Geolocation
+//                handleNoGeolocation(false);
+//            }
+//        }
         //google.maps.event.addDomListener(window, 'load', initialize);
 
         //        $('.add-place').click('shown.bs.collapse', function() {
@@ -60,12 +61,6 @@
         ////            google.maps.event.trigger(map, 'resize');
         //        });
     </script>
-    <!--Load google map after open tab-->
-    <%--<script>--%>
-    <%--$('.add-place').click('shown.bs.collapse', function() {--%>
-    <%--google.maps.event.trigger(map, 'resize');--%>
-    <%--});--%>
-    <%--</script>--%>
 </head>
 <body>
 <sec:authorize access="isAuthenticated()">
@@ -245,25 +240,25 @@
                                             <%--<input type="submit" name="action" value="upload" />--%>
                                         </form:form>
 
-                                        <%--<form:form method="POST" modelAttribute="place" enctype="multipart/form-data" >--%>
-                                        <%--<div class="add-own-place-container"><br>--%>
-                                            <%--<div class="description">--%>
-                                                <%--<label>Name</label><br>--%>
-                                                <%--<form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>--%>
-                                                <%--<br><br>--%>
-                                                <%--<label>Description</label><br>--%>
-                                                <%--<form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>--%>
-                                                <%--<br><br>--%>
-                                                <%--<label>Address</label><br>--%>
-                                                <%--<form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>--%>
-                                                <%--<label>Tags</label><br>--%>
-                                                <%--<form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>--%>
-                                                <%--<br><br>--%>
-                                                <%--<div id="map-canvas" style="width:100%; height:400px;"></div><br><br>--%>
-                                            <%--</div>--%>
-                                        <%--</div>--%>
-                                        <%--<input class="btn btn-primary" type="submit" name="action" value="save" />--%>
-                                        <%--</form:form>--%>
+                                        <form:form method="POST" modelAttribute="place" enctype="multipart/form-data" >
+                                        <div class="add-own-place-container"><br>
+                                            <div class="description">
+                                                <label>Name</label><br>
+                                                <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
+                                                <br><br>
+                                                <label>Description</label><br>
+                                                <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
+                                                <br><br>
+                                                <label>Address</label><br>
+                                                <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
+                                                <label>Tags</label><br>
+                                                <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
+                                                <br><br>
+                                                <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
+                                            </div>
+                                        </div>
+                                        <input class="btn btn-primary" type="submit" name="action" value="save" />
+                                        </form:form>
                                     </div>
                                 </div>
                             </div>
