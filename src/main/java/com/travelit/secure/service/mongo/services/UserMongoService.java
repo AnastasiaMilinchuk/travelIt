@@ -104,6 +104,12 @@ public class UserMongoService implements UserService, UserDetailsService {
     }
 
     @Override
+    public void changePassword(String userEmail, String newPassword) {
+        setChanges(userEmail, "password", newPassword);
+        setChanges(userEmail, "matchingPassword", newPassword);
+    }
+
+    @Override
     public User mergeChanges(User currentUser, User newUser) {
         return null;
     }

@@ -172,7 +172,7 @@
                             <p>Trips</p>
                         </li>
                     </ul>
-                    <%--<div id="map-canvas" style="width:100%; height:400px;"></div>--%>
+                    <div id="map-canvas" style="width:100%; height:400px;"></div>
                     <div class = "people">
                         <h3>These people can become your friends</h3>
                     </div>

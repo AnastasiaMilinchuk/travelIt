@@ -35,4 +35,13 @@ public class Password {
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
+
+    public boolean isMatchesNewPassword(){
+        return newPassword.equals(confirmPassword);
+    }
+
+    public boolean isMatchesOldPassword(String oldPassword){
+        return currentPassword.equals(oldPassword);
+    }
+
 }

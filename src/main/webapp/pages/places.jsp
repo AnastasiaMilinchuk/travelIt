@@ -230,35 +230,35 @@
                             <div class="collapse" id="collapseExample">
                                 <div class="well">
                                     <div class="add-own-place">
-                                        <form:form method="POST" modelAttribute="file" enctype="multipart/form-data" action="upload" >
-                                            <label>Choose photo</label><form:input path = "file" id="file" type="file" multiple="false" placeholder = "Choose photo" />
-                                            <script>
-                                                $("#file").fileinput({
-                                                    allowedFileTypes: ["image"]
-                                                });
-                                            </script>
-                                            <%--<input type="submit" name="action" value="upload" />--%>
-                                        </form:form>
+                                        <%--<form:form method="POST" modelAttribute="file" enctype="multipart/form-data" action="upload" >--%>
+                                            <%--<label>Choose photo</label><form:input path = "file" id="file" type="file" multiple="false" placeholder = "Choose photo" />--%>
+                                            <%--<script>--%>
+                                                <%--$("#file").fileinput({--%>
+                                                    <%--allowedFileTypes: ["image"]--%>
+                                                <%--});--%>
+                                            <%--</script>--%>
+                                            <%--&lt;%&ndash;<input type="submit" name="action" value="upload" />&ndash;%&gt;--%>
+                                        <%--</form:form>--%>
 
-                                        <form:form method="POST" modelAttribute="place" enctype="multipart/form-data" >
-                                        <div class="add-own-place-container"><br>
-                                            <div class="description">
-                                                <label>Name</label><br>
-                                                <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
-                                                <br><br>
-                                                <label>Description</label><br>
-                                                <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
-                                                <br><br>
-                                                <label>Address</label><br>
-                                                <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
-                                                <label>Tags</label><br>
-                                                <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
-                                                <br><br>
-                                                <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
-                                            </div>
-                                        </div>
-                                        <input class="btn btn-primary" type="submit" name="action" value="save" />
-                                        </form:form>
+                                        <%--<form:form method="POST" modelAttribute="place" enctype="multipart/form-data" >--%>
+                                        <%--<div class="add-own-place-container"><br>--%>
+                                            <%--<div class="description">--%>
+                                                <%--<label>Name</label><br>--%>
+                                                <%--<form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<label>Description</label><br>--%>
+                                                <%--<form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<label>Address</label><br>--%>
+                                                <%--<form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>--%>
+                                                <%--<label>Tags</label><br>--%>
+                                                <%--<form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>--%>
+                                                <%--<br><br>--%>
+                                                <%--<div id="map-canvas" style="width:100%; height:400px;"></div><br><br>--%>
+                                            <%--</div>--%>
+                                        <%--</div>--%>
+                                        <%--<input class="btn btn-primary" type="submit" name="action" value="save" />--%>
+                                        <%--</form:form>--%>
                                     </div>
                                 </div>
                             </div>

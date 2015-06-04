@@ -9,8 +9,6 @@
   <title>TravelIt - About</title>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta name="keywords" content="Template, html, premium, themeforest" />
-  <meta name="description" content="Traveler - Premium template for travel companies">
-  <meta name="author" content="Tsoy">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- GOOGLE FONTS -->
@@ -155,7 +153,7 @@
             </div>
 
             <div class="col-md-4 col-md-offset-1">
-            <form:form modelAttribute="password" method="POST" enctype="utf8"  action="changePassword">
+            <form:form modelAttribute="password" method="POST" enctype="utf8"  action="change-password">
               <h4>Change Password</h4>
                 <div class="form-group">
                   <label>Current Password</label>
