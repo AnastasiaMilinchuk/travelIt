@@ -47,10 +47,6 @@ public class PlacesController{
         this.userPlaces = service;
     }
 
-    public void setValidator(SavePlaceValidator validator) {
-        this.validator = validator;
-    }
-
     @RequestMapping(value = "/places", method = RequestMethod.GET )
     public String start(ModelMap model){
         if(commonValidation.isAuthorize().isValid){
@@ -65,15 +61,15 @@ public class PlacesController{
     }
 
     @RequestMapping(value="/places", method = RequestMethod.POST)
-    public ModelAndView submit(@ModelAttribute("places") PlaceData places,
+    public ModelAndView submit(@ModelAttribute("place") Place place,
                                  BindingResult result,ModelMap model , Errors errors ) throws IOException {
         if(!result.hasErrors() && file != null){
             System.out.println("koko no errs");
-            String msg = save(places.getImage(), places.getPlace());
-            return new ModelAndView("places", "msg", places);
+            String msg = save(new FileUpload().getFile(), place);
+            return new ModelAndView("places", "msg", place);
         }
         else {
-            return new ModelAndView("places", "error", places);
+            return new ModelAndView("places", "error", place);
         }
     }
 
@@ -89,8 +85,8 @@ public class PlacesController{
 
             // save Place
             System.out.println("save place");
-            placeService.save(place);
         }
+        placeService.save(place);
         return "";
     }
 
