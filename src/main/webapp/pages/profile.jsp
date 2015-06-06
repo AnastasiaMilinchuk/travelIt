@@ -124,9 +124,6 @@
             <h1 class="page-title">Travel Profile</h1>
         </div>
 
-
-
-
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -173,9 +170,7 @@
                     <%--</ul>--%>
 
                     <div id="map-canvas" style="width:100%; height:400px;"></div>
-                    <div class = "people">
-                        <h3>These people can become your friends</h3>
-                    </div>
+
                 </div>
             </div>
         </div>

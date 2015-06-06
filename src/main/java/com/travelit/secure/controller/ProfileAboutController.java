@@ -81,6 +81,9 @@ public class ProfileAboutController {
             password.setCurrentPassword(new ShaPasswordEncoder().encodePassword(password.getCurrentPassword(), o));
             password.setNewPassword(new ShaPasswordEncoder().encodePassword(password.getNewPassword(), o));
 
+            System.out.println(password.isMatchesNewPassword());
+            System.out.println(password.isMatchesOldPassword(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
+                    .getPassword()));
             if(password.isMatchesNewPassword() &&
                     password.isMatchesOldPassword(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
                             .getPassword())){

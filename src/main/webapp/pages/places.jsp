@@ -25,8 +25,10 @@
     <script src="<c:url value="/pages/js/input/fileinput.min.js"/>"></script>
     <script src="<c:url value="/pages/js/input/fileinput_locale_uk.js"/>"></script>
     <script src="<c:url value="/pages/js/modernizr.js"/>"></script>
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script src="<c:url value='/pages/templates/milinchuck.js'/>"></script>
+    <%--<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>--%>
+    <%--<script src="https://maps.googleapis.com/maps/api/js"></script>--%>
     <script>
 //        function initialize() {
 //            var mapCanvas = document.getElementById('map-canvas');
@@ -133,10 +135,10 @@
             <h1 class="page-title">Places</h1>
         </div>
 
+
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-
                         <fieldset>
                             <div class="selected-places">
                                 <h1>My selected places</h1>
@@ -218,16 +220,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary add-place" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <button class="btn btn-primary add-place" id="add-place" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                 Share with place
                             </button>
-                            <script>
-                                $('.add-place').click('shown.bs.collapse', function() {
-                                    initialize();
 
-//                               google.maps.event.trigger(map, 'resize');
-                                });
-                            </script>
                             <div class="collapse" id="collapseExample">
                                 <div class="well">
                                     <div class="add-own-place">
@@ -245,17 +241,29 @@
                                         <div class="add-own-place-container"><br>
                                             <div class="description">
                                                 <label>Name</label><br>
-                                                <form:input path="place.name" type="text"  id = "name" name="name" placeholder = "Name"/>
+                                                <form:input path="name" type="text"  id = "name" name="name" placeholder = "Name"/>
                                                 <br><br>
                                                 <label>Description</label><br>
-                                                <form:input path="place.description" type="text" id="description" name="description" placeholder = "Description"/>
+                                                <form:input path="description" type="text" id="description" name="description" placeholder = "Description"/>
                                                 <br><br>
                                                 <label>Address</label><br>
-                                                <form:input path="place.address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
+                                                <form:input path="address" type="text" id="address" name="address" placeholder = "Address" /><br><br>
                                                 <label>Tags</label><br>
-                                                <form:input path="place.tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
+                                                <form:input path="tags" name="tags" id="tags" placeholder = "Input characteristic words e.g. 'landscape'"/>
                                                 <br><br>
-                                                <div id="map-canvas" style="width:100%; height:400px;"></div><br><br>
+                                                <div class="map">
+                                                    <div id="panel">
+                                                        <!--<input id="address" type="textbox" value="Киев">-->
+                                                        <input type="button" value="Geocode" onclick="codeAddress()"/>
+                                                        <form:input path="address" type="text"  name="address" placeholder = "Address"
+                                                               onFocus="geolocate()"/>
+                                                        <p id="coordinates"></p>
+                                                    </div>
+                                                    <br>
+
+                                                    <div id="map-canvas"></div>
+                                                </div>
+                                                <%--<div id="map-canvas" style="width:100%; height:400px;"></div><br><br>--%>
                                             </div>
                                         </div>
                                         <input class="btn btn-primary" type="submit" name="action" value="save" />

@@ -1,0 +1,55 @@
+ html, body, #map-canvas {
+        height: 90%;
+		width: 90%;
+        margin: 10px;
+        padding: 10px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+
+	  #locationField, #controls {
+        position: relative;
+        width: 480px;
+      }
+      #autocomplete {
+        /*position: absolute;*/
+        top: 0px;
+        left: 0px;
+        width: 500px;
+      }
+      .label {
+        text-align: right;
+        font-weight: bold;
+        width: 100px;
+        color: #303030;
+      }
+      #address {
+        border: 1px solid #000090;
+        background-color: #f0f0ff;
+        width: 480px;
+        padding-right: 2px;
+      }
+      #address td {
+        font-size: 10pt;
+      }
+      .field {
+        width: 99%;
+      }
+      .slimField {
+        width: 80px;
+      }
+      .wideField {
+        width: 200px;
+      }
+      #locationField {
+        height: 20px;
+        margin-bottom: 2px;
+      }
