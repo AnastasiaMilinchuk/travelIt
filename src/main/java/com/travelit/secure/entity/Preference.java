@@ -2,10 +2,7 @@ package com.travelit.secure.entity;
 
 import com.google.common.collect.Sets;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by milinchuk on 5/29/15.
@@ -39,11 +36,15 @@ public class Preference {
     }
 
     public static List<Preference> fromMap(Map<String,String> map) {
+        if(map == null) {
+            return Collections.emptyList();
+        }
         List<Preference> list = new ArrayList<>(map.size());
         for (Map.Entry<String, String> entry : map.entrySet()) {
             Preference p = new Preference();
             p.setName(p.getName());
             p.setValue(Sets.newHashSet(entry.getValue().split("\\s+")));
+            list.add(p);
         }
         return list;
     }

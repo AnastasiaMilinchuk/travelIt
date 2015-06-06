@@ -18,4 +18,5 @@ public interface UserService {
     public User mergeChanges(User currentUser, User newUser);
     void subscribeToPlace(String userEmail, ObjectId placeID);
     List<String> getSubscribePlaceByUser(String userEmail);
+    List<User> getSimilarUsersByPreferences(String mail, int limit);
 }
