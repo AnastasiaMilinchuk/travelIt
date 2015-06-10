@@ -114,26 +114,19 @@ public class Place {
         this.y = y;
     }
 
-    // Gets city's x coordinate
     public double getX(){
         return this.x;
     }
 
-    // Gets city's y coordinate
     public double getY(){
         return this.y;
     }
 
-    // Gets the distance to given city
-    public double distanceTo(Place city){
-        double xDistance = Math.abs(getX() - city.getX());
-        double yDistance = Math.abs(getY() - city.getY());
-        double distance = Math.sqrt( (xDistance*xDistance) + (yDistance*yDistance) );
-
-        return distance;
+    public double getDistance(Place place){
+        double distX = Math.abs(this.x - place.x);
+        double distY = Math.abs(this.y - place.y);
+        return  Math.sqrt((distX * distX) + ( distY * distY));
     }
-
-
 
     public ObjectId getId() {
         return id;

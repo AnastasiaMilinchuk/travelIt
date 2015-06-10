@@ -1,0 +1,79 @@
+package com.travelit.secure.algorithms.travelsalesman;
+
+import com.travelit.secure.entity.Place;
+
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Created by milinchuk on 6/8/15.
+ */
+public class Route {
+    private List<Place> route;
+    private double totalLength;
+    private double rating;
+
+    public Route(List<Place> route) {
+        this.route = route;
+        generateRandomGen();
+    }
+
+    public Place getPlace(int index){
+        return route.get(index);
+    }
+
+    public void setPlace(int index, Place place){
+        route.set(index, place);
+    }
+
+    private void generateRandomGen(){
+        Collections.shuffle(route);
+        calculateTotalLength();
+        calculateRating();
+    }
+
+    private void calculateTotalLength(){
+        Place last = route.get(0);
+        for(Place current: route){
+            totalLength += last.getDistance(current);
+            last = current;
+        }
+    }
+
+    private void calculateRating(){
+        this.rating = 1 / this.totalLength;
+    }
+
+    public double getTotalLength(){
+        return this.totalLength;
+    }
+
+    public double getRating(){
+        return this.rating;
+    }
+
+    public boolean isExist(Place place){
+        return route.contains(place);
+    }
+
+    public int size(){
+        return route.size();
+    }
+
+    public void run(){
+        generateRandomGen();
+    }
+    public List<Place> getAllPlaces(){
+        return route;
+    }
+
+    @Override
+    public String toString() {
+        String routeString = " Route: ";
+        for (Place place: route) {
+            routeString += place.getName() + " -> ";
+        }
+        routeString += route.get(0).getName();
+        return routeString;
+    }
+}

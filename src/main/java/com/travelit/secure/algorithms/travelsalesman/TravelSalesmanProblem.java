@@ -16,20 +16,19 @@ public class TravelSalesmanProblem {
 
     public List<Place> findPath(List<Place> places){
         System.out.println("TRAVELSALESMAN "+ places.size());
-        TourManager.setDestinationCities(places);
-        System.out.println("tour manager " + TourManager.numberOfCities());
-        Population pop = evolvePopulation(createPopulation(150, true));
-        System.out.println(pop.getFittest().getPlaces().size());
-        return pop.getFittest().getPlaces();
+        Population pop = evolvePopulation(createPopulation(150, places), places);
+        System.out.println(pop.getBestRoute().getAllPlaces().size());
+        return pop.getBestRoute().getAllPlaces();
     }
 
-    private Population createPopulation(int populationSize, boolean initialize){
-        return new Population(populationSize, initialize);
+    private Population createPopulation(int populationSize, List<Place> places){
+        return new Population(populationSize, places);
     }
 
-    private Population evolvePopulation(Population population){
-        for (int i = 0; i < population.populationSize(); i++) {
-            population = GeneticAlgo.evolvePopulation(population);
+    private Population evolvePopulation(Population population, List<Place> places){
+        for (int i = 0; i < population.size(); i++) {
+            GeneticAlgo algo = new GeneticAlgo(places, 5, 0.015, true);
+            population = algo.createNewIndivids(population);
         }
         return population;
     }

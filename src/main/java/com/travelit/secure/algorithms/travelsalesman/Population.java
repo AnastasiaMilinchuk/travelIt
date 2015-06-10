@@ -1,51 +1,59 @@
 package com.travelit.secure.algorithms.travelsalesman;
 
+import com.travelit.secure.entity.Place;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by milinchuk on 5/28/15.
  */
 public class Population {
+    private List<Route> routes;
 
-    // Holds population of tours
-    Tour[] tours;
+    public Population(int sizeOfPopulation, List<Place> places){
+        // generate new population
+        routes = new LinkedList<>();
+        generatePopulation(sizeOfPopulation, places);
+    }
 
-    // Construct a population
-    public Population(int populationSize, boolean initialise) {
-        tours = new Tour[populationSize];
-        // If we need to initialise a population of tours do so
-        if (initialise) {
-            // Loop and create individuals
-            for (int i = 0; i < populationSize(); i++) {
-                Tour newTour = new Tour();
-                newTour.generateIndividual();
-                saveTour(i, newTour);
-            }
+    public Population(int size){
+        routes = new LinkedList<>();
+        for(int i = 0; i < size; i++){
+            routes.add(null);
         }
     }
 
-    // Saves a tour
-    public void saveTour(int index, Tour tour) {
-        tours[index] = tour;
+    private void generatePopulation(int size, List<Place> places){
+        for(int i = 0; i < size; i++){
+            routes.add(new Route(places));
+        }
     }
 
-    // Gets a tour from population
-    public Tour getTour(int index) {
-        return tours[index];
+    public void setRoute(int index, Route route){
+        routes.set(index, route);
     }
 
-    // Gets the best tour in the population
-    public Tour getFittest() {
-        Tour fittest = tours[0];
-        // Loop through individuals to find fittest
-        for (int i = 1; i < populationSize(); i++) {
-            if (fittest.getFitness() <= getTour(i).getFitness()) {
-                fittest = getTour(i);
+    public Route getRoute(int index){
+        return routes.get(index);
+    }
+
+    public List<Route> getRoutes(){
+        return routes;
+    }
+
+    public Route getBestRoute(){
+        Route best = routes.get(0);
+        for(Route route: routes){
+            if(route.getRating() > best.getRating()){
+                best = route;
             }
         }
-        return fittest;
+        return best;
     }
 
-    // Gets population size
-    public int populationSize() {
-        return tours.length;
+    public int size(){
+        return routes.size();
     }
 }

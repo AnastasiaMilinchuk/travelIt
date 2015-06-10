@@ -22,8 +22,8 @@ function addMarkers(data, map){
 
         map.panTo(myLatLng);
 }
-}
     localStorage.setItem("data", null);
+
 }
 
 function doAjax() {
@@ -42,7 +42,7 @@ success: function (request) {
     data = request.coordinates;
     var temp=[];
     for(var i = 0; i < data.length; i++){
-        temp.push('<h4>'+ data[i].name +'</h4>;'+[data[i].x]+";"+data[i].y);
+        temp.push(data[i].name +[data[i].x]+";"+data[i].y);
     }
     localStorage.setItem("data", temp);
     }
@@ -60,4 +60,4 @@ function initialize() {
     addMarkers(localStorage.getItem("data"),map);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize)};
