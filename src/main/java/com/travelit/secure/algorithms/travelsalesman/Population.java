@@ -11,6 +11,15 @@ import java.util.List;
  */
 public class Population {
     private List<Route> routes;
+    private List<Route> sortRoutes;
+
+    public void setRoutes(List<Route> routes) {
+        this.routes = routes;
+    }
+
+    public List<Route> getSortRoutes() {
+        return sortRoutes;
+    }
 
     public Population(int sizeOfPopulation, List<Place> places){
         // generate new population
@@ -29,10 +38,12 @@ public class Population {
         for(int i = 0; i < size; i++){
             routes.add(new Route(places));
         }
+        sort();
     }
 
     public void setRoute(int index, Route route){
         routes.set(index, route);
+        sort();
     }
 
     public Route getRoute(int index){
@@ -55,5 +66,26 @@ public class Population {
 
     public int size(){
         return routes.size();
+    }
+
+    public List<Route> sortSequence(){
+        if(sortRoutes == null){
+            sort();
+        }
+        return sortRoutes;
+    }
+
+    private void sort(){
+        sortRoutes = this.routes.subList(0, this.routes.size());
+        for(int i = 0; i < sortRoutes.size(); i++){
+            for(int j = 1; j < sortRoutes.size(); j++){
+                if(sortRoutes.get(i).getRating() < sortRoutes.get(j).getRating()){
+                    Route temp = sortRoutes.get(i);
+                    sortRoutes.set(i, sortRoutes.get(j));
+                    sortRoutes.set(j, temp);
+                }
+            }
+        }
+        routes = sortRoutes;
     }
 }

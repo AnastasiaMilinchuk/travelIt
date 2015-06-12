@@ -44,8 +44,8 @@ li a {
 }
 
 #map-canvas {
-    height: 200px;
-    /*width: 200px;*/
+    width: 100% !important;
+    height: 560px !important;
 }
 
 
@@ -217,4 +217,13 @@ input[type='submit']{
     z-index: -2;
     position: fixed;
     /*opacity: 0.7;*/
+}
+.salesman{
+    background-color: #ECB300;
+    border: none;
+    text-align: center;
+    padding: 3%;
+    width: 100px;
+    margin: 3%;
+    height: 30px;
 }

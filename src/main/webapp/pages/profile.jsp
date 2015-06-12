@@ -60,7 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a class="logo" href="index.html">
+                            <a class="logo" href="salesman.jsp">
                                     <%--<img src="<c:url value="/pages/images/login/logoEarth1.png" />" alt="Image Alternative text" title="Image Title" />--%>
                             </a>
                         </div>

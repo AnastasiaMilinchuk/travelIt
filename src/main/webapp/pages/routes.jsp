@@ -37,7 +37,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a class="logo" href="index.html">
+                            <a class="logo" href="salesman.jsp">
                             </a>
                         </div>
                         <div class="col-md-3 col-md-offset-2">
@@ -90,6 +90,8 @@
                         </li>
                         <li class = "active"><a href="routes">Routes</a>
                         </li>
+                        <li><a href="salesman">Salesman</a>
+                        </li>
 
                     </ul>
                 </div>
@@ -107,10 +109,8 @@
                         <h1>Choose city:</h1>
                         <form:select id="city" path="cityName">
                             <form:option selected="selected" value="Kiev">Kiev</form:option>
-                            <form:option value="Odessa">Odessa</form:option>
-                            <form:option value="Lviv">Lviv</form:option>
                         </form:select>
-                        <button onclick="doAjax()">Find</button>
+                        <button  onclick="doAjax()">Find</button>
                         <div id="customMap"></div>
 
                         <fieldset>

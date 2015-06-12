@@ -16,9 +16,18 @@ public class TravelSalesmanProblem {
 
     public List<Place> findPath(List<Place> places){
         System.out.println("TRAVELSALESMAN "+ places.size());
-        Population pop = evolvePopulation(createPopulation(150, places), places);
-        System.out.println(pop.getBestRoute().getAllPlaces().size());
-        return pop.getBestRoute().getAllPlaces();
+//        Population pop = evolvePopulation(createPopulation(100, places), places);
+        int numberOfElite = 10;
+        double selectionRate = 0.1;
+        double mutationRate = 0.015;
+        int populationCount = 100;
+        GeneticAlgorithm algo = new GeneticAlgorithm(places, numberOfElite,
+                selectionRate, mutationRate, populationCount);
+        Route best = algo.run();
+        System.out.println("best " + best);
+        return best.getAllPlaces();
+//        System.out.println(pop.getBestRoute().getAllPlaces().size());
+//        return pop.getBestRoute().getAllPlaces();
     }
 
     private Population createPopulation(int populationSize, List<Place> places){
@@ -26,9 +35,9 @@ public class TravelSalesmanProblem {
     }
 
     private Population evolvePopulation(Population population, List<Place> places){
+        GeneticAlgo algo = new GeneticAlgo(places, 50, 0.15, true);
         for (int i = 0; i < population.size(); i++) {
-            GeneticAlgo algo = new GeneticAlgo(places, 5, 0.015, true);
-            population = algo.createNewIndivids(population);
+            population = algo.generate(population);
         }
         return population;
     }

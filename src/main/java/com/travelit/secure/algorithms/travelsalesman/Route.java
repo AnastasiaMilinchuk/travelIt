@@ -12,10 +12,25 @@ public class Route {
     private List<Place> route;
     private double totalLength;
     private double rating;
+    private boolean isElite;
+
+    private Route(Route route){
+        this.route = route.route;
+        this.totalLength = route.totalLength;
+        this.rating = route.rating;
+        this.isElite = route.isElite;
+    }
+
+    public Route clone(){
+        return new Route(this);
+    }
 
     public Route(List<Place> route) {
         this.route = route;
-        generateRandomGen();
+        isElite = false;
+        calculateTotalLength();
+        calculateRating();
+        //generateRandomGen();
     }
 
     public Place getPlace(int index){
@@ -24,18 +39,20 @@ public class Route {
 
     public void setPlace(int index, Place place){
         route.set(index, place);
+        calculateTotalLength();
     }
 
     private void generateRandomGen(){
         Collections.shuffle(route);
-        calculateTotalLength();
-        calculateRating();
+
     }
 
     private void calculateTotalLength(){
         Place last = route.get(0);
+        totalLength = 0;
         for(Place current: route){
-            totalLength += last.getDistance(current);
+            double dist = last.getDistance(current);
+            totalLength += dist;
             last = current;
         }
     }
@@ -58,6 +75,14 @@ public class Route {
 
     public int size(){
         return route.size();
+    }
+
+    public boolean isElite() {
+        return isElite;
+    }
+
+    public void setElite(boolean isElite) {
+        this.isElite = isElite;
     }
 
     public void run(){

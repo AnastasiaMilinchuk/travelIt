@@ -1,5 +1,6 @@
 package com.travelit.secure.algorithms.travelsalesman;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import com.travelit.secure.entity.Place;
 
 import java.util.List;
@@ -21,18 +22,14 @@ public class GeneticAlgo {
     }
 
     public Population generate(Population oldPopulation){
-        return mutateAllPopulation(oldPopulation, createNewIndivids(new Population(oldPopulation.size())));
+        return mutateAllPopulation(oldPopulation, createNewIndivids(oldPopulation));
     }
 
     public Population createNewIndivids(Population old){
         Population newGeneration = new Population(old.size());
-        int koef = 0;
-        if(valid){
-            newGeneration.setRoute(0, old.getBestRoute());
-            koef++;
-        }
+        newGeneration.setRoute(0, old.getBestRoute());
 
-        for(int i = koef; i < old.size(); i++){
+        for(int i = 0; i < old.size(); i++){
             // create population
             Route firstParent = selection(old);
             Route secondParent = selection(old);
@@ -44,12 +41,7 @@ public class GeneticAlgo {
     }
 
     private Population mutateAllPopulation(Population old, Population newGeneration){
-        int koef = 0;
-        if(valid){
-            koef++;
-        }
-
-        for(int i = koef; i < old.size(); i++){
+        for(int i = 0; i < old.size(); i++){
             // mutate
             mutate(newGeneration.getRoute(i));
         }
@@ -75,43 +67,42 @@ public class GeneticAlgo {
 
     private Route selection(Population population){
         Population newPop = new Population(tourne);
+        List<Route> sort = population.sortSequence();
         for(int i = 0; i < tourne; i++){
-            int index = (int) (Math.random() * population.size());
-            newPop.setRoute(i, population.getRoute(index));
+            newPop.setRoute(i, sort.get(i));
         }
-
         return newPop.getBestRoute();
     }
 
+    // crossover
     public Route createGeneration(Route firstParent, Route secondParent){
         Route child = new Route(places);
         int start  = (int)(Math.random() * firstParent.size());
-        int destination = (int) (Math.random() * secondParent.size());
+        int destination = secondParent.size() - start;
+//        if(start > destination){
+//            int temp = start;
+//            start = destination;
+//            destination = temp;
+//        }
+        if(start < firstParent.size() / 2){
+            for(int i = 0; i < firstParent.size() / 2; i++){
+                    child.setPlace(i, firstParent.getPlace(i));
+            }
 
-        for(int i = 0; i < child.size(); i++){
-            if(start < destination && i > start && i < destination){
+            for(int i = firstParent.size(); i < secondParent.size(); i++){
+                child.setPlace(i, secondParent.getPlace(i));
+            }
+
+        }
+        else {
+            for(int i = 0; i < firstParent.size() / 2; i++){
+                child.setPlace(i, secondParent.getPlace(i));
+            }
+
+            for(int i = firstParent.size(); i < secondParent.size(); i++){
                 child.setPlace(i, firstParent.getPlace(i));
             }
-            else {
-                if(start > destination){
-                    if(! (i < start && i > destination)){
-                        child.setPlace(i, firstParent.getPlace(i));
-                    }
-                }
-            }
         }
-
-        for(int i = 0; i < secondParent.size(); i++){
-            if(!child.isExist(secondParent.getPlace(i))){
-                for(int j = 0; j < child.size(); j++){
-                    if(child.getPlace(j) == null){
-                        child.setPlace(j, secondParent.getPlace(i));
-                        break;
-                    }
-                }
-            }
-        }
-
         return child;
     }
 }
