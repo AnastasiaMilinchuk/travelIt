@@ -557,7 +557,7 @@ var ga = {
                             </select>
                         </td>
                     </tr>
-                    <tr>
+                    <tr hidden="hidden">
                         <td>Mutation Koef: </td>
                         <td>
                             <select class="salesman" id="mutation-rate">
@@ -572,7 +572,7 @@ var ga = {
                             </select>
                         </td>
                     </tr>
-                    <tr>
+                    <tr hidden="hidden">
                         <td>Crossover Koef: </td>
                         <td>
                             <select class="salesman" id="crossover-rate">

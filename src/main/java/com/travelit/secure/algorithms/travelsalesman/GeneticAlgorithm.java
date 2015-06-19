@@ -4,6 +4,7 @@ import com.sun.jndi.url.corbaname.corbanameURLContextFactory;
 import com.travelit.secure.entity.Place;
 import sun.management.resources.agent_pt_BR;
 
+import javax.annotation.processing.RoundEnvironment;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -93,32 +94,6 @@ public class GeneticAlgorithm {
     }
 
     private void crossingover(Route leftParent, Route rigthParent){
-//        int crossoverPoint  = (int)(Math.random() * places.size());
-//        if (crossoverPoint + 2 >= rigthParent.size()){
-//            crossoverPoint /= 2;
-//        }
-//
-//        List<Place> subRoute1 = leftParent.clone().getAllPlaces().subList(0, crossoverPoint);
-//        List<Place> subRoute2 = rigthParent.clone().getAllPlaces().subList(crossoverPoint, rigthParent.size());
-//        System.out.println(subRoute1.size() + " " + subRoute2.size());
-//        // first child
-//        List<Place> route = clonePlaces(subRoute1);
-//        route.addAll(subRoute2);
-//        Route newRoute = new Route(route);
-//        //mutation
-//        newRoute = mutation(newRoute);
-//        currentPopulation.setRoute(getRandomNotElitePosition(), newRoute);
-//
-//        assignElitism();
-//
-//        // second child
-//        route = clonePlaces(subRoute2);
-//        route.addAll(subRoute1);
-//        newRoute = new Route(route);
-//        // mutation
-//        newRoute = mutation(newRoute);
-//        currentPopulation.setRoute(getRandomNotElitePosition(), newRoute);
-
         List<Place> child = new ArrayList<>();
         for(int i = 0; i < leftParent.size(); i++){
             child.add(null);
@@ -147,37 +122,72 @@ public class GeneticAlgorithm {
                 }
             }
         }
+
+        child = localOptimization(child);
         System.out.println("After crossover" + child.toString());
         currentPopulation.setRoute(getRandomNotElitePosition(), mutation(new Route(child)));
         assignElitism();
     }
 
+
     private List<Place> localOptimization(List<Place> places){
         if(places.size() >= 5){
-            int start = (int) (Math.random() * places.size());
+            int start = Math.abs((int) (Math.random() * places.size()) - 1);
             List<Place> sequence = new ArrayList<>();
             if(start == places.size()){
                 sequence = getSeq(start - 2, start - 1, 0, 1, 2, places);
-
+                sequence =  getOptSequence(new Route(sequence));
+                places.set(start - 2, sequence.get(0));
+                places.set(start - 1, sequence.get(1));
+                places.set(0, sequence.get(2));
+                places.set(1, sequence.get(3));
+                places.set(2, sequence.get(4));
             }
             else {
-                if(places.size() - start == 1){
+                if(places.size() - start == 2){
                     sequence = getSeq(start - 2, start - 1, start, 0, 1, places);
+                    sequence =  getOptSequence(new Route(sequence));
+                    places.set(start - 2, sequence.get(0));
+                    places.set(start - 1, sequence.get(1));
+                    places.set(start, sequence.get(2));
+                    places.set(0, sequence.get(3));
+                    places.set(1, sequence.get(4));
                 }
                 else {
-                    if(places.size() - start == 2){
+                    if(places.size() - start == 3){
                         sequence = getSeq(start - 2, start - 1, start, start + 1, 0, places);
+                        sequence =  getOptSequence(new Route(sequence));
+                        places.set(start - 2, sequence.get(0));
+                        places.set(start - 1, sequence.get(1));
+                        places.set(start, sequence.get(2));
+                        places.set(start + 1, sequence.get(3));
+                        places.set(0, sequence.get(4));
                     }
                     else {
                         if(start == 0){
                             sequence = getSeq(places.size() - 1, 0, 1, 2, 3, places);
+                            sequence =  getOptSequence(new Route(sequence));
+                            places.set(places.size() - 1, sequence.get(0));
+                            places.set(0, sequence.get(1));
+                            places.set(1, sequence.get(2));
+                            places.set(2, sequence.get(3));
+                            places.set(3, sequence.get(4));
+                        }
+                        else {
+                            sequence = getSeq(start - 1, start, start+1, start + 2, start + 3, places);
+                            sequence =  getOptSequence(new Route(sequence));
+                            places.set(start - 1, sequence.get(0));
+                            places.set(start, sequence.get(1));
+                            places.set(start + 1 , sequence.get(2));
+                            places.set(start + 2, sequence.get(3));
+                            places.set(start + 3, sequence.get(4));
                         }
                     }
                 }
             }
         }
 
-        return null;
+        return places;
     }
 
     private List<Place> getSeq(int a, int b, int c, int d, int e, List<Place> places){
@@ -191,12 +201,26 @@ public class GeneticAlgorithm {
     }
 
     private List<Place> getOptSequence(Route route){
-        Route optimal = route;
+        Route optimal = route.clone();
         int k = 1;
+        double length = route.getTotalLength();
         for(int i = 0; i < 5; i++){
-
+            if(i % 2 == 0){
+                Place temp = route.getPlace(1);
+                route.setPlace(1, route.getPlace(2));
+                route.setPlace(2, temp);
+            }
+            else {
+                Place temp = route.getPlace(2);
+                route.setPlace(2, route.getPlace(3));
+                route.setPlace(3, temp);
+            }
+            if(route.getTotalLength() < length){
+                optimal = route.clone();
+                length = route.getTotalLength();
+            }
         }
-        return null;
+        return optimal.getAllPlaces();
     }
     private double getLength(List<Place> places){
         Place last = places.get(0);

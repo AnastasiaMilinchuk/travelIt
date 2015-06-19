@@ -43,7 +43,7 @@ function addMarkers(data, map){
 
         path = new google.maps.Polyline({
             path: pathCoordinates,
-            strokeColor: 'green',
+            strokeColor: '#0066ff',
             strokeOpacity: 1.0,
             strokeWeight: 2
         });
