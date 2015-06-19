@@ -35,6 +35,12 @@ public class Place {
     private double avgRatingForAdditionalCriterias; // average rating of additional criterias
     private double fitnessIndividual; // represent how individual is attractive
 
+    public Place(String name, double x, double y) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+    }
+
     public Place(double avgRatingForAdditionalCriterias, double eventsNowNumber, double length, double luxury, double rating,String name) {
         this.avgRatingForAdditionalCriterias = avgRatingForAdditionalCriterias;
         this.eventsNowNumber = eventsNowNumber;
@@ -103,7 +109,7 @@ public class Place {
 
     @Override
     public String toString(){
-        return city + ", " + name;
+        return  name;
     }
 
     public void setX(double x) {

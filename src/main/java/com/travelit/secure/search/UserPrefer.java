@@ -29,12 +29,25 @@ public class UserPrefer {
 
 
     public List<Place> getUserPrefers(){
-        return optimizeImport.getSequence(userPlaces.getAllPlaces()).subList(0,6);
+        List<Place> places = userPlaces.getAllPlaces();
+        if(places.size() >= 6){
+            return optimizeImport.getSequence(userPlaces.getAllPlaces()).subList(0,6);
+        }
+        else {
+            return optimizeImport.getSequence(userPlaces.getAllPlaces());
+        }
     }
 
     public List<Place> getPlacePrefersByLocation(String city){
-        List<Place> places = optimizeImport.getSequence(userPlaces.getPlacesByCity(city)).subList(0,6);
+        List<Place> places = userPlaces.getPlacesByCity(city);
+        if(places.size() >= 6){
+             places = optimizeImport.getSequence(places).subList(0,6);
+        }
+        else {
+            places = optimizeImport.getSequence(places);
+        }
+
         System.out.println("get prefer places by location " + places.size());
-        return travelSalesmanProblem.findPath(places);
+        return travelSalesmanProblem.findPath(places, 45, 0.8, 0.5, 50);
     }
 }

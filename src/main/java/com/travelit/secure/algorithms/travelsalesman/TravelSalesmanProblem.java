@@ -1,5 +1,6 @@
 package com.travelit.secure.algorithms.travelsalesman;
 
+import com.travelit.secure.config.StaticData;
 import com.travelit.secure.entity.Place;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
@@ -14,18 +15,21 @@ import java.util.List;
 @Configuration
 public class TravelSalesmanProblem {
 
-    public List<Place> findPath(List<Place> places){
+    public List<Place> findPath(List<Place> places, int elite, double selection, double mutation, int population){
         System.out.println("TRAVELSALESMAN "+ places.size());
 //        Population pop = evolvePopulation(createPopulation(100, places), places);
-        int numberOfElite = 10;
-        double selectionRate = 0.1;
-        double mutationRate = 0.015;
-        int populationCount = 100;
-        GeneticAlgorithm algo = new GeneticAlgorithm(places, numberOfElite,
-                selectionRate, mutationRate, populationCount);
+        GeneticAlgorithm algo = new GeneticAlgorithm(places, elite,
+                selection, mutation, population);
         Route best = algo.run();
         System.out.println("best " + best);
         return best.getAllPlaces();
+//        GeneticAlgorithm algorithm = new GeneticAlgorithm(StaticData.getPlaces(), numberOfElite, selectionRate, mutationRate, populationCount);
+//        Route r = algorithm.run();
+//        System.out.println();
+//        System.out.println();
+//        System.out.println(r.toString());
+//        System.out.println("Length: " +  r.getTotalLength());
+//        return r.getAllPlaces();
 //        System.out.println(pop.getBestRoute().getAllPlaces().size());
 //        return pop.getBestRoute().getAllPlaces();
     }
@@ -41,4 +45,8 @@ public class TravelSalesmanProblem {
         }
         return population;
     }
+    int numberOfElite = 10;
+    double selectionRate = 0.1;
+    double mutationRate = 0.015;
+    int populationCount = 100;
 }

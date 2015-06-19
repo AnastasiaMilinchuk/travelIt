@@ -105,6 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
+
                     <form:form modelAttribute="city" method="POST">
                         <h1>Choose city:</h1>
                         <form:select id="city" path="cityName">
@@ -112,32 +113,29 @@
                         </form:select>
                         <button  onclick="doAjax()">Find</button>
                         <div id="customMap"></div>
-
-                        <fieldset>
-
-                            <div class="selected-places">
-                                <h1>Recomended Places</h1>
-
-                                <div class="row row-wrap">
-                                    <c:forEach items="${response.places}" var="place" >
-                                    <div class="col-md-4">
-                                        <div class="thumb">
-                                            <a class="hover-img" href="place?id=${place.id}">
-                                                <img src="<c:out value="${place.photo}"/>" alt="Image Alternative text" title="Gaviota en el Top">
-                                                <div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">
-                                                    <div class="text-small">
-                                                        <h5><c:out value="${place.name}"/></h5>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    </c:forEach>
-                                </div>
-
-                            </div>
-                        </fieldset>
                     </form:form>
+                    <div class="selected-places">
+                        <h1>Recomended Places</h1>
+
+                        <div id="recomended" class="row row-wrap">
+                                <%--<c:forEach items="${response.places}" var="place" >--%>
+                                <%--<div class="col-md-4">--%>
+                                <%--<div class="thumb">--%>
+                                <%--<a class="hover-img" href="place?id=${place.id}">--%>
+                                <%--<img src="<c:out value="${place.photo}"/>" alt="Image Alternative text" title="Gaviota en el Top">--%>
+                                <%--<div class="hover-inner hover-inner-block hover-inner-bottom hover-inner-bg-black hover-hold">--%>
+                                <%--<div class="text-small">--%>
+                                <%--<h5><c:out value="${place.name}"/></h5>--%>
+                                <%--</div>--%>
+                                <%--</div>--%>
+                                <%--</a>--%>
+                                <%--</div>--%>
+                                <%--</div>--%>
+                                <%--</c:forEach>--%>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import com.travelit.secure.entity.Place;
 import com.travelit.secure.entity.User;
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -37,6 +38,16 @@ public class StaticData {
             places.add(getPlace());
         }
 
+        return places;
+    }
+
+    public static List<Place> getPlaces(){
+        List<Place> places = new ArrayList<>();
+        places.add(new Place("A", 0, 2));
+        places.add(new Place("B", 1, 3));
+        places.add(new Place("C", 3, 2));
+        places.add(new Place("D", 4, 1));
+        places.add(new Place("E", 2, 0));
         return places;
     }
 }

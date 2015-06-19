@@ -28,11 +28,13 @@ public class GeneticAlgorithm {
     }
 
     private void generatePopulation(){
+        System.out.println("Generate start population");
         currentPopulation = new Population(populationCount);
         List<Route> population = new ArrayList<>(populationCount);
         for(int i = 0; i < populationCount; i++){
             // Create random placed Places
             Collections.shuffle(places);
+            System.out.println("Individ #" + i + "  " + places.toString());
             // Add route to population
             population.add(i, new Route(places));
         }
@@ -42,17 +44,20 @@ public class GeneticAlgorithm {
 
 
     private void createNewGeneration(){
+        System.out.println("Creating new generation:");
         selection();
     }
 
     private void selection(){
         // select 2 parents
         // otdat` predpotchtenie elite, but rarely include non elite
+        System.out.println("Selection");
         int leftParentIndex;
         int rigthParentIndex;
         double randomSelection = Math.random();
         if(randomSelection >= selectionRate){
             // choose from elites
+            System.out.println("Random > selection rate, choose parents from elites");
             leftParentIndex = getRandomIndex(1, numberOfElit);
             rigthParentIndex= getRandomIndex(1, numberOfElit);
             while (leftParentIndex == rigthParentIndex){
@@ -61,7 +66,9 @@ public class GeneticAlgorithm {
         }
         else{
             // choose from not elite
+
             if(randomSelection > selectionRate / 3){
+                System.out.println("Random in range selection rate / 3 ... selection rate , choose parents from basic individs");
                 leftParentIndex= getRandomIndex(numberOfElit + 1, currentPopulation.size());
                 rigthParentIndex= getRandomIndex(numberOfElit + 1, currentPopulation.size());
                 while (leftParentIndex == rigthParentIndex){
@@ -70,6 +77,7 @@ public class GeneticAlgorithm {
             }
             else {
                 // choose from elite and not elite
+                System.out.println("Random in range 0 ...  selection rate / 3, choose first parent from basic individs and second elite");
                 leftParentIndex= getRandomIndex(numberOfElit + 1, currentPopulation.size());
                 rigthParentIndex= getRandomIndex(1, numberOfElit);
                 while (leftParentIndex == rigthParentIndex){
@@ -78,6 +86,7 @@ public class GeneticAlgorithm {
             }
         }
 
+        System.out.println("Left index parent:" + leftParentIndex + ",  right index parent " + rigthParentIndex);
         // crossing over
         crossingover(currentPopulation.getRoute(leftParentIndex),
                 currentPopulation.getRoute(rigthParentIndex));
@@ -138,9 +147,67 @@ public class GeneticAlgorithm {
                 }
             }
         }
-        System.out.println(child.toString());
-        currentPopulation.setRoute(getRandomNotElitePosition(), new Route(child));
+        System.out.println("After crossover" + child.toString());
+        currentPopulation.setRoute(getRandomNotElitePosition(), mutation(new Route(child)));
         assignElitism();
+    }
+
+    private List<Place> localOptimization(List<Place> places){
+        if(places.size() >= 5){
+            int start = (int) (Math.random() * places.size());
+            List<Place> sequence = new ArrayList<>();
+            if(start == places.size()){
+                sequence = getSeq(start - 2, start - 1, 0, 1, 2, places);
+
+            }
+            else {
+                if(places.size() - start == 1){
+                    sequence = getSeq(start - 2, start - 1, start, 0, 1, places);
+                }
+                else {
+                    if(places.size() - start == 2){
+                        sequence = getSeq(start - 2, start - 1, start, start + 1, 0, places);
+                    }
+                    else {
+                        if(start == 0){
+                            sequence = getSeq(places.size() - 1, 0, 1, 2, 3, places);
+                        }
+                    }
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private List<Place> getSeq(int a, int b, int c, int d, int e, List<Place> places){
+        List<Place> sequence = new ArrayList<>();
+        sequence.add(places.get(a));
+        sequence.add(places.get(b));
+        sequence.add(places.get(c));
+        sequence.add(places.get(d));
+        sequence.add(places.get(e));
+        return sequence;
+    }
+
+    private List<Place> getOptSequence(Route route){
+        Route optimal = route;
+        int k = 1;
+        for(int i = 0; i < 5; i++){
+
+        }
+        return null;
+    }
+    private double getLength(List<Place> places){
+        Place last = places.get(0);
+        double totalLength = 0;
+        for(Place current: places){
+            double dist = last.getDistance(current);
+            totalLength += dist;
+            last = current;
+        }
+
+        return totalLength;
     }
 
     private List<Place> clonePlaces(List<Place> pls){
@@ -209,7 +276,6 @@ public class GeneticAlgorithm {
             createNewGeneration();
             System.out.println("New generation, best route:" + currentPopulation.getBestRoute().getRating());
         }
-
         return currentPopulation.getBestRoute();
     }
 }
